@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "851290860886",
+    "firebase_url": "https://healthyabj.firebaseio.com",
+    "project_id": "healthyabj",
+    "storage_bucket": "healthyabj.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:851290860886:android:24fabfc8713ff19821baf7",
+        "android_client_info": {
+          "package_name": "com.example.healthyabj"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "851290860886-bsfk8ibo8ps5j8b5uh13d6cjbmb10m10.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.healthyabj",
+            "certificate_hash": "f896e413c0c671c0e18f1d6ccaf7ccbf9e83da79"
+          }
+        },
+        {
+          "client_id": "851290860886-lkchupvm1bsfqfr77nd7ltpmtgrgaobt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAi1TnKGRa5IKdblOuK-mO3trZC8BKDdyw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "851290860886-lkchupvm1bsfqfr77nd7ltpmtgrgaobt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
