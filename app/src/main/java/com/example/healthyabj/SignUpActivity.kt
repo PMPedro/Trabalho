@@ -26,11 +26,11 @@ class SignUpActivity : AppCompatActivity() {
             }
 
            else  if(SignInName.text.toString().isEmpty()){
-                Toast.makeText(baseContext, "PO CRL", Toast.LENGTH_SHORT).show()
+                Toast.makeText(baseContext, "Nome em falta", Toast.LENGTH_SHORT).show()
             }
 
               else if(SignInPassword.text.toString().isEmpty()){
-                Toast.makeText(baseContext, "PO CRL", Toast.LENGTH_SHORT).show()
+                Toast.makeText(baseContext, "Password em falta", Toast.LENGTH_SHORT).show()
             }
 
 
