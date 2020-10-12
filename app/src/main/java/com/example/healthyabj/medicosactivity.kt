@@ -12,6 +12,8 @@ class medicosactivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
 
 
+    //klihbhgu
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.medico)
