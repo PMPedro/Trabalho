@@ -21,7 +21,7 @@ class SignUpActivity : AppCompatActivity() {
         SignInCreateAccount.setOnClickListener {
 
             if(SignInEmail.text.toString().isEmpty()){
-                Toast.makeText(baseContext, "PO CRL", Toast.LENGTH_SHORT).show()
+                Toast.makeText(baseContext, "Email em Falta", Toast.LENGTH_SHORT).show()
 
             }
 
