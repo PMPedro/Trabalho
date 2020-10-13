@@ -24,14 +24,12 @@ class MainActivity : AppCompatActivity() {
 
 
         LoginntLogin.setOnClickListener{
-
-
             auth.signInWithEmailAndPassword(editTextTextPersonName.text.toString(), editTextTextPassword.text.toString())
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
                         // Sign in success, update UI with the signed-in user's information
-                        startActivity(Intent(this,medicosactivity::class.java))
-
+                        val intent = Intent(this, MedicosActivity::class.java)
+                        startActivity(intent)
 
                     } else {
                         // If sign in fails, display a message to the user.
@@ -47,7 +45,7 @@ class MainActivity : AppCompatActivity() {
 
         LoginbtNumTele.setOnClickListener{
 //Ao clicar no botao de Num tele vai para outra tela
-            startActivity(Intent(this,loginnumtele::class.java))
+            startActivity(Intent(this,Loginnumtele::class.java))
             finish()
 
 

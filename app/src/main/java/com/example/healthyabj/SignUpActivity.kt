@@ -42,8 +42,8 @@ class SignUpActivity : AppCompatActivity() {
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
                         // Sign in success, update UI with the signed-in user's information
-                        startActivity(Intent(this, MainActivity::class.java))
-                        finish()
+                        val intent = Intent(this, MainActivity::class.java)
+                        startActivity(intent)
                     } else {
                         // If sign in fails, display a message to the user.
                         Toast.makeText(baseContext, "Try Again Bich", Toast.LENGTH_SHORT).show()
