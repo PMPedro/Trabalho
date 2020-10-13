@@ -44,6 +44,15 @@ class MainActivity : AppCompatActivity() {
                 }
 
         }
+
+        LoginbtNumTele.setOnClickListener{
+//Ao clicar no botao de Num tele vai para outra tela
+            startActivity(Intent(this,loginnumtele::class.java))
+            finish()
+
+
+        }
+
     }
 
     public override fun onStart() {
