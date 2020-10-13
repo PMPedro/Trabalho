@@ -28,8 +28,8 @@ class MainActivity : AppCompatActivity() {
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
                         // Sign in success, update UI with the signed-in user's information
-                        val intent = Intent(this, MedicosActivity::class.java)
-                        startActivity(intent)
+                        startActivity(Intent(this,MedicosActivity::class.java))
+                        finish()
 
                     } else {
                         // If sign in fails, display a message to the user.
