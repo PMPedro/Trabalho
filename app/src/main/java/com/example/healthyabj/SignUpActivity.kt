@@ -18,6 +18,7 @@ class SignUpActivity : AppCompatActivity() {
         auth= FirebaseAuth.getInstance()
 
 
+        //Verifica se alguns dos campos estao vazios, se estiver manda mensagem de erro
         SignInCreateAccount.setOnClickListener {
 
             if(SignInEmail.text.toString().isEmpty()){
@@ -41,12 +42,14 @@ class SignUpActivity : AppCompatActivity() {
                 auth.createUserWithEmailAndPassword(SignInEmail.text.toString(), SignInPassword.text.toString())
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
+                        //Caso nao exista nenhum erro ao criar conta, vai para a tela de login
                         // Sign in success, update UI with the signed-in user's information
                         startActivity(Intent(this, MainActivity::class.java))
                         finish()
                     } else {
+                        //Caso exista algum erro ao criar conta, manda mensagem de erro
                         // If sign in fails, display a message to the user.
-                        Toast.makeText(baseContext, "Try Again Bich", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(baseContext, "Error 404, please try again! ", Toast.LENGTH_SHORT).show()
                     }
                 }
 

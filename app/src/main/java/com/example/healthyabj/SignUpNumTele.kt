@@ -17,7 +17,7 @@ class SignUpNumTele : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
 
 
-
+            // Ao Clicar na checkbox, mostra os termso e condicoes
         signupnumteleCB.setOnClickListener {
             Toast.makeText(baseContext, "I agree that Pedro can call-me everyday of the week (if you a girl)!", Toast.LENGTH_LONG).show()
 

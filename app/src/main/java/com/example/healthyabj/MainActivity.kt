@@ -29,13 +29,16 @@ class MainActivity : AppCompatActivity() {
             auth.signInWithEmailAndPassword(editTextTextPersonName.text.toString(), editTextTextPassword.text.toString())
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
+
+                        // Se consegui logar com sucesso ele muda de pagina
                         // Sign in success, update UI with the signed-in user's information
                         startActivity(Intent(this,medicosactivity::class.java))
 
 
                     } else {
                         // If sign in fails, display a message to the user.
-                        Toast.makeText(baseContext, "PO CRL", Toast.LENGTH_SHORT).show()
+                        //Se nao conseguir logar com sucesso, manda uma mensagem de erro
+                        Toast.makeText(baseContext, "Credenciais Erradas", Toast.LENGTH_SHORT).show()
                         updateUI(null)
 
                     }
