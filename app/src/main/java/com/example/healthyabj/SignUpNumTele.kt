@@ -30,7 +30,7 @@ class SignUpNumTele : AppCompatActivity() {
 
             else
             {
-                //Se a checkbox n tiver clicada n da para dar criar novo num de tele 
+                //Se a checkbox n tiver clicada n da para dar criar novo num de tele
                 Toast.makeText(baseContext, "Please click on the CheckBox", Toast.LENGTH_LONG).show()
                 finish()
             }
