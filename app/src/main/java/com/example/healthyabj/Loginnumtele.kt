@@ -47,7 +47,7 @@ class Loginnumtele : AppCompatActivity() {
             this, // Activity (for callback binding)
             callbacks) // OnVerificationStateChangedCallbacks
         }
-        //botao verify do louyout, ao clicar envia sms de verificao 
+        //botao verify do louyout, ao clicar envia sms de verificao
         loginnumteleVerificar.setOnClickListener {
                 Verificar()
         }
