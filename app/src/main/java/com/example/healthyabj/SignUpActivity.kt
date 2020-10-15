@@ -44,7 +44,8 @@ class SignUpActivity : AppCompatActivity() {
                     if (task.isSuccessful) {
                         //Caso nao exista nenhum erro ao criar conta, vai para a tela de login
                         // Sign in success, update UI with the signed-in user's information
-                        startActivity(Intent(this, MainActivity::class.java))
+
+                        startActivity(Intent(this,MainActivity::class.java))
                         finish()
                     } else {
                         //Caso exista algum erro ao criar conta, manda mensagem de erro

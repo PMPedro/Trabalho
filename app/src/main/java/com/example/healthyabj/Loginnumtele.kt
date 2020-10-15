@@ -9,7 +9,7 @@ import com.google.firebase.auth.PhoneAuthProvider
 import kotlinx.android.synthetic.main.loginnumtele.*
 import java.util.concurrent.TimeUnit
 
-class loginnumtele : AppCompatActivity() {
+class Loginnumtele : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
     lateinit var callbacks: PhoneAuthProvider.OnVerificationStateChangedCallbacks
