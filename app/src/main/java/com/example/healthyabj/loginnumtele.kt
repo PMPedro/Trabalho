@@ -21,7 +21,7 @@ class loginnumtele : AppCompatActivity() {
 
 
 
-
+            //Verifica o Callback
         fun VerifyCallbacks () {
         callbacks = object :PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
             override fun onVerificationCompleted(p0: PhoneAuthCredential) {
@@ -37,7 +37,7 @@ class loginnumtele : AppCompatActivity() {
             }
         }
         }
-
+        //Verifica o numero de telefone, manda sms para fazer a verificação
         fun Verificar() {
             VerifyCallbacks()
         PhoneAuthProvider.getInstance().verifyPhoneNumber(
@@ -47,7 +47,7 @@ class loginnumtele : AppCompatActivity() {
             this, // Activity (for callback binding)
             callbacks) // OnVerificationStateChangedCallbacks
         }
-
+        //botao verify do louyout, ao clicar envia sms de verificao 
         loginnumteleVerificar.setOnClickListener {
                 Verificar()
         }
