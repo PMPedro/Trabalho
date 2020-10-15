@@ -10,11 +10,12 @@
         android:id="@+id/numteleloginNumTele"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="284dp"
         android:ems="10"
         android:hint="Phone Number"
         android:inputType="phone"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -22,9 +23,31 @@
         android:id="@+id/numteleloginAddTelefone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:text="Login with phone number"
+        android:layout_marginTop="48dp"
+        android:text="Login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numteleloginVerificationCode" />
+
+    <EditText
+        android:id="@+id/numteleloginVerificationCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:ems="10"
+        android:hint="Verification Code"
+        android:inputType="textPersonName"
+        app:layout_constraintTop_toBottomOf="@+id/numteleloginNumTele"
+        tools:layout_editor_absoluteX="100dp" />
+
+    <Button
+        android:id="@+id/loginnumteleVerificar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Verify"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/numteleloginNumTele" />
+        app:layout_constraintTop_toBottomOf="@+id/numteleloginAddTelefone" />
 </androidx.constraintlayout.widget.ConstraintLayout>
