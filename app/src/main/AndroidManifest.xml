@@ -27,6 +27,14 @@
             android:name=".MedicosActivity"
             android:label="@string/app_name"></activity>
 
+        <activity
+            android:name=".Loginnumtele"
+            android:label="@string/app_name"></activity>
+
+        <activity
+            android:name=".SignUpNumTele"
+            android:label="@string/app_name"></activity>
+
     </application>
 
 </manifest>

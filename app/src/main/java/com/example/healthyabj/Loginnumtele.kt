@@ -1,6 +1,7 @@
 package com.example.healthyabj
 
 import android.os.Bundle
+import android.text.Editable
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.FirebaseException
 import com.google.firebase.auth.FirebaseAuth
@@ -20,10 +21,13 @@ class Loginnumtele : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
 
 
+        auth.setLanguageCode("pt")
+
 
             //Verifica o Callback
         fun VerifyCallbacks () {
-        callbacks = object :PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
+
+         callbacks = object :PhoneAuthProvider.OnVerificationStateChangedCallbacks() {
             override fun onVerificationCompleted(p0: PhoneAuthCredential) {
                 TODO("Not yet implemented")
             }
@@ -37,8 +41,16 @@ class Loginnumtele : AppCompatActivity() {
             }
         }
         }
+
+
+
+
+
+
+
         //Verifica o numero de telefone, manda sms para fazer a verificação
         fun Verificar() {
+
             VerifyCallbacks()
         PhoneAuthProvider.getInstance().verifyPhoneNumber(
             numteleloginNumTele.text.toString(), // Phone number to verify
@@ -47,6 +59,7 @@ class Loginnumtele : AppCompatActivity() {
             this, // Activity (for callback binding)
             callbacks) // OnVerificationStateChangedCallbacks
         }
+
         //botao verify do louyout, ao clicar envia sms de verificao
         loginnumteleVerificar.setOnClickListener {
                 Verificar()
@@ -55,7 +68,11 @@ class Loginnumtele : AppCompatActivity() {
 
 
     }
+
+    
 }
+
+
 
 
 /*

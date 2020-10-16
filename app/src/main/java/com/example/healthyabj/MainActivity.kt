@@ -19,8 +19,17 @@ class MainActivity : AppCompatActivity() {
 
         LoginbtSignUp.setOnClickListener {
             startActivity(Intent(this,SignUpActivity::class.java))
+
             finish()
         }
+
+        LoginbtNumTele.setOnClickListener{
+//Ao clicar no botao de Num tele vai para outra tela
+            startActivity(Intent(this,Loginnumtele::class.java))
+            finish()
+
+        }
+
 
 
         LoginntLogin.setOnClickListener{
@@ -46,13 +55,6 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-        LoginbtNumTele.setOnClickListener{
-//Ao clicar no botao de Num tele vai para outra tela
-            startActivity(Intent(this,Loginnumtele::class.java))
-            finish()
-
-
-        }
 
     }
 
