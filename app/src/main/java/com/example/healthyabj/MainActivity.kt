@@ -35,14 +35,23 @@ class MainActivity : AppCompatActivity() {
         LoginntLogin.setOnClickListener{
             auth.signInWithEmailAndPassword(editTextTextPersonName.text.toString(), editTextTextPassword.text.toString())
                 .addOnCompleteListener(this) { task ->
-                    if (task.isSuccessful) {
+                    if(task.isSuccessful){
+
+                            if((editTextTextPersonName.text.toString().isEmpty()) || (editTextTextPassword.text.toString().isEmpty())){
+                                Toast.makeText(baseContext, "Por favor, insira dados! ", Toast.LENGTH_SHORT).show()
+                            }
+
+
+
+
+                    else   {
 
                         // Se consegui logar com sucesso ele muda de pagina
                         // Sign in success, update UI with the signed-in user's information
                         Toast.makeText(baseContext, "bem vindo", Toast.LENGTH_SHORT).show()
                         startActivity(Intent(this,HomePageActivity::class.java))
                         finish()
-
+                            }
                     } else {
                         // If sign in fails, display a message to the user.
                         //Se nao conseguir logar com sucesso, manda uma mensagem de erro
