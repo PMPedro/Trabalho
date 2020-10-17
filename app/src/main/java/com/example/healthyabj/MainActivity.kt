@@ -22,11 +22,19 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
        auth= FirebaseAuth.getInstance()
 
+        if (auth.currentUser != null) {
+            // User is signed in (getCurrentUser() will be null if not signed in)
+            val intent = Intent(this, HomePageActivity::class.java);
+            startActivity(intent);
+            finish();
+        }
+
         LoginbtSignUp.setOnClickListener {
             startActivity(Intent(this,SignUpActivity::class.java))
 
             finish()
         }
+
 
 
 
