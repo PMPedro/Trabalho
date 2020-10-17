@@ -39,7 +39,8 @@ class MainActivity : AppCompatActivity() {
 
                         // Se consegui logar com sucesso ele muda de pagina
                         // Sign in success, update UI with the signed-in user's information
-                        startActivity(Intent(this,MedicosActivity::class.java))
+                        Toast.makeText(baseContext, "bem vindo", Toast.LENGTH_SHORT).show()
+                        startActivity(Intent(this,HomePageActivity::class.java))
                         finish()
 
                     } else {
