@@ -1,8 +1,13 @@
 package com.example.healthyabj
 
+import android.app.AlertDialog
+import android.content.DialogInterface
 import android.content.Intent
+import android.nfc.Tag
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Patterns
+import android.widget.EditText
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -23,6 +28,8 @@ class MainActivity : AppCompatActivity() {
             finish()
         }
 
+
+
         LoginbtNumTele.setOnClickListener{
 //Ao clicar no botao de Num tele vai para outra tela
             startActivity(Intent(this,Loginnumtele::class.java))
@@ -40,9 +47,6 @@ class MainActivity : AppCompatActivity() {
                             if((editTextTextPersonName.text.toString().isEmpty()) || (editTextTextPassword.text.toString().isEmpty())){
                                 Toast.makeText(baseContext, "Por favor, insira dados! ", Toast.LENGTH_SHORT).show()
                             }
-
-
-
 
                     else   {
 
@@ -65,7 +69,35 @@ class MainActivity : AppCompatActivity() {
 
         }
 
+        btn_forgot_password.setOnClickListener {
+            val builder = AlertDialog.Builder(this)
+            builder.setTitle("Forgot Password")
+            val view = layoutInflater.inflate(R.layout.dialog_forgot_password,null)
+            val username = view.findViewById<EditText>(R.id.et_usermame)
+            builder.setView(view)
+            builder.setPositiveButton("Reset", DialogInterface.OnClickListener { _, _->
+                forgotPassword(username)
 
+            })
+            builder.setNegativeButton("Close", DialogInterface.OnClickListener { _, _->  })
+            builder.show()
+        }
+    }
+
+    private  fun forgotPassword(username:EditText){
+        if (username.text.toString().isEmpty()){
+            return
+        }
+        if (!Patterns.EMAIL_ADDRESS.matcher(username.text.toString()).matches()){
+            return
+        }
+        auth.sendPasswordResetEmail(username.text.toString())
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful){
+                  Toast.makeText(this, "Email sent.",Toast.LENGTH_LONG).show()
+                }
+
+            }
     }
 
     public override fun onStart() {

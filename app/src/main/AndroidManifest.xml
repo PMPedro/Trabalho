@@ -34,6 +34,12 @@
         <activity
             android:name=".SignUpNumTele"
             android:label="@string/app_name"></activity>
+        <activity
+            android:name=".HomePageActivity"
+            android:label="@string/app_name"></activity>
+        <activity
+            android:name=".ChatActivity"
+            android:label="@string/app_name"></activity>
 
     </application>
 
