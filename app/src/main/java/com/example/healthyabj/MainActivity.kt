@@ -3,7 +3,6 @@ package com.example.healthyabj
 import android.app.AlertDialog
 import android.content.DialogInterface
 import android.content.Intent
-import android.nfc.Tag
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Patterns
@@ -115,7 +114,7 @@ class MainActivity : AppCompatActivity() {
         updateUI(currentUser)
     }
 
-    fun updateUI (curretUser : FirebaseUser?){
+    fun updateUI (currentUser : FirebaseUser?){
 
 
     }

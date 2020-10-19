@@ -25,5 +25,13 @@ class HomePageActivity : AppCompatActivity() {
 
         }
 
+
+
+        homeSignOut.setOnClickListener {
+
+            FirebaseAuth.getInstance().signOut();
+            startActivity(Intent(this,MainActivity::class.java))
+            finish()
+        }
     }
 }
