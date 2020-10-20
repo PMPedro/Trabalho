@@ -20,5 +20,6 @@ class ChatActivity : AppCompatActivity() {
 
 
 
+
     }
 }
