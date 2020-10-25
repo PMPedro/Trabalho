@@ -9,7 +9,7 @@ class User {
         val email: String,
         var password: String,
         var Name: String,
-        var DataNascimento: DateFormat,
+        var DataNascimento: String,
         var CC: String
     ) {
 

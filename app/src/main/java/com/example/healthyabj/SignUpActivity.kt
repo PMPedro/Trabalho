@@ -7,6 +7,9 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.ktx.Firebase
+import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.ktx.storage
 import kotlinx.android.synthetic.main.signin.*
 
 class SignUpActivity : AppCompatActivity() {
@@ -18,6 +21,12 @@ class SignUpActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.signin)
         var num = 2
+
+       val Email =  SignInEmail.text.toString()
+        val Nome = SignInName.text.toString()
+        val Password = SignInPassword.text.toString()
+        val DataNascimento = signinBirthdate.text.toString()
+        val CC = signinCC.text.toString()
 
         auth= FirebaseAuth.getInstance()
 
@@ -53,11 +62,12 @@ class SignUpActivity : AppCompatActivity() {
 
 
            if ( num === 1 ) {
-                auth.createUserWithEmailAndPassword(SignInEmail.text.toString(), SignInPassword.text.toString())
+                auth.createUserWithEmailAndPassword(Email, Password)
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
                         //Caso nao exista nenhum erro ao criar conta, vai para a tela de login
                         // Sign in success, update UI with the signed-in user's information
+                        val user = auth.currentUser
 
                         startActivity(Intent(this,MainActivity::class.java))
 
@@ -72,11 +82,27 @@ class SignUpActivity : AppCompatActivity() {
                 }
         }
 
+        fun SaveData () {
+            val uid = FirebaseAuth.getInstance().uid
+            val ref = FirebaseStorage.getInstance().getReference("/Users/$uid")
+
+            val Users = User.User (Email,Password,Nome,DataNascimento,CC)
+
+            ref.setValue(Users)
+            ref.child("/Users/$uid").push(user)
+            //ref.child("/Users/$uid").setValue(user)
+            //database.child("users").child(userId).setValue(user)
+                    }
+
 
 
     }
 
 }
+
+
+
+
 
 
 
