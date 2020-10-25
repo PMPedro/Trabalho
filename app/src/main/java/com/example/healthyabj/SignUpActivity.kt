@@ -9,6 +9,7 @@ import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.StorageReference
 import com.google.firebase.storage.ktx.storage
 import kotlinx.android.synthetic.main.signin.*
 
@@ -83,13 +84,15 @@ class SignUpActivity : AppCompatActivity() {
         }
 
         fun SaveData () {
+
+            val database = Firebase
             val uid = FirebaseAuth.getInstance().uid
             val ref = FirebaseStorage.getInstance().getReference("/Users/$uid")
 
             val Users = User.User (Email,Password,Nome,DataNascimento,CC)
 
             ref.setValue(Users)
-            ref.child("/Users/$uid").push(user)
+            ref.child("/Users/$uid").setValue(Users)
             //ref.child("/Users/$uid").setValue(user)
             //database.child("users").child(userId).setValue(user)
                     }
@@ -98,6 +101,10 @@ class SignUpActivity : AppCompatActivity() {
 
     }
 
+}
+
+private fun StorageReference.setValue(users: User.User) {
+    TODO("Not yet implemented")
 }
 
 

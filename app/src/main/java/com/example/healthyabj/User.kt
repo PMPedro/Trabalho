@@ -16,7 +16,7 @@ class User {
         val Mail: String = email
         var Password2: String = password
         val Nome: String = Name
-        var Idade: DateFormat = DataNascimento
+        var Idade: String = DataNascimento
         val Cartaoc: String = CC
 
 
