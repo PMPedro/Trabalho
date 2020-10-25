@@ -4,6 +4,8 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.gms.tasks.Task
+import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.signin.*
 
@@ -15,30 +17,42 @@ class SignUpActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.signin)
+        var num = 2
+
         auth= FirebaseAuth.getInstance()
 
 
+         fun VerificaUser () {
+             if(SignInEmail.text.toString().isEmpty()){
+                 Toast.makeText(baseContext, "Email em Falta", Toast.LENGTH_SHORT).show()
+                 num = 1
+             }
+
+             else  if(SignInName.text.toString().isEmpty()){
+                 Toast.makeText(baseContext, "Nome em falta", Toast.LENGTH_SHORT).show()
+                 num = 1
+             }
+
+             else if(SignInPassword.text.toString().isEmpty()){
+                 Toast.makeText(baseContext, "Password em falta", Toast.LENGTH_SHORT).show()
+                 num = 1
+             }
+
+             else  num = 0
+
+        }
+
         //Verifica se alguns dos campos estao vazios, se estiver manda mensagem de erro
         SignInCreateAccount.setOnClickListener {
-
-            if(SignInEmail.text.toString().isEmpty()){
-                Toast.makeText(baseContext, "Email em Falta", Toast.LENGTH_SHORT).show()
-
-            }
-
-           else  if(SignInName.text.toString().isEmpty()){
-                Toast.makeText(baseContext, "Nome em falta", Toast.LENGTH_SHORT).show()
-            }
-
-              else if(SignInPassword.text.toString().isEmpty()){
-                Toast.makeText(baseContext, "Password em falta", Toast.LENGTH_SHORT).show()
-            }
+            VerificaUser()
 
 
 
 
 
-           else {
+
+
+           if ( num === 1 ) {
                 auth.createUserWithEmailAndPassword(SignInEmail.text.toString(), SignInPassword.text.toString())
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
@@ -46,6 +60,7 @@ class SignUpActivity : AppCompatActivity() {
                         // Sign in success, update UI with the signed-in user's information
 
                         startActivity(Intent(this,MainActivity::class.java))
+
                         finish()
                     } else {
                         //Caso exista algum erro ao criar conta, manda mensagem de erro
@@ -60,4 +75,8 @@ class SignUpActivity : AppCompatActivity() {
 
 
     }
+
 }
+
+
+
