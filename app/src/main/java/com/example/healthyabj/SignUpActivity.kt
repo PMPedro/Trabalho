@@ -24,7 +24,7 @@ class SignUpActivity : AppCompatActivity() {
         val nome = SignInName.text.toString()
         val password = SignInPassword.text.toString()
         val dataNascimento = signinBirthdate.text.toString()
-        val c = signinCC.text.toString()
+        val cc = signinCC.text.toString()
 
         auth= FirebaseAuth.getInstance()
 
@@ -89,8 +89,8 @@ class SignUpActivity : AppCompatActivity() {
 
             val users = User.User (email,password,nome,dataNascimento,cc)
 
-            ref.setValue(users)
-            ref.child("/Users/$uid").setValue(users)
+            ref.setvalue(users)
+           // ref.child("/Users/$uid").setValue(users)
             //ref.child("/Users/$uid").setValue(user)
             //database.child("users").child(userId).setValue(user)
                     }
@@ -101,9 +101,11 @@ class SignUpActivity : AppCompatActivity() {
 
 }
 
-private fun StorageReference.setValue(users: User.User) {
+private fun StorageReference.setvalue(users: User.User) {
     TODO("Not yet implemented")
 }
+
+
 
 
 
