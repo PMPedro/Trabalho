@@ -70,6 +70,7 @@ class SignUpActivity : AppCompatActivity() {
                         startActivity(Intent(this,MainActivity::class.java))
 
                         finish()
+
                     } else {
                         //Caso exista algum erro ao criar conta, manda mensagem de erro
                         // If sign in fails, display a message to the user.
