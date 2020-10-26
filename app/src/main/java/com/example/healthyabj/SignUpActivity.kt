@@ -84,13 +84,13 @@ class SignUpActivity : AppCompatActivity() {
         }
 
         fun SaveData () {
-
             val database = Firebase
+
             val uid = FirebaseAuth.getInstance().uid
             val ref = FirebaseStorage.getInstance().getReference("/Users/$uid")
 
             val Users = User.User (Email,Password,Nome,DataNascimento,CC)
-
+            
             ref.setValue(Users)
             ref.child("/Users/$uid").setValue(Users)
             //ref.child("/Users/$uid").setValue(user)
