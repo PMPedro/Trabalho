@@ -8,16 +8,16 @@ class User {
     class User(
         val email: String,
         var password: String,
-        var Name: String,
-        var DataNascimento: String,
-        var CC: String
+        var name: String,
+        var datanascimento: String,
+        var cc: String
     ) {
 
-        val Mail: String = email
-        var Password2: String = password
-        val Nome: String = Name
-        var Idade: String = DataNascimento
-        val Cartaoc: String = CC
+        val mail: String = email
+        var password2: String = password
+        val nome: String = name
+        var idade: String = datanascimento
+        val cartaoc: String = cc
 
 
         // initializer block

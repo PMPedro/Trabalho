@@ -4,13 +4,10 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.google.android.gms.tasks.Task
-import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
-import com.google.firebase.storage.ktx.storage
 import kotlinx.android.synthetic.main.signin.*
 
 class SignUpActivity : AppCompatActivity() {
@@ -23,11 +20,11 @@ class SignUpActivity : AppCompatActivity() {
         setContentView(R.layout.signin)
         var num = 2
 
-       val Email =  SignInEmail.text.toString()
-        val Nome = SignInName.text.toString()
-        val Password = SignInPassword.text.toString()
-        val DataNascimento = signinBirthdate.text.toString()
-        val CC = signinCC.text.toString()
+        val email =  SignInEmail.text.toString()
+        val nome = SignInName.text.toString()
+        val password = SignInPassword.text.toString()
+        val dataNascimento = signinBirthdate.text.toString()
+        val c = signinCC.text.toString()
 
         auth= FirebaseAuth.getInstance()
 
@@ -63,7 +60,7 @@ class SignUpActivity : AppCompatActivity() {
 
 
            if ( num === 1 ) {
-                auth.createUserWithEmailAndPassword(Email, Password)
+                auth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
                         //Caso nao exista nenhum erro ao criar conta, vai para a tela de login
@@ -89,10 +86,10 @@ class SignUpActivity : AppCompatActivity() {
             val uid = FirebaseAuth.getInstance().uid
             val ref = FirebaseStorage.getInstance().getReference("/Users/$uid")
 
-            val Users = User.User (Email,Password,Nome,DataNascimento,CC)
-            
-            ref.setValue(Users)
-            ref.child("/Users/$uid").setValue(Users)
+            val users = User.User (email,password,nome,dataNascimento,cc)
+
+            ref.setValue(users)
+            ref.child("/Users/$uid").setValue(users)
             //ref.child("/Users/$uid").setValue(user)
             //database.child("users").child(userId).setValue(user)
                     }
