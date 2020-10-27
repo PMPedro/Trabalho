@@ -30,36 +30,31 @@ class SignUpActivity : AppCompatActivity() {
 
 
          fun VerificaUser () {
-             if(SignInEmail.text.toString().isEmpty()){
-                 Toast.makeText(baseContext, "Email em Falta", Toast.LENGTH_SHORT).show()
-                 num = 1
-             }
-
-             else  if(SignInName.text.toString().isEmpty()){
-                 Toast.makeText(baseContext, "Nome em falta", Toast.LENGTH_SHORT).show()
-                 num = 1
-             }
-
-             else if(SignInPassword.text.toString().isEmpty()){
-                 Toast.makeText(baseContext, "Password em falta", Toast.LENGTH_SHORT).show()
-                 num = 1
-             }
-
-             else  num = 0
 
         }
 
         //Verifica se alguns dos campos estao vazios, se estiver manda mensagem de erro
         SignInCreateAccount.setOnClickListener {
-            VerificaUser()
+
+            if(SignInEmail.text.toString().isEmpty()){
+                Toast.makeText(baseContext, "Email em Falta", Toast.LENGTH_SHORT).show()
+
+            }
+
+            else  if(SignInName.text.toString().isEmpty()){
+                Toast.makeText(baseContext, "Nome em falta", Toast.LENGTH_SHORT).show()
+
+            }
+
+            else if(SignInPassword.text.toString().isEmpty()){
+                Toast.makeText(baseContext, "Password em falta", Toast.LENGTH_SHORT).show()
+
+            }
+
+            else
 
 
-
-
-
-
-           if ( num === 1 ) {
-                auth.createUserWithEmailAndPassword(email, password)
+                auth.createUserWithEmailAndPassword(SignInEmail.text.toString(), SignInPassword.text.toString())
                 .addOnCompleteListener(this) { task ->
                     if (task.isSuccessful) {
                         //Caso nao exista nenhum erro ao criar conta, vai para a tela de login
@@ -77,7 +72,7 @@ class SignUpActivity : AppCompatActivity() {
                     }
                 }
 
-                }
+
         }
 
         fun SaveData () {
