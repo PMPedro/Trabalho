@@ -58,7 +58,6 @@ class SignUpActivity : AppCompatActivity() {
 
 
 
-
            if ( num === 1 ) {
                 auth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this) { task ->
@@ -89,7 +88,8 @@ class SignUpActivity : AppCompatActivity() {
 
             val users = User.User (email,password,nome,dataNascimento,cc)
 
-            ref.setvalue(users)
+
+            ref.setvalue("users")
            // ref.child("/Users/$uid").setValue(users)
             //ref.child("/Users/$uid").setValue(user)
             //database.child("users").child(userId).setValue(user)
@@ -101,7 +101,7 @@ class SignUpActivity : AppCompatActivity() {
 
 }
 
-private fun StorageReference.setvalue(users: User.User) {
+private fun StorageReference.setvalue(users: String) {
     TODO("Not yet implemented")
 }
 
