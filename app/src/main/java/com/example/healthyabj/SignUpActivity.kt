@@ -29,8 +29,19 @@ class SignUpActivity : AppCompatActivity() {
         auth= FirebaseAuth.getInstance()
 
 
-         fun VerificaUser () {
+        fun SaveData () {
+            val database = Firebase
 
+            val uid = FirebaseAuth.getInstance().uid
+            val ref = FirebaseStorage.getInstance().getReference("/Users/$uid")
+
+            val users = User.User (email,password,nome,dataNascimento,cc)
+
+
+            ref.setvalue("users")
+            // ref.child("/Users/$uid").setValue(users)
+            //ref.child("/Users/$uid").setValue(user)
+            //database.child("users").child(userId).setValue(user)
         }
 
         //Verifica se alguns dos campos estao vazios, se estiver manda mensagem de erro
@@ -63,6 +74,8 @@ class SignUpActivity : AppCompatActivity() {
 
                         startActivity(Intent(this,MainActivity::class.java))
 
+
+                        SaveData()
                         finish()
 
                     } else {
@@ -75,20 +88,7 @@ class SignUpActivity : AppCompatActivity() {
 
         }
 
-        fun SaveData () {
-            val database = Firebase
 
-            val uid = FirebaseAuth.getInstance().uid
-            val ref = FirebaseStorage.getInstance().getReference("/Users/$uid")
-
-            val users = User.User (email,password,nome,dataNascimento,cc)
-
-
-            ref.setvalue("users")
-           // ref.child("/Users/$uid").setValue(users)
-            //ref.child("/Users/$uid").setValue(user)
-            //database.child("users").child(userId).setValue(user)
-                    }
 
 
 
