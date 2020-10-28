@@ -2,6 +2,7 @@ package com.example.healthyabj
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
@@ -70,12 +71,13 @@ class SignUpActivity : AppCompatActivity() {
                     if (task.isSuccessful) {
                         //Caso nao exista nenhum erro ao criar conta, vai para a tela de login
                         // Sign in success, update UI with the signed-in user's information
-                        val user = auth.currentUser
 
+
+                        val user = auth.currentUser
                         startActivity(Intent(this,MainActivity::class.java))
 
 
-                        SaveData()
+                     //   SaveData()
 
 
                     } else {

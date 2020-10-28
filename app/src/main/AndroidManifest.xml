@@ -19,9 +19,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".MedicosActivity"
-            android:label="@string/app_name" />
+
         <activity
             android:name=".Loginnumtele"
             android:label="@string/app_name" />

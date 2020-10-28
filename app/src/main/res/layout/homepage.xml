@@ -45,11 +45,11 @@
 
     <TextView
         android:id="@+id/textView3"
-        android:textSize="75dp"
-        android:textColor="#ff0f5f"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Home page"
+        android:textColor="#ff0f5f"
+        android:textSize="75dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -61,6 +61,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
-        tools:layout_editor_absoluteX="15dp"
-        tools:layout_editor_absoluteY="9dp" />
+        app:layout_constraintEnd_toStartOf="@+id/homeSignOut"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>
