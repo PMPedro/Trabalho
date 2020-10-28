@@ -25,15 +25,15 @@ class MainActivity : AppCompatActivity() {
 
         if (auth.currentUser != null) {
             // User is signed in (getCurrentUser() will be null if not signed in)
-            val intent = Intent(this, HomePageActivity::class.java);
-            startActivity(intent);
-            finish();
+            val intent = Intent(this, HomePageActivity::class.java)
+            startActivity(intent)
+            finish()
         }
 
         LoginbtSignUp.setOnClickListener {
             startActivity(Intent(this,SignUpActivity::class.java))
 
-            finish()
+
 
         }
 
@@ -43,7 +43,6 @@ class MainActivity : AppCompatActivity() {
         LoginbtNumTele.setOnClickListener{
 //Ao clicar no botao de Num tele vai para outra tela
             startActivity(Intent(this,Loginnumtele::class.java))
-            finish()
 
         }
 

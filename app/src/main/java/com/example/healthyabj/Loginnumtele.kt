@@ -73,8 +73,3 @@ class Loginnumtele : AppCompatActivity() {
 }
 
 
-
-
-/*
-
- */

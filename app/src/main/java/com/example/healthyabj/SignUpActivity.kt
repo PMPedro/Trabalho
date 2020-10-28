@@ -76,7 +76,7 @@ class SignUpActivity : AppCompatActivity() {
 
 
                         SaveData()
-                        finish()
+
 
                     } else {
                         //Caso exista algum erro ao criar conta, manda mensagem de erro

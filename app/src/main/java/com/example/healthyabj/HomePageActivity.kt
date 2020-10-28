@@ -23,7 +23,7 @@ class HomePageActivity : AppCompatActivity() {
         bthomeChat.setOnClickListener{
 
             startActivity(Intent(this,ChatActivity::class.java))
-            finish()
+
 
         }
 
