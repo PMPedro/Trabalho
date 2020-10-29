@@ -80,7 +80,7 @@ class MainActivity : AppCompatActivity() {
 
         btn_forgot_password.setOnClickListener {
             val builder = AlertDialog.Builder(this)
-            builder.setTitle("Forgot Password")
+            builder.setTitle("Insira o email")
             val view = layoutInflater.inflate(R.layout.dialog_forgot_password,null)
             val username = view.findViewById<EditText>(R.id.et_usermame)
             builder.setView(view)
@@ -88,7 +88,7 @@ class MainActivity : AppCompatActivity() {
                 forgotPassword(username)
 
             })
-            builder.setNegativeButton("Close", DialogInterface.OnClickListener { _, _->  })
+            builder.setNegativeButton("Fechar", DialogInterface.OnClickListener { _, _->  })
             builder.show()
         }
     }
