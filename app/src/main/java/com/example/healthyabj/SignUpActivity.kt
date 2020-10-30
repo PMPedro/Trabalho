@@ -6,6 +6,8 @@ import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
@@ -21,6 +23,7 @@ class SignUpActivity : AppCompatActivity() {
         setContentView(R.layout.signin)
         var num = 2
 
+
         val email =  SignInEmail.text.toString()
         val nome = SignInName.text.toString()
         val password = SignInPassword.text.toString()
@@ -31,34 +34,45 @@ class SignUpActivity : AppCompatActivity() {
 
 
         fun SaveData () {
+
+
+
             val database = Firebase
 
             val uid = FirebaseAuth.getInstance().uid
-            val ref = FirebaseStorage.getInstance().getReference("/Users/$uid")
+            val ref = FirebaseDatabase.getInstance().getReference("/Users/$uid")
 
             val users = User.User (email,password,nome,dataNascimento,cc)
 
 
-            ref.setvalue("users")
+            ref.setValue(users)
+            ref.child("users").setValue(users)
             // ref.child("/Users/$uid").setValue(users)
             //ref.child("/Users/$uid").setValue(user)
             //database.child("users").child(userId).setValue(user)
         }
 
+
+
+
+
+
+
+
         //Verifica se alguns dos campos estao vazios, se estiver manda mensagem de erro
         SignInCreateAccount.setOnClickListener {
 
-            if(SignInEmail.text.toString().isEmpty()){
+            if(SignInEmail.text.isEmpty()){
                 Toast.makeText(baseContext, "Email em Falta", Toast.LENGTH_SHORT).show()
 
             }
 
-            else  if(SignInName.text.toString().isEmpty()){
+            else  if(SignInName.text.isEmpty()){
                 Toast.makeText(baseContext, "Nome em falta", Toast.LENGTH_SHORT).show()
 
             }
 
-            else if(SignInPassword.text.toString().isEmpty()){
+            else if(SignInPassword.text.isEmpty()){
                 Toast.makeText(baseContext, "Password em falta", Toast.LENGTH_SHORT).show()
 
             }
@@ -72,7 +86,7 @@ class SignUpActivity : AppCompatActivity() {
                         //Caso nao exista nenhum erro ao criar conta, vai para a tela de login
                         // Sign in success, update UI with the signed-in user's information
 
-
+                        SaveData()
                         val user = auth.currentUser
                         startActivity(Intent(this,MainActivity::class.java))
 
@@ -98,9 +112,7 @@ class SignUpActivity : AppCompatActivity() {
 
 }
 
-private fun StorageReference.setvalue(users: String) {
-    TODO("Not yet implemented")
-}
+
 
 
 

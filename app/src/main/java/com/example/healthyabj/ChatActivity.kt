@@ -18,7 +18,11 @@ class ChatActivity : AppCompatActivity() {
 
 
         chatpageSendMessage.setOnClickListener {
-            chatpageMessage.text.toString() == ""
+
+
+            chatpageMessage.text.clear()
+
+
 
 
         }
