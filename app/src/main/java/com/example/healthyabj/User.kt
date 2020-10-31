@@ -13,11 +13,6 @@ class User {
         var cc: String
     ) {
 
-        val mail: String = email
-        var password2: String = password
-        val nome: String = name
-        var idade: String = datanascimento
-        val cartaoc: String = cc
 
 
         // initializer block
