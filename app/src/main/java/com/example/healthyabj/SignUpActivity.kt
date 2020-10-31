@@ -42,11 +42,11 @@ class SignUpActivity : AppCompatActivity() {
             val uid = FirebaseAuth.getInstance().uid
             val ref = FirebaseDatabase.getInstance().getReference("/Users/$uid")
 
-            val users = User.User (email,password,nome,dataNascimento,cc)
+            val users = User.User (SignInEmail.text.toString(),SignInPassword.text.toString(),SignInName.text.toString(),signinBirthdate.text.toString(),signinCC.text.toString())
 
 
             ref.setValue(users)
-            ref.child("users").setValue(users)
+           // ref.child("users").setValue(users)
             // ref.child("/Users/$uid").setValue(users)
             //ref.child("/Users/$uid").setValue(user)
             //database.child("users").child(userId).setValue(user)
