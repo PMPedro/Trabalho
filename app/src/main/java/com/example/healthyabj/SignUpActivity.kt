@@ -46,6 +46,7 @@ class SignUpActivity : AppCompatActivity() {
 
 
             ref.setValue(users)
+
            // ref.child("users").setValue(users)
             // ref.child("/Users/$uid").setValue(users)
             //ref.child("/Users/$uid").setValue(user)
@@ -111,6 +112,7 @@ class SignUpActivity : AppCompatActivity() {
     }
 
 }
+
 
 
 
