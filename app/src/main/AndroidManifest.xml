@@ -24,6 +24,9 @@
             android:name=".Loginnumtele"
             android:label="@string/app_name" />
         <activity
+            android:name=".PerfilUser"
+            android:label="@string/app_name" />
+        <activity
             android:name=".SignUpNumTele"
             android:label="@string/app_name" />
         <activity

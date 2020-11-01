@@ -1,6 +1,7 @@
 package com.example.healthyabj
 
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DataSnapshot
@@ -36,7 +37,8 @@ class PerfilUser : AppCompatActivity() {
 
             }
 
-        var a = mutableListOf<String>()
+        val a = arrayOf<String>("1", "2", "3") //explicit type declaration
+
 
         val postListener = object : ValueEventListener {
             override fun onCancelled(error: DatabaseError) {
@@ -47,7 +49,9 @@ class PerfilUser : AppCompatActivity() {
                 // Get Post object and use the values to update the UI
                 val uid = FirebaseAuth.getInstance().uid
                 var post = dataSnapshot.child("/Users/$uid/name").getValue()
-                a.set(0,post.toString())
+
+                a[0] = post.toString()
+              //  a.set(0,post.toString())
 
 
             }
@@ -55,7 +59,11 @@ class PerfilUser : AppCompatActivity() {
 
         }
 
-        perfilusertvNome.text = (a.get(0))
+       // a[0] = "asd"
+        perfilusertvNome.text = a[0]
+
+
+
 
 
 
