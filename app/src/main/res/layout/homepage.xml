@@ -25,7 +25,7 @@
         app:layout_constraintStart_toEndOf="@+id/bthomeChat" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/homePerfil"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"

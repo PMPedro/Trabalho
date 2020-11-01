@@ -26,8 +26,9 @@ class HomePageActivity : AppCompatActivity() {
 
 
         }
-
-
+            homePerfil.setOnClickListener{
+                startActivity(Intent(this,PerfilUser::class.java))
+            }
 
         homeSignOut.setOnClickListener {
 
