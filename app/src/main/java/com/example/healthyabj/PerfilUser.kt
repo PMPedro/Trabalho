@@ -4,10 +4,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.DatabaseError
-import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.database.ValueEventListener
+import com.google.firebase.database.*
 import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.perfiluser.*
 import kotlinx.android.synthetic.main.signin.*
@@ -58,6 +55,7 @@ class PerfilUser : AppCompatActivity() {
 
 
         }
+
 
        // a[0] = "asd"
         perfilusertvNome.text = a[0]
