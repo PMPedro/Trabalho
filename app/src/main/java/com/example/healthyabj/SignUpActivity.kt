@@ -1,17 +1,20 @@
 package com.example.healthyabj
 
+import android.app.Activity
 import android.content.Intent
+import android.graphics.drawable.BitmapDrawable
+import android.net.Uri
 import android.os.Bundle
+import android.provider.MediaStore
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
-import com.google.firebase.storage.StorageReference
 import kotlinx.android.synthetic.main.signin.*
+import java.util.*
 
 class SignUpActivity : AppCompatActivity() {
 
@@ -32,31 +35,13 @@ class SignUpActivity : AppCompatActivity() {
 
         auth= FirebaseAuth.getInstance()
 
+        SignInFoto.setOnClickListener{
+            Log.d("SignIn Ativity","Try to show photo selector")
+            val intent = Intent(Intent.ACTION_PICK)
+            intent.type="image/*"
+            startActivityForResult(intent,0)
 
-        fun SaveData () {
-
-
-
-            val database = Firebase
-
-            val uid = FirebaseAuth.getInstance().uid
-            val ref = FirebaseDatabase.getInstance().getReference("/Users/$uid")
-
-            val users = User.User (SignInEmail.text.toString(),SignInPassword.text.toString(),SignInName.text.toString(),signinBirthdate.text.toString(),signinCC.text.toString())
-
-
-            ref.setValue(users)
-
-           // ref.child("users").setValue(users)
-            // ref.child("/Users/$uid").setValue(users)
-            //ref.child("/Users/$uid").setValue(user)
-            //database.child("users").child(userId).setValue(user)
         }
-
-
-
-
-
 
 
 
@@ -82,12 +67,13 @@ class SignUpActivity : AppCompatActivity() {
 
 
                 auth.createUserWithEmailAndPassword(SignInEmail.text.toString(), SignInPassword.text.toString())
-                .addOnCompleteListener(this) { task ->
+                .addOnCompleteListener(this) {task ->
                     if (task.isSuccessful) {
                         //Caso nao exista nenhum erro ao criar conta, vai para a tela de login
                         // Sign in success, update UI with the signed-in user's information
 
-                        SaveData()
+                        uplaodImageToFirebaseStorage()
+
                         val user = auth.currentUser
                         startActivity(Intent(this,MainActivity::class.java))
 
@@ -106,9 +92,49 @@ class SignUpActivity : AppCompatActivity() {
         }
 
 
+    }
+    var selectedPhotoUri: Uri?= null
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?){
+        super.onActivityResult(requestCode, resultCode,data)
+        if (requestCode == 0 && resultCode == Activity.RESULT_OK && data !=null)
+            Log.d("SignupActivity"," photo selected")
+            selectedPhotoUri=data?.data
+        val bitmap = MediaStore.Images.Media.getBitmap(contentResolver, selectedPhotoUri)
+        selectphoto_imageview.setImageBitmap(bitmap)
+
+        SignInFoto.alpha =0f
+    }
+
+    private fun uplaodImageToFirebaseStorage () {
+        if (selectedPhotoUri == null)return
+        val filename = UUID.randomUUID().toString()
+        val reffoto =   FirebaseStorage.getInstance().getReference("/images/$filename")
+        reffoto.putFile(selectedPhotoUri!!)
+            .addOnSuccessListener {
+                Log.d("SignupActivity","Successfully uploaded image: ${it.metadata?.path}")
+                reffoto.downloadUrl.addOnSuccessListener {
+                    Log.d("SignupActivity","File Location $it")
+                    saveUserToFirabaseDatabase(it.toString())
+                }
+            }
 
 
+    }
+    private fun saveUserToFirabaseDatabase(profileImageUrl: String){
+        val database = Firebase
+        val uid = FirebaseAuth.getInstance().uid
+        val ref = FirebaseDatabase.getInstance().getReference("/Users/$uid")
+        val users = User.User(SignInEmail.text.toString(),SignInPassword.text.toString(),SignInName.text.toString(),signinBirthdate.text.toString(),signinCC.text.toString(),profileImageUrl)
 
+        ref.setValue(users)
+            .addOnSuccessListener {
+                Log.d("SignupActivity","Finaly we saved the user to firebase ")
+            }
+
+        // ref.child("users").setValue(users)
+        // ref.child("/Users/$uid").setValue(users)
+        //ref.child("/Users/$uid").setValue(user)
+        //database.child("users").child(userId).setValue(user)
     }
 
 }

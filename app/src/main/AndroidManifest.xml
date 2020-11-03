@@ -38,6 +38,9 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"/>
+        <activity
+            android:name=".PerfilUser"
+            android:label="@string/app_name"/>
 
     </application>
 

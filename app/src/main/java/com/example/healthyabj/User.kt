@@ -1,24 +1,19 @@
 package com.example.healthyabj
 
-import java.text.DateFormat
-
 class User {
-    constructor()
+
     lateinit var name:String
     lateinit var email:String
     data class User(
+        val uid: String,
         val email: String,
-        var password: String,
-        var name: String,
-        var datanascimento: String,
-        var cc: String
-    ) {
+        val name: String,
+        val password: String,
+        val datanascimento: String,
+        val cc: String
 
 
-
-        // initializer block
-
-    }
+    )
 
 
 }
