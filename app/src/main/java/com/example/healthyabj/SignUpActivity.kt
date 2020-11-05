@@ -36,7 +36,7 @@ class SignUpActivity : AppCompatActivity() {
         auth= FirebaseAuth.getInstance()
 
         SignInFoto.setOnClickListener{
-            Log.d("SignIn Ativity","Try to show photo selector")
+            Log.d("SignupActivity","Try to show photo selector")
             val intent = Intent(Intent.ACTION_PICK)
             intent.type="image/*"
             startActivityForResult(intent,0)
@@ -124,7 +124,7 @@ class SignUpActivity : AppCompatActivity() {
         val database = Firebase
         val uid = FirebaseAuth.getInstance().uid
         val ref = FirebaseDatabase.getInstance().getReference("/Users/$uid")
-        val users = User.User(SignInEmail.text.toString(),SignInPassword.text.toString(),SignInName.text.toString(),signinBirthdate.text.toString(),signinCC.text.toString(),profileImageUrl)
+        val users = User.User(SignInEmail.text.toString(),SignInPassword.text.toString(),SignInName.text.toString(),profileImageUrl)
 
         ref.setValue(users)
             .addOnSuccessListener {

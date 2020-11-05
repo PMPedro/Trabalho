@@ -9,26 +9,14 @@
     tools:context=".MainActivity">
 
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="579dp"
-        android:layout_height="823dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.63"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/degrade_color" />
-
     <EditText
         android:id="@+id/editTextTextPersonName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="279dp"
+        android:layout_height="41dp"
         android:layout_marginTop="200dp"
+        android:background="@drawable/ret_ngulo_4"
         android:ems="10"
-        android:background="@drawable/plain_text"
-        android:hint="Email"
+        android:hint="   Email"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,32 +24,16 @@
 
     <EditText
         android:id="@+id/editTextTextPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="284dp"
+        android:layout_height="37dp"
         android:layout_marginTop="20dp"
+        android:background="@drawable/ret_ngulo_4"
         android:ems="10"
-        android:background="@drawable/plain_text"
-        android:hint="Password"
+        android:hint="  Password"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
-
-    <TextView
-        android:id="@+id/LoginbtSignUp"
-        android:layout_width="96dp"
-        android:layout_height="18dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="324dp"
-        android:gravity="top"
-        android:text="Criar_Conta"
-        android:textAppearance="@style/criar_conta"
-        app:layout_constraintEnd_toStartOf="@+id/LoginntLogin"
-        app:layout_constraintHorizontal_bias="0.327"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/LoginbtNumTele"
@@ -102,16 +74,32 @@
     <Button
 
         android:id="@+id/LoginntLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/custom_email"
+        android:layout_width="156dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/ret_ngulo_8"
         android:clickable="false"
-        android:text="ENTRAR"
+        android:text="Login"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.749"
+        app:layout_constraintHorizontal_bias="0.847"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+
+    <Button
+
+        android:id="@+id/LoginbtSignUp"
+        android:layout_width="156dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/ret_ngulo_6"
+        android:clickable="false"
+        android:text="SingIn"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.117"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
 
