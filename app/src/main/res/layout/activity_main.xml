@@ -5,7 +5,6 @@
     android:id="@+id/loginLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/xxxhdpi_login_background"
     tools:context=".MainActivity">
 
 
@@ -100,11 +99,35 @@
         android:layout_height="19dp"
         android:layout_marginTop="4dp"
         android:text="Recuperar Password"
+        android:textAlignment="center"
         android:textAllCaps="false"
         android:textAppearance="@style/ForgotPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="441dp"
+        android:layout_height="403dp"
+        android:layout_marginBottom="88dp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.133"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/grupo_de_rolagem_5" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="355dp"
+        android:layout_height="267dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="348dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:srcCompat="@drawable/grupo_de_rolagem_3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
