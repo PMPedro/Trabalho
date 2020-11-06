@@ -41,6 +41,7 @@ class SignUpActivity : AppCompatActivity() {
             val intent = Intent(Intent.ACTION_PICK)
             intent.type="image/*"
             startActivityForResult(intent,0)
+            saveUserToFirabaseDatabase();
 
         }
 
@@ -115,13 +116,13 @@ class SignUpActivity : AppCompatActivity() {
                 Log.d("SignupActivity","Successfully uploaded image: ${it.metadata?.path}")
                 reffoto.downloadUrl.addOnSuccessListener {
                     Log.d("SignupActivity","File Location $it")
-                    saveUserToFirabaseDatabase(it.toString())
+                    saveUserToFirabaseDatabase()
                 }
             }
 
 
     }
-    private fun saveUserToFirabaseDatabase(profileImageUrl: String){
+    private fun saveUserToFirabaseDatabase(){
         val database = Firebase
         val uid = FirebaseAuth.getInstance().uid
         val ref = FirebaseFirestore.getInstance()
