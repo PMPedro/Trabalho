@@ -42,7 +42,7 @@
     <Button
         android:id="@+id/button"
         android:layout_width="61dp"
-        android:layout_height="34dp"
+        android:layout_height="28dp"
         android:layout_marginStart="116dp"
         android:layout_marginBottom="348dp"
         android:backgroundTint="#000000"
@@ -94,5 +94,24 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/grupo_de_rolagem_3" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="62dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginTop="328dp"
+        android:layout_marginEnd="233dp"
+        android:layout_marginBottom="370dp"
+        android:background="@color/black"
+        android:gravity="center"
+        android:text="Francisco"
+        android:textAlignment="center"
+        android:textColor="#C6C5C5"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
