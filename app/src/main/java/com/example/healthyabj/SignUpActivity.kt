@@ -125,14 +125,15 @@ class SignUpActivity : AppCompatActivity() {
         val database = Firebase
         val uid = FirebaseAuth.getInstance().uid
         val ref = FirebaseFirestore.getInstance()
-        val users = User.User(SignInEmail.text.toString(),SignInPassword.text.toString(),SignInName.text.toString(),profileImageUrl)
+        //val users = User.User(SignInEmail.text.toString(),SignInPassword.text.toString(),SignInName.text.toString())
+        val users = User.User (uid.toString(), SignInEmail.text.toString(),SignInName.text.toString() ,SignInPassword.text.toString() )
+
+
 
         ref.collection("User")
             .add(users)
-            .addOnSuccessListener {
-
-            }
-
+            .addOnSuccessListener {  }
+            .addOnFailureListener{}
 
 
 
