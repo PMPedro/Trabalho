@@ -29,9 +29,9 @@ class ChatActivity : AppCompatActivity() {
             val database = Firebase
 
             val uid = FirebaseAuth.getInstance().uid
-            val ref = FirebaseDatabase.getInstance().getReference("/Message/$uid")
+            val ref = FirebaseDatabase.getInstance().getReference("/Message/")
 
-            val message = Message.Message(chatpageMessage.text.toString())
+            val message = Message.Message(chatpageMessage.text.toString(),uid.toString())
 
 
             ref.setValue(message)
@@ -57,7 +57,7 @@ class ChatActivity : AppCompatActivity() {
                 override fun onDataChange(dataSnapshot: DataSnapshot) {
                     // Get Post object and use the values to update the UI
                     val uid = FirebaseAuth.getInstance().uid
-                    var post = dataSnapshot.child("/Message/$uid").getValue()
+                    var post = dataSnapshot.child("/Message").getValue()
 
                     chatpagemessageSent.text = post.toString()
                     //  a.set(0,post.toString())

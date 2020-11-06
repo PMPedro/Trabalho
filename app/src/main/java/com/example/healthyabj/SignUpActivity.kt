@@ -11,6 +11,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
 import kotlinx.android.synthetic.main.signin.*
@@ -40,6 +41,7 @@ class SignUpActivity : AppCompatActivity() {
             val intent = Intent(Intent.ACTION_PICK)
             intent.type="image/*"
             startActivityForResult(intent,0)
+            saveUserToFirabaseDatabase();
 
         }
 
@@ -114,22 +116,36 @@ class SignUpActivity : AppCompatActivity() {
                 Log.d("SignupActivity","Successfully uploaded image: ${it.metadata?.path}")
                 reffoto.downloadUrl.addOnSuccessListener {
                     Log.d("SignupActivity","File Location $it")
-                    saveUserToFirabaseDatabase(it.toString())
+                    saveUserToFirabaseDatabase()
                 }
             }
 
 
     }
-    private fun saveUserToFirabaseDatabase(profileImageUrl: String){
+    private fun saveUserToFirabaseDatabase(){
         val database = Firebase
         val uid = FirebaseAuth.getInstance().uid
-        val ref = FirebaseDatabase.getInstance().getReference("/Users/$uid")
-        val users = User.User(SignInEmail.text.toString(),SignInPassword.text.toString(),SignInName.text.toString(),profileImageUrl)
+        val ref = FirebaseFirestore.getInstance()
+        //val users = User.User(SignInEmail.text.toString(),SignInPassword.text.toString(),SignInName.text.toString())
+        val users = User.User (uid.toString(), SignInEmail.text.toString(),SignInName.text.toString() ,SignInPassword.text.toString() )
 
-        ref.setValue(users)
-            .addOnSuccessListener {
-                Log.d("SignupActivity","Finaly we saved the user to firebase ")
-            }
+
+
+        ref.collection("User")
+            .add(users)
+            .addOnSuccessListener {  }
+            .addOnFailureListener{}
+
+
+
+
+
+
+
+//        ref.setValue(users)
+//            .addOnSuccessListener {
+//                Log.d("SignupActivity","Finaly we saved the user to firebase ")
+//            }
 
         // ref.child("users").setValue(users)
         // ref.child("/Users/$uid").setValue(users)
