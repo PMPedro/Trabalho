@@ -11,6 +11,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
 import kotlinx.android.synthetic.main.signin.*
@@ -123,13 +124,26 @@ class SignUpActivity : AppCompatActivity() {
     private fun saveUserToFirabaseDatabase(profileImageUrl: String){
         val database = Firebase
         val uid = FirebaseAuth.getInstance().uid
-        val ref = FirebaseDatabase.getInstance().getReference("/Users/$uid")
+        val ref = FirebaseFirestore.getInstance()
         val users = User.User(SignInEmail.text.toString(),SignInPassword.text.toString(),SignInName.text.toString(),profileImageUrl)
 
-        ref.setValue(users)
+        ref.collection("User")
+            .add(users)
             .addOnSuccessListener {
-                Log.d("SignupActivity","Finaly we saved the user to firebase ")
+
             }
+
+
+
+
+
+
+
+
+//        ref.setValue(users)
+//            .addOnSuccessListener {
+//                Log.d("SignupActivity","Finaly we saved the user to firebase ")
+//            }
 
         // ref.child("users").setValue(users)
         // ref.child("/Users/$uid").setValue(users)

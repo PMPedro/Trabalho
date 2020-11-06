@@ -9,7 +9,7 @@ class Message {
         data class Message(
 
             var message: String,
-
+            var UserId: String,
 
         ) {
 
