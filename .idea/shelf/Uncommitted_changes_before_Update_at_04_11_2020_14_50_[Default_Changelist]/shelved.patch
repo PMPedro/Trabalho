@@ -1,0 +1,60 @@
+Index: app/src/main/java/com/example/healthyabj/ChatActivity.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.healthyabj\r\n\r\nimport android.os.Bundle\r\nimport androidx.appcompat.app.AppCompatActivity\r\nimport com.google.firebase.auth.FirebaseAuth\r\nimport com.google.firebase.auth.PhoneAuthProvider\r\nimport com.google.firebase.database.DataSnapshot\r\nimport com.google.firebase.database.DatabaseError\r\nimport com.google.firebase.database.FirebaseDatabase\r\nimport com.google.firebase.database.ValueEventListener\r\nimport com.google.firebase.ktx.Firebase\r\nimport kotlinx.android.synthetic.main.chatopage.*\r\nimport kotlinx.android.synthetic.main.signin.*\r\n\r\nclass ChatActivity : AppCompatActivity() {\r\n\r\n    private lateinit var auth: FirebaseAuth\r\n    lateinit var callbacks: PhoneAuthProvider.OnVerificationStateChangedCallbacks\r\n\r\n    override fun onCreate(savedInstanceState: Bundle?) {\r\n        super.onCreate(savedInstanceState)\r\n        setContentView(R.layout.chatopage)\r\n        auth = FirebaseAuth.getInstance()\r\n\r\n\r\n        fun SaveMessage() {\r\n\r\n\r\n            val database = Firebase\r\n\r\n            val uid = FirebaseAuth.getInstance().uid\r\n            val ref = FirebaseDatabase.getInstance().getReference(\"/Message/$uid\")\r\n\r\n            val message = Message.Message(chatpageMessage.text.toString())\r\n\r\n\r\n            ref.setValue(message)\r\n\r\n            // ref.child(\"users\").setValue(users)\r\n            // ref.child(\"/Users/$uid\").setValue(users)\r\n            //ref.child(\"/Users/$uid\").setValue(user)\r\n            //database.child(\"users\").child(userId).setValue(user)\r\n        }\r\n\r\n\r\n        chatpageSendMessage.setOnClickListener {\r\n\r\n\r\n            SaveMessage()\r\n\r\n\r\n            val postListener = object : ValueEventListener {\r\n                override fun onCancelled(error: DatabaseError) {\r\n                    TODO(\"Not yet implemented\")\r\n                }\r\n\r\n                override fun onDataChange(dataSnapshot: DataSnapshot) {\r\n                    // Get Post object and use the values to update the UI\r\n                    val uid = FirebaseAuth.getInstance().uid\r\n                    var post = dataSnapshot.child(\"/Message/$uid\").getValue()\r\n\r\n                    chatpagemessageSent.text = post.toString()\r\n                    //  a.set(0,post.toString())\r\n\r\n                    chatpageMessage.text.clear()\r\n\r\n                }\r\n\r\n\r\n            }\r\n\r\n\r\n        }\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/healthyabj/ChatActivity.kt	(revision 6e0244df419fea889a83c95f7af3f9eb29528661)
++++ app/src/main/java/com/example/healthyabj/ChatActivity.kt	(date 1604332045799)
+@@ -29,9 +29,9 @@
+             val database = Firebase
+ 
+             val uid = FirebaseAuth.getInstance().uid
+-            val ref = FirebaseDatabase.getInstance().getReference("/Message/$uid")
++            val ref = FirebaseDatabase.getInstance().getReference("/Message/")
+ 
+-            val message = Message.Message(chatpageMessage.text.toString())
++            val message = Message.Message(chatpageMessage.text.toString(),uid.toString())
+ 
+ 
+             ref.setValue(message)
+@@ -57,7 +57,7 @@
+                 override fun onDataChange(dataSnapshot: DataSnapshot) {
+                     // Get Post object and use the values to update the UI
+                     val uid = FirebaseAuth.getInstance().uid
+-                    var post = dataSnapshot.child("/Message/$uid").getValue()
++                    var post = dataSnapshot.child("/Message").getValue()
+ 
+                     chatpagemessageSent.text = post.toString()
+                     //  a.set(0,post.toString())
+Index: app/src/main/java/com/example/healthyabj/Message.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.healthyabj\r\n\r\nclass Message {\r\n\r\n\r\n        constructor()\r\n        lateinit var message:String\r\n\r\n        data class Message(\r\n\r\n            var message: String,\r\n\r\n\r\n        ) {\r\n\r\n\r\n\r\n            // initializer block\r\n\r\n        }\r\n\r\n\r\n    }\r\n\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/example/healthyabj/Message.kt	(revision 6e0244df419fea889a83c95f7af3f9eb29528661)
++++ app/src/main/java/com/example/healthyabj/Message.kt	(date 1604332045791)
+@@ -9,7 +9,7 @@
+         data class Message(
+ 
+             var message: String,
+-
++            var UserId: String,
+ 
+         ) {
+ 
+Index: app/src/main/res/layout/homemedicoview.xml
+===================================================================
+--- app/src/main/res/layout/homemedicoview.xml	(revision 6e0244df419fea889a83c95f7af3f9eb29528661)
++++ app/src/main/res/layout/homemedicoview.xml	(revision 6e0244df419fea889a83c95f7af3f9eb29528661)
+@@ -1,6 +0,0 @@
+-<?xml version="1.0" encoding="utf-8"?>
+-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+-    android:layout_width="match_parent"
+-    android:layout_height="match_parent">
+-
+-</LinearLayout>
+\ No newline at end of file
