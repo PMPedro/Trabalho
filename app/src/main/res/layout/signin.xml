@@ -73,19 +73,6 @@
         app:layout_constraintTop_toBottomOf="@+id/SignInPassword" />
 
     <EditText
-        android:id="@+id/SignInPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:ems="10"
-        android:background="@drawable/plain_text"
-        android:hint="Password"
-        android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/SignInName" />
-
-    <EditText
         android:id="@+id/signinBirthdate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -97,6 +84,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/SignInPassword" />
+
+    <EditText
+        android:id="@+id/SignInPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/plain_text"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SignInName" />
 
     <EditText
         android:id="@+id/signinCC"

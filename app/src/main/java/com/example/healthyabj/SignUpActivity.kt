@@ -45,6 +45,10 @@ class SignUpActivity : AppCompatActivity() {
 
         }
 
+        signinbtVoltar.setOnClickListener {
+            startActivity(Intent(this,MainActivity::class.java))
+        }
+
 
 
         //Verifica se alguns dos campos estao vazios, se estiver manda mensagem de erro
@@ -122,6 +126,8 @@ class SignUpActivity : AppCompatActivity() {
 
 
     }
+
+
     private fun saveUserToFirabaseDatabase(){
         val database = Firebase
         val uid = FirebaseAuth.getInstance().uid
@@ -152,6 +158,10 @@ class SignUpActivity : AppCompatActivity() {
         //ref.child("/Users/$uid").setValue(user)
         //database.child("users").child(userId).setValue(user)
     }
+
+
+
+
 
 }
 

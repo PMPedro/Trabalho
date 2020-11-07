@@ -20,29 +20,42 @@ class HomePageActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
 
 
-        bthomeChat.setOnClickListener{
+        homepagebtPerfil.setOnClickListener {
+            startActivity(Intent(this,PerfilUser::class.java))
 
-            startActivity(Intent(this,ChatActivity::class.java))
+        }
+
+
+        homepagebtSignOut.setOnClickListener {
+           //sai da conta
+
+        }
+
+        homepagebtChat.setOnClickListener {
+            //vai para o chat
+            startActivity(Intent(this,PerfilUser::class.java))
+        }
+
+
+        homepagebtProximasConsultas.setOnClickListener {
+            startActivity(Intent(this,ProxConsultasActivitie::class.java))
+        }
+
+        homepagebtLocalizacao.setOnClickListener {
+            startActivity(Intent(this,ProxConsultasActivitie::class.java))
 
 
         }
-            homePerfil.setOnClickListener{
-                startActivity(Intent(this,PerfilUser::class.java))
-            }
-
-        homeSignOut.setOnClickListener {
-
-            FirebaseAuth.getInstance().signOut();
-            startActivity(Intent(this,MainActivity::class.java))
-            finish()
-        }
-
-        if (auth.currentUser != null) {
-            val user: TextView = findViewById(R.id.homeUser)
-            user.text = auth.currentUser!!.email
 
 
-        }
+
+
+
+
+
+
+
+
 
 
     }

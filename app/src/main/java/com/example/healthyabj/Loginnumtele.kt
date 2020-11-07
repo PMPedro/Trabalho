@@ -24,7 +24,6 @@ class Loginnumtele : AppCompatActivity() {
 
         auth.setLanguageCode("pt")
 
-
             //Verifica o Callback
         fun VerifyCallbacks () {
 

@@ -1,5 +1,6 @@
 package com.example.healthyabj
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
@@ -22,7 +23,9 @@ class ChatActivity : AppCompatActivity() {
         setContentView(R.layout.chatopage)
         auth = FirebaseAuth.getInstance()
 
-
+        chatpagebtHome.setOnClickListener {
+            startActivity(Intent(this,HomePageActivity::class.java))
+        }
         fun SaveMessage() {
 
 
@@ -59,7 +62,7 @@ class ChatActivity : AppCompatActivity() {
                     val uid = FirebaseAuth.getInstance().uid
                     var post = dataSnapshot.child("/Message").getValue()
 
-                    chatpagemessageSent.text = post.toString()
+
                     //  a.set(0,post.toString())
 
                     chatpageMessage.text.clear()
