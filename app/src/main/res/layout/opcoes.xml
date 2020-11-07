@@ -1,6 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout12"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-</LinearLayout>
+    <ImageView
+        android:id="@+id/imageView38"
+        android:layout_width="326dp"
+        android:layout_height="227dp"
+        android:layout_marginEnd="156dp"
+        android:layout_marginBottom="568dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/grupo_de_rolagem_19" />
+
+    <ImageView
+        android:id="@+id/imageView40"
+        android:layout_width="298dp"
+        android:layout_height="407dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="192dp"
+        android:rotation="-8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ret_ngulo_22" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="216dp"
+        android:layout_marginEnd="68dp"
+        android:background="@drawable/grupo_de_rolagem_23"
+        android:text="About Us"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

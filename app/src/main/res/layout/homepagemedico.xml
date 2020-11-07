@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout16"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/button17"
+        android:layout_width="88dp"
+        android:layout_height="89dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="200dp"
+        android:background="@drawable/grupo_da_morte"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/button12"
+        android:layout_width="88dp"
+        android:layout_height="89dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="200dp"
+        android:background="@drawable/grupo_5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button11"
+        android:layout_width="191dp"
+        android:layout_height="193dp"
+        android:layout_marginStart="212dp"
+        android:layout_marginBottom="316dp"
+        android:background="@drawable/grupo_4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView47"
+        android:layout_width="201dp"
+        android:layout_height="209dp"
+        android:layout_marginEnd="236dp"
+        android:layout_marginBottom="536dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/grupo_de_rolagem_19" />
+
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="191dp"
+        android:layout_height="193dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="316dp"
+        android:background="@drawable/grupo_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

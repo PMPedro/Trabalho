@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    android:background="@drawable/male_doctor">
+    android:background="@color/white">
 
 
     <ImageView
@@ -51,8 +51,8 @@
         android:id="@+id/SignInCreateAccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="256dp"
-        android:background="@drawable/custom_email"
+        android:layout_marginTop="136dp"
+        android:background="@drawable/ret_ngulo_30"
         android:text="Create Account"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -118,5 +118,35 @@
         app:layout_constraintEnd_toEndOf="@+id/SignInFoto"
         app:layout_constraintStart_toStartOf="@+id/SignInFoto"
         app:layout_constraintTop_toTopOf="@+id/SignInFoto" />
+
+    <ImageView
+        android:id="@+id/imageView39"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="144dp"
+        android:layout_marginTop="564dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/grupo_de_rolagem_3" />
+
+    <ImageView
+        android:id="@+id/imageView45"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="544dp"
+        android:layout_marginEnd="56dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/grupo_de_rolagem_57" />
+
+    <ImageView
+        android:id="@+id/imageView46"
+        android:layout_width="306dp"
+        android:layout_height="215dp"
+        android:layout_marginEnd="136dp"
+        android:layout_marginBottom="600dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/grupo_de_rolagem_2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
