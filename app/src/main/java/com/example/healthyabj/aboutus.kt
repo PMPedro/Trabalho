@@ -6,9 +6,8 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.PhoneAuthProvider
 import kotlinx.android.synthetic.main.aboutus.*
-import kotlinx.android.synthetic.main.opcoes.*
 
-class opcoes : AppCompatActivity() {
+class aboutus : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
     lateinit var callbacks: PhoneAuthProvider.OnVerificationStateChangedCallbacks
@@ -18,15 +17,13 @@ class opcoes : AppCompatActivity() {
         setContentView(R.layout.aboutus)
         auth = FirebaseAuth.getInstance()
 
-        opcoesbtHome.setOnClickListener {
+        aboutusbtHome.setOnClickListener {
             startActivity(Intent(this,HomePageActivity::class.java))
         }
 
-        opcoesbtAboutUs.setOnClickListener {
-            startActivity(Intent(this,aboutus::class.java))
-        }
 
 
 
-}
+
+    }
 }

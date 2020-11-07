@@ -43,7 +43,7 @@
         app:srcCompat="@drawable/ret_ngulo_22" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/opcoesbtAboutUs"
         android:layout_width="160dp"
         android:layout_height="60dp"
         android:layout_marginTop="216dp"
@@ -54,4 +54,5 @@
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
