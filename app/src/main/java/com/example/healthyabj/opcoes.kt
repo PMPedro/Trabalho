@@ -15,7 +15,7 @@ class opcoes : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.aboutus)
+        setContentView(R.layout.opcoes)
         auth = FirebaseAuth.getInstance()
 
         opcoesbtHome.setOnClickListener {

@@ -9,13 +9,11 @@ import kotlinx.android.synthetic.main.aboutus.*
 
 class aboutus : AppCompatActivity() {
 
-    private lateinit var auth: FirebaseAuth
-    lateinit var callbacks: PhoneAuthProvider.OnVerificationStateChangedCallbacks
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.aboutus)
-        auth = FirebaseAuth.getInstance()
 
         aboutusbtHome.setOnClickListener {
             startActivity(Intent(this,HomePageActivity::class.java))
