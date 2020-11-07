@@ -14,13 +14,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="138dp"
+        android:layout_marginTop="154dp"
         android:layout_marginEnd="138dp"
-        app:layout_constraintBottom_toTopOf="@+id/activitymainEmail"
+        android:layout_marginBottom="502dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.952"
         app:srcCompat="@drawable/frame" />
 
     <Button
@@ -28,43 +29,55 @@
         android:id="@+id/activitymainbtLogin"
         android:layout_width="154dp"
         android:layout_height="60dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginStart="229dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="8dp"
         android:background="@drawable/ret_ngulo_8"
         android:clickable="false"
         android:text="Login"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.854"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/activitymainPassword" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.681" />
 
     <Button
 
         android:id="@+id/activitymainbtSignUp"
         android:layout_width="154dp"
         android:layout_height="60dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="217dp"
+        android:layout_marginBottom="8dp"
         android:background="@drawable/ret_ngulo_6"
-        android:clickable="false"
+        android:clickable="true"
+        android:text="Sign Up"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.125"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/activitymainPassword"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.681"
         tools:text="Sign Up" />
 
     <EditText
         android:id="@+id/activitymainEmail"
         android:layout_width="278dp"
         android:layout_height="64dp"
-        android:layout_marginTop="244dp"
+        android:layout_marginTop="245dp"
+        android:layout_marginBottom="423dp"
         android:background="@drawable/ret_ngulo_4"
         android:ems="10"
-        android:hint="   Email"
+        android:hint="Email"
         android:inputType="textPersonName"
+        android:textAlignment="center"
         android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
@@ -74,37 +87,46 @@
         android:id="@+id/activitymainPassword"
         android:layout_width="278dp"
         android:layout_height="64dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="60dp"
         android:background="@drawable/ret_ngulo_4"
         android:ems="10"
-        android:hint="  Password"
+        android:hint="Password"
         android:inputType="textPassword"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/activitymainEmail" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.449" />
 
     <TextView
         android:id="@+id/activitymainForgotPassword"
         android:layout_width="154dp"
         android:layout_height="19dp"
-        android:layout_marginTop="4dp"
         android:text="Recuperar Password"
+        android:textAlignment="center"
         android:textAllCaps="false"
         android:textAppearance="@style/ForgotPassword"
+        app:layout_constraintBottom_toTopOf="@+id/activitymainbtLogin"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/activitymainPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/activitymainPassword"
+        app:layout_constraintVertical_bias="0.358" />
 
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="402dp"
         android:layout_height="277dp"
         android:layout_marginEnd="88dp"
-        android:layout_marginBottom="548dp"
+        android:layout_marginBottom="556dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.734"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.921"
         app:srcCompat="@drawable/grupo_de_rolagem_2" />
 
     <ImageView
@@ -113,18 +135,28 @@
         android:layout_height="316dp"
         android:layout_marginStart="64dp"
         android:layout_marginTop="528dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.047"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/grupo_de_rolagem_3" />
 
     <Button
         android:id="@+id/activitymainbtLoginTele"
         android:layout_width="58dp"
         android:layout_height="67dp"
+        android:layout_marginStart="178dp"
+        android:layout_marginTop="520dp"
         android:layout_marginEnd="176dp"
         android:layout_marginBottom="144dp"
         android:background="@drawable/hiclipart_com"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
