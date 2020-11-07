@@ -39,17 +39,6 @@
         app:layout_constraintVertical_bias="0.433"
         app:srcCompat="@drawable/grupo_7" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="61dp"
-        android:layout_height="28dp"
-        android:layout_marginStart="116dp"
-        android:layout_marginBottom="348dp"
-        android:backgroundTint="#000000"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -109,6 +98,34 @@
         android:textAlignment="center"
         android:textColor="#C6C5C5"
         android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView38"
+        android:layout_width="24dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="127dp"
+        android:layout_marginTop="361dp"
+        android:layout_marginEnd="260dp"
+        android:layout_marginBottom="339dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@color/black" />
+
+    <Button
+        android:id="@+id/aboutusbtHome"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="320dp"
+        android:layout_marginTop="654dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="16dp"
+        android:background="@android:drawable/ic_dialog_dialer"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
