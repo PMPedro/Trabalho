@@ -1,12 +1,13 @@
 package com.example.healthyabj
 
+import android.content.Intent
 import android.os.Bundle
-import android.text.Editable
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.FirebaseException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.PhoneAuthCredential
 import com.google.firebase.auth.PhoneAuthProvider
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.loginnumtele.*
 import java.util.concurrent.TimeUnit
 
@@ -43,7 +44,10 @@ class Loginnumtele : AppCompatActivity() {
         }
 
 
-
+        loginnumtelebtVoltar.setOnClickListener{
+            startActivity(Intent(this,MainActivity::class.java))
+            finish()
+        }
 
 
 
@@ -53,7 +57,7 @@ class Loginnumtele : AppCompatActivity() {
 
             VerifyCallbacks()
         PhoneAuthProvider.getInstance().verifyPhoneNumber(
-            numteleloginNumTele.text.toString(), // Phone number to verify
+            loginnumteleNumTele.text.toString(), // Phone number to verify
             60, // Timeout duration
             TimeUnit.SECONDS, // Unit of timeout
             this, // Activity (for callback binding)
@@ -69,7 +73,10 @@ class Loginnumtele : AppCompatActivity() {
 
     }
 
-    
+
+
+
+
 }
 
 

@@ -7,7 +7,7 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/horaiomedicobtHome"
+        android:id="@+id/horariomedicobtHome"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_marginStart="320dp"
@@ -44,8 +44,8 @@
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="74dp"
-        android:layout_height="153dp"
+        android:layout_width="89dp"
+        android:layout_height="110dp"
         android:layout_marginStart="16dp"
         android:text="Button"
         app:layout_constraintStart_toStartOf="parent"
