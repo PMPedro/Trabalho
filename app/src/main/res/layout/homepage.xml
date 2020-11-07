@@ -7,64 +7,121 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/bthomeChat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:text="Chat"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/button7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/bthomeChat" />
-
-    <Button
-        android:id="@+id/homePerfil"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="40dp"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button7" />
-
-    <Button
         android:id="@+id/homeSignOut"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/ret_ngulo_25"
         android:text="Sign Out"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="159dp"
+        android:layout_height="205dp"
+        android:layout_marginTop="152dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/grupo_4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="87dp"
+        android:layout_height="108dp"
+        android:layout_marginTop="392dp"
+        android:layout_marginEnd="72dp"
+        android:background="@drawable/grupo_6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bthomeChat"
+        android:layout_width="161dp"
+        android:layout_height="179dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="156dp"
+        android:background="@drawable/grupo_3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="95dp"
+        android:layout_height="117dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="392dp"
+        android:background="@drawable/grupo_5"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Home page"
-        android:textColor="#ff0f5f"
-        android:textSize="75dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="4dp"
+        android:text="Médicos"
+        android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bthomeChat" />
 
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/homeUser"
+    <Button
+        android:id="@+id/homePerfil"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toStartOf="@+id/homeSignOut"
-        app:layout_constraintHorizontal_bias="0.105"
+        android:layout_marginEnd="324dp"
+        android:layout_marginBottom="676dp"
+        android:background="@drawable/ret_ngulo_25"
+        android:text="Perfil"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView31"
+        android:layout_width="377dp"
+        android:layout_height="90dp"
+        android:layout_marginBottom="668dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ret_ngulo_28" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Home"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView33"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="556dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints" />
+        app:srcCompat="@drawable/grupo_de_rolagem_3" />
+
+    <ImageView
+        android:id="@+id/imageView34"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="552dp"
+        android:layout_marginEnd="52dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/grupo_de_rolagem_57" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

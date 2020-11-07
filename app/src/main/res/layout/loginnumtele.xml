@@ -6,97 +6,86 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/numteleloginVerificationCode"
+    <ImageView
+        android:id="@+id/imageView18"
+        android:layout_width="628dp"
+        android:layout_height="663dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginBottom="500dp"
+        android:rotation="-268"
+        android:rotationX="4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/grupo_de_rolagem_1" />
+
+    <ImageView
+        android:id="@+id/imageView19"
+        android:layout_width="607dp"
+        android:layout_height="400dp"
+        android:layout_marginTop="580dp"
+        android:layout_marginEnd="16dp"
+        android:rotationY="-180"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/grupo_de_rolagem_10" />
+
+    <ImageView
+        android:id="@+id/imageView30"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:background="@drawable/ret_ngulo_4"
-        android:ems="10"
-        android:hint="Verification Code"
-        android:inputType="textPersonName"
+        android:layout_marginTop="216dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/numteleloginNumTele" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/frame" />
 
     <EditText
         android:id="@+id/numteleloginNumTele"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="212dp"
+        android:layout_marginTop="344dp"
         android:background="@drawable/ret_ngulo_4"
         android:ems="10"
-        android:hint="Phone Number"
-        android:inputType="phone"
+        android:hint="Numero de Telefone"
+        android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="456dp"
+        android:background="@drawable/ret_ngulo_4"
+        android:ems="10"
+        android:hint="Codigo de Verificação"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/loginnumteleVerificar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_width="239dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="568dp"
         android:background="@drawable/ret_ngulo_30"
-        android:text="Verify"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        android:text="Verificar"
+        android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/numteleloginAddTelefone" />
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/frame___c_pia" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/numteleloginAddTelefone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/ret_ngulo_30"
+        android:id="@+id/loginnumteleLogin"
+        android:layout_width="219dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="568dp"
+        android:layout_marginEnd="44dp"
+        android:background="@drawable/ret_ngulo_28"
         android:text="Login"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/numteleloginVerificationCode" />
-
-    <ImageView
-        android:id="@+id/imageView15"
-        android:layout_width="315dp"
-        android:layout_height="238dp"
-        android:layout_marginEnd="120dp"
-        android:layout_marginBottom="568dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/grupo_de_rolagem_2" />
-
-    <ImageView
-        android:id="@+id/imageView18"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="548dp"
-        android:layout_marginEnd="48dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/grupo_de_rolagem_57" />
-
-    <ImageView
-        android:id="@+id/imageView19"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="160dp"
-        android:layout_marginTop="528dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/grupo_de_rolagem_3" />
-
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
