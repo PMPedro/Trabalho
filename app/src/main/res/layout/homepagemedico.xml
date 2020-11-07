@@ -85,7 +85,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button13"
+        android:id="@+id/homepagemedicoOpcoes"
         android:layout_width="91dp"
         android:layout_height="115dp"
         android:layout_marginTop="422dp"
@@ -94,7 +94,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/button17"
+        app:layout_constraintStart_toEndOf="@+id/homepagemedicoHorario"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
@@ -108,39 +108,39 @@
         android:textColor="@color/black"
         android:textSize="19dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button14"
+        app:layout_constraintEnd_toStartOf="@+id/homepagemedicoProximasConsultas"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button15"
+        android:id="@+id/homepagemedicoLocalizacao"
         android:layout_width="95dp"
         android:layout_height="117dp"
         android:layout_marginTop="421dp"
         android:layout_marginBottom="194dp"
         android:background="@drawable/grupo_5"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button17"
+        app:layout_constraintEnd_toStartOf="@+id/homepagemedicoHorario"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/bthomeChat4"
+        android:id="@+id/homepagemedicoChat"
         android:layout_width="167dp"
         android:layout_height="173dp"
         android:layout_marginTop="170dp"
         android:layout_marginBottom="388dp"
         android:background="@drawable/grupo_3"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button14"
+        app:layout_constraintEnd_toStartOf="@+id/homepagemedicoProximasConsultas"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button14"
+        android:id="@+id/homepagemedicoProximasConsultas"
         android:layout_width="177dp"
         android:layout_height="203dp"
         android:layout_marginTop="170dp"
@@ -149,11 +149,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/bthomeChat4"
+        app:layout_constraintStart_toEndOf="@+id/homepagemedicoChat"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button17"
+        android:id="@+id/homepagemedicoHorario"
         android:layout_width="95dp"
         android:layout_height="115dp"
         android:layout_marginTop="420dp"

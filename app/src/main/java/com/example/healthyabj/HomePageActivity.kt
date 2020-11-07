@@ -2,7 +2,6 @@ package com.example.healthyabj
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Patterns
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
@@ -20,17 +19,17 @@ class HomePageActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
 
 
-        bthomeChat.setOnClickListener{
+        homepageChat.setOnClickListener{
 
             startActivity(Intent(this,ChatActivity::class.java))
 
 
         }
-            homePerfil.setOnClickListener{
+            homepagePerfil.setOnClickListener{
                 startActivity(Intent(this,PerfilUser::class.java))
             }
 
-        homeSignOut.setOnClickListener {
+        homepageSignOut.setOnClickListener {
 
             FirebaseAuth.getInstance().signOut();
             startActivity(Intent(this,MainActivity::class.java))

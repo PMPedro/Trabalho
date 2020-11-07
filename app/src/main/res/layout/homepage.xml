@@ -7,7 +7,7 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/homeSignOut"
+        android:id="@+id/homepageSignOut"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="315dp"
@@ -23,7 +23,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/homepageProximasConsultas"
         android:layout_width="177dp"
         android:layout_height="203dp"
         android:layout_marginStart="210dp"
@@ -37,7 +37,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button9"
+        android:id="@+id/homepageOpcoes"
         android:layout_width="91dp"
         android:layout_height="115dp"
         android:layout_marginStart="236dp"
@@ -51,7 +51,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/bthomeChat"
+        android:id="@+id/homepageChat"
         android:layout_width="167dp"
         android:layout_height="173dp"
         android:layout_marginStart="24dp"
@@ -67,7 +67,7 @@
         app:layout_constraintVertical_bias="1.0" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/homepageLocalizacao"
         android:layout_width="95dp"
         android:layout_height="117dp"
         android:layout_marginStart="80dp"
@@ -100,7 +100,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/homePerfil"
+        android:id="@+id/homepagePerfil"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="7dp"
