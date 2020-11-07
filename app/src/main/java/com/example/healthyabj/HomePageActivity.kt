@@ -37,12 +37,7 @@ class HomePageActivity : AppCompatActivity() {
             finish()
         }
 
-        if (auth.currentUser != null) {
-            val user: TextView = findViewById(R.id.homeUser)
-            user.text = auth.currentUser!!.email
 
-
-        }
 
 
     }
