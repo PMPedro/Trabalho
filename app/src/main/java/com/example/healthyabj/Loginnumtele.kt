@@ -1,7 +1,6 @@
 package com.example.healthyabj
 
 import android.os.Bundle
-import android.text.Editable
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.FirebaseException
 import com.google.firebase.auth.FirebaseAuth
@@ -53,7 +52,7 @@ class Loginnumtele : AppCompatActivity() {
 
             VerifyCallbacks()
         PhoneAuthProvider.getInstance().verifyPhoneNumber(
-            numteleloginNumTele.text.toString(), // Phone number to verify
+            loginnumteleNumTele.text.toString(), // Phone number to verify
             60, // Timeout duration
             TimeUnit.SECONDS, // Unit of timeout
             this, // Activity (for callback binding)
