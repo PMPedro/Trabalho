@@ -1,11 +1,13 @@
 package com.example.healthyabj
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.FirebaseException
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.PhoneAuthCredential
 import com.google.firebase.auth.PhoneAuthProvider
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.loginnumtele.*
 import java.util.concurrent.TimeUnit
 
@@ -42,7 +44,10 @@ class Loginnumtele : AppCompatActivity() {
         }
 
 
-
+        loginnumtelebtVoltar.setOnClickListener{
+            startActivity(Intent(this,MainActivity::class.java))
+            finish()
+        }
 
 
 
@@ -68,7 +73,10 @@ class Loginnumtele : AppCompatActivity() {
 
     }
 
-    
+
+
+
+
 }
 
 
