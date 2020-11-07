@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
             finish()
         }
 
-        LoginbtSignUp.setOnClickListener {
+        activitymainbtSignUp.setOnClickListener {
             startActivity(Intent(this,SignUpActivity::class.java))
 
 
@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        LoginbtNumTele.setOnClickListener{
+        activitymainbtLoginTele.setOnClickListener{
 //Ao clicar no botao de Num tele vai para outra tela
             startActivity(Intent(this,Loginnumtele::class.java))
 
@@ -48,12 +48,12 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        LoginntLogin.setOnClickListener{
-            auth.signInWithEmailAndPassword(editTextTextPersonName.text.toString(), editTextTextPassword.text.toString())
+        activitymainbtLogin.setOnClickListener{
+            auth.signInWithEmailAndPassword(activitymainEmail.text.toString(), activitymainPassword.text.toString())
                 .addOnCompleteListener(this) { task ->
                     if(task.isSuccessful){
 
-                            if((editTextTextPersonName.text.toString().isEmpty()) || (editTextTextPassword.text.toString().isEmpty())){
+                            if((activitymainEmail.text.toString().isEmpty()) || (activitymainPassword.text.toString().isEmpty())){
                                 Toast.makeText(baseContext, "Por favor, insira dados! ", Toast.LENGTH_SHORT).show()
                             }
 
@@ -78,7 +78,7 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-        btn_forgot_password.setOnClickListener {
+        activitymainForgotPassword.setOnClickListener {
             val builder = AlertDialog.Builder(this)
             builder.setTitle("Insira o email")
             val view = layoutInflater.inflate(R.layout.dialog_forgot_password,null)

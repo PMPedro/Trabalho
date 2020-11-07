@@ -10,12 +10,12 @@
 
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/activitymainLogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="138dp"
         android:layout_marginEnd="138dp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/activitymainEmail"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,7 +25,7 @@
 
     <Button
 
-        android:id="@+id/LoginntLogin"
+        android:id="@+id/activitymainbtLogin"
         android:layout_width="154dp"
         android:layout_height="60dp"
         android:layout_marginTop="56dp"
@@ -37,11 +37,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.854"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/activitymainPassword" />
 
     <Button
 
-        android:id="@+id/LoginbtSignUp"
+        android:id="@+id/activitymainbtSignUp"
         android:layout_width="154dp"
         android:layout_height="60dp"
         android:layout_marginTop="56dp"
@@ -52,11 +52,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.125"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword"
+        app:layout_constraintTop_toBottomOf="@+id/activitymainPassword"
         tools:text="Sign In" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/activitymainEmail"
         android:layout_width="278dp"
         android:layout_height="64dp"
         android:layout_marginTop="244dp"
@@ -71,7 +71,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/activitymainPassword"
         android:layout_width="278dp"
         android:layout_height="64dp"
         android:layout_marginTop="24dp"
@@ -82,10 +82,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/activitymainEmail" />
 
     <TextView
-        android:id="@+id/btn_forgot_password"
+        android:id="@+id/activitymainForgotPassword"
         android:layout_width="154dp"
         android:layout_height="19dp"
         android:layout_marginTop="4dp"
@@ -95,7 +95,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/activitymainPassword" />
 
     <ImageView
         android:id="@+id/imageView6"
@@ -118,7 +118,7 @@
         app:srcCompat="@drawable/grupo_de_rolagem_3" />
 
     <Button
-        android:id="@+id/LoginbtNumTele"
+        android:id="@+id/activitymainbtLoginTele"
         android:layout_width="58dp"
         android:layout_height="67dp"
         android:layout_marginEnd="176dp"
