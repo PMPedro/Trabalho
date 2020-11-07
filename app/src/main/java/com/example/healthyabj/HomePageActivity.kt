@@ -3,6 +3,7 @@ package com.example.healthyabj
 import android.content.Intent
 import android.os.Bundle
 import android.widget.TextView
+import android.util.Patterns
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.PhoneAuthProvider
@@ -34,13 +35,6 @@ class HomePageActivity : AppCompatActivity() {
             FirebaseAuth.getInstance().signOut();
             startActivity(Intent(this,MainActivity::class.java))
             finish()
-        }
-
-        if (auth.currentUser != null) {
-            val user: TextView = findViewById(R.id.homeUser)
-            user.text = auth.currentUser!!.email
-
-
         }
 
 
