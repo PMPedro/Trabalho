@@ -26,9 +26,7 @@
         <activity
             android:name=".PerfilUser"
             android:label="@string/app_name" />
-        <activity
-            android:name=".SignUpNumTele"
-            android:label="@string/app_name" />
+
         <activity
             android:name=".HomePageActivity"
             android:label="@string/app_name" />
@@ -39,8 +37,16 @@
             android:name=".MainActivity"
             android:label="@string/app_name"/>
         <activity
-            android:name=".PerfilUser"
+            android:name=".LocalizacaoActivitie"
             android:label="@string/app_name"/>
+        <activity
+            android:name=".MedicosActivitie"
+            android:label="@string/app_name"/>
+        <activity
+            android:name=".ProxConsultasActivitie"
+            android:label="@string/app_name"/>
+
+
 
     </application>
 
