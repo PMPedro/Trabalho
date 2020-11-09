@@ -32,15 +32,23 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.tasks.await
 import java.util.ArrayList
 import kotlin.coroutines.CoroutineContext
+
+
 class UserViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 class NewMessageActivity : AppCompatActivity() {
-    lateinit var name: User
+
     // Access a Cloud Firestore instance from your Activity
     val db = Firebase.firestore
+
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_new_message)
         supportActionBar?.title = "Select User"
+
+        val usermain = User()
 
        val query: CollectionReference = db.collection("User")
         val options = FirestoreRecyclerOptions.Builder<User>().setQuery(query,User::class.java)
@@ -49,12 +57,20 @@ class NewMessageActivity : AppCompatActivity() {
             override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserViewHolder {
              val view:View = LayoutInflater.from(this@NewMessageActivity).inflate(R.layout.user_row_new_message, parent,false)
                 return UserViewHolder(view)
+
             }
 
 
             override fun onBindViewHolder(holder: UserViewHolder, position: Int, model: User) {
-               val usName: TextView = holder.itemView.findViewById(R.id.usernames)
+                val usName: TextView = holder.itemView.findViewById(R.id.usernames)
+
+
+
+                usermain.setLateInitVariable(model.name)
                 usName.text = model.name
+                    print(usermain.getLateInitVariable())
+
+
             }
 
         }
@@ -63,4 +79,6 @@ class NewMessageActivity : AppCompatActivity() {
 
 
     }
+
 }
+

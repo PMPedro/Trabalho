@@ -40,6 +40,8 @@
         <activity android:name=".MedicosActivitie" android:label="@string/app_name" />
         <activity android:name=".ProxConsultasActivitie"  android:label="@string/app_name" />
         <activity android:name=".ChatListViewActivity" android:label="@string/app_name" />
+        <activity android:name=".opcoes" android:label="@string/app_name" />
+        <activity android:name=".aboutus" android:label="@string/app_name" />
 
     </application>
 
