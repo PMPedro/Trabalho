@@ -107,14 +107,13 @@ class SignUpActivity : AppCompatActivity() {
             selectedPhotoUri=data?.data
         val bitmap = MediaStore.Images.Media.getBitmap(contentResolver, selectedPhotoUri)
         selectphoto_imageview.setImageBitmap(bitmap)
-
         SignInFoto.alpha =0f
     }
 
     private fun uplaodImageToFirebaseStorage () {
         if (selectedPhotoUri == null)return
         val filename = UUID.randomUUID().toString()
-        val reffoto =   FirebaseStorage.getInstance().getReference("/images/$filename")
+        val reffoto = FirebaseStorage.getInstance().getReference("/images/$filename")
         reffoto.putFile(selectedPhotoUri!!)
             .addOnSuccessListener {
                 Log.d("SignupActivity","Successfully uploaded image: ${it.metadata?.path}")
