@@ -23,6 +23,11 @@ class LocalizacaoActivitie : AppCompatActivity() {
         }
 
 
+        localizacaohospitalbt.setOnClickListener {
+
+            startActivity(Intent(this,MapsActivity::class.java))
+        }
+
 
 
 
