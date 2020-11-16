@@ -8,13 +8,14 @@
     android:layout_marginBottom="12dp">
 
     <TextView
-        android:id="@+id/textView14"
+        android:id="@+id/textView_from_row"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/plain_text"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/ret_ngulo_28"
         android:text="esta é a menssagem vai ser apresentada no chat log das messensagens enviadas"
+        android:textColor="@color/white"
         app:layout_constraintStart_toEndOf="@+id/chat_image"
         app:layout_constraintTop_toTopOf="parent" />
 
