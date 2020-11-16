@@ -54,15 +54,14 @@
         android:id="@+id/homepagebtProximasConsultas"
         android:layout_width="127dp"
         android:layout_height="149dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginBottom="319dp"
+        android:layout_marginTop="186dp"
+        android:layout_marginBottom="396dp"
         android:background="@drawable/grupo_4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/homepagebtChat"
-        app:layout_constraintTop_toBottomOf="@+id/homepagebtPerfil"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/homepagebtLocalizacao"
@@ -122,7 +121,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="@+id/imageView54"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.108" />
 
     <ImageView
         android:id="@+id/imageView33"
