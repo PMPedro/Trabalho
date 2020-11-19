@@ -24,28 +24,34 @@ class ChatLogActivity : AppCompatActivity() {
         setContentView(R.layout.activity_chat_log)
 
 
+        
         val username = intent.getStringExtra("Name")
         supportActionBar?.title = username
-        setupDunmmyData()
+      //  setupDunmmyData()
+        listenForMessages()
         send_button_chat_log.setOnClickListener{
             Log.d(TAG,"Attemp to send message")
             performSendMessage()
         }
     }
-    class  ChatMessage(
-     val text:String )
+    private  fun listenForMessages(){
+        val ref=FirebaseFirestore.getInstance().collection("Messages")
+
+        
+    }
+    class  ChatMessage( val text:String, /*val fromId:String,val toId: String*/ )
 
     private fun performSendMessage(){
         val text =edittText_chat_log.text.toString()
-        val username = intent.getStringExtra("uid")
         val fromId= FirebaseAuth.getInstance().uid
-        //val toId= username.uid
+        val userUid = intent.getStringExtra("uid")
+        val toId= userUid
 
         if (fromId == null)return
 
         val refence= FirebaseFirestore.getInstance()
 
-       val chatMessage=ChatMessage( text)
+       val chatMessage=ChatMessage(text)
 
 
         refence.collection("Messages")

@@ -107,6 +107,7 @@ class SignUpActivity : AppCompatActivity() {
             selectedPhotoUri=data?.data
         val bitmap = MediaStore.Images.Media.getBitmap(contentResolver, selectedPhotoUri)
         selectphoto_imageview.setImageBitmap(bitmap)
+        //selectphoto_imageview.rotation = 90
         SignInFoto.alpha =0f
     }
 
