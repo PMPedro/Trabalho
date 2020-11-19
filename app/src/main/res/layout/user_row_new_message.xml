@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
+
     <TextView
         android:id="@+id/usernames"
         android:layout_width="0dp"
@@ -17,11 +18,10 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/imageViewUser"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/imageViewUser"
         app:layout_constraintTop_toTopOf="@+id/imageViewUser"
-        app:layout_constraintVertical_bias="0.578" />
-
+        app:layout_constraintVertical_bias="0.0" />
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imageViewUser"

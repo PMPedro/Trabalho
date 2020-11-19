@@ -78,10 +78,9 @@ class NewMessageActivity : AppCompatActivity() {
 
                 holder.itemView.setOnClickListener {
 
-                    var name = usName.text.toString()
                     val intent = Intent(this@NewMessageActivity, ChatLogActivity::class.java)
 
-                    intent.putExtra("Name", name)
+                    intent.putExtra("Name", model.name)
                     intent.putExtra("uid", model.uid)
 
                     startActivity(intent)

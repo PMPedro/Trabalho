@@ -3,8 +3,10 @@ package com.example.healthyabj
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.QuerySnapshot
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.Item
 import com.xwray.groupie.ViewHolder
@@ -27,31 +29,45 @@ class ChatLogActivity : AppCompatActivity() {
         
         val username = intent.getStringExtra("Name")
         supportActionBar?.title = username
-      //  setupDunmmyData()
-        listenForMessages()
+       //setupDunmmyData()
+      //  listenForMessages()
         send_button_chat_log.setOnClickListener{
             Log.d(TAG,"Attemp to send message")
             performSendMessage()
+            send_button_chat_log.text = ""
         }
     }
-    private  fun listenForMessages(){
-        val ref=FirebaseFirestore.getInstance().collection("Messages")
 
-        
-    }
-    class  ChatMessage( val text:String, /*val fromId:String,val toId: String*/ )
+   /* private  fun listenForMessages(){
+        val ref=FirebaseFirestore.getInstance().collection("Messages")
+            ref.addSnapshotListener { querySnapshot, firebaseFirestoreException ->
+                firebaseFirestoreException?.let {
+                    Toast.makeText(this, it.message, Toast.LENGTH_LONG).show()
+                    return@addSnapshotListener
+                }
+                querySnapshot?.let {
+                    val sb = StringBuilder()
+                    for(document in it) {
+                        val person = document.toObject<Person>()
+                        sb.append("$person\n")
+                    }
+                    tvPersons.text = sb.toString()
+                }
+            }
+    }*/
+    class  ChatMessage( val text:String ,val fromId:String,val toId: String,timestamp:Long)
 
     private fun performSendMessage(){
         val text =edittText_chat_log.text.toString()
         val fromId= FirebaseAuth.getInstance().uid
         val userUid = intent.getStringExtra("uid")
-        val toId= userUid
+        val toId= userUid!!
 
         if (fromId == null)return
 
         val refence= FirebaseFirestore.getInstance()
 
-       val chatMessage=ChatMessage(text)
+       val chatMessage=ChatMessage(text, fromId, toId,System.currentTimeMillis()/1000)
 
 
         refence.collection("Messages")
