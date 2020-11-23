@@ -6,7 +6,7 @@ import android.util.Log
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.firestore.QuerySnapshot
+import com.google.firebase.firestore.ktx.toObject
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.Item
 import com.xwray.groupie.ViewHolder
@@ -20,62 +20,74 @@ class ChatLogActivity : AppCompatActivity() {
     companion object{
         val TAG ="ChatLog"
     }
-
+    val adapter = GroupAdapter<ViewHolder>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_chat_log)
 
+        recyclerview_chat_log.adapter=adapter
 
-        
         val username = intent.getStringExtra("Name")
         supportActionBar?.title = username
        //setupDunmmyData()
-      //  listenForMessages()
+     //  listenForMessages()
         send_button_chat_log.setOnClickListener{
-            Log.d(TAG,"Attemp to send message")
+            Log.d(TAG, "Attemp to send message")
             performSendMessage()
-            send_button_chat_log.text = ""
+        edittText_chat_log.text.clear()
+
         }
     }
 
-   /* private  fun listenForMessages(){
-        val ref=FirebaseFirestore.getInstance().collection("Messages")
+    private  fun listenForMessages() {
+        val ref = FirebaseFirestore.getInstance().collection("Messages")
+
             ref.addSnapshotListener { querySnapshot, firebaseFirestoreException ->
                 firebaseFirestoreException?.let {
                     Toast.makeText(this, it.message, Toast.LENGTH_LONG).show()
                     return@addSnapshotListener
                 }
                 querySnapshot?.let {
-                    val sb = StringBuilder()
-                    for(document in it) {
-                        val person = document.toObject<Person>()
-                        sb.append("$person\n")
+                    for (document in it) {
+                        val person = document.toObject<ChatMessage>()
+
+                        adapter.add(ChatToItem(person.text))
+
+                        adapter.add(ChatFromItem(person.text))
                     }
-                    tvPersons.text = sb.toString()
+                    //tvPersons.text = sb.toString()
+
                 }
             }
-    }*/
-    class  ChatMessage( val text:String ,val fromId:String,val toId: String,timestamp:Long)
+    }
 
-    private fun performSendMessage(){
-        val text =edittText_chat_log.text.toString()
-        val fromId= FirebaseAuth.getInstance().uid
+    data class  ChatMessage(val text:String, val fromId:String, val toId: String,val timestamp: Long )
+    private fun performSendMessage() {
+        val text = edittText_chat_log.text.toString()
+        val fromId = FirebaseAuth.getInstance().uid
         val userUid = intent.getStringExtra("uid")
-        val toId= userUid!!
+        val toId = userUid!!
 
-        if (fromId == null)return
+        if (fromId == null) return
 
-        val refence= FirebaseFirestore.getInstance()
+        val refence = FirebaseFirestore.getInstance()
 
-       val chatMessage=ChatMessage(text, fromId, toId,System.currentTimeMillis()/1000)
+        val chatMessage = ChatMessage(text, fromId, toId, System.currentTimeMillis() / 1000)
 
 
         refence.collection("Messages")
-           .add(chatMessage)
-          .addOnSuccessListener {
-                Log.d(TAG,"Saved our chat message...${refence}")
+            .add(chatMessage)
+            .addOnSuccessListener {
+                Log.d(TAG, "Saved our chat message...${refence}")
             }
-
+        if (chatMessage != null) {
+            Log.d(TAG, chatMessage.text)
+            if (chatMessage.fromId == FirebaseAuth.getInstance().uid) {
+                adapter.add(ChatToItem(chatMessage.text))
+            } else {
+                adapter.add(ChatFromItem(chatMessage.text))
+            }
+        }
     }
     private fun setupDunmmyData(){
         val adapter = GroupAdapter<ViewHolder>()
