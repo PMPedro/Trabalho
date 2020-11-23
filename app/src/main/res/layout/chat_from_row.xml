@@ -26,6 +26,6 @@
         android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@drawable/imgbin_beard_drawing_line_art_png_tu2kpb33" />
+        tools:srcCompat="@drawable/medicouserdefault" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

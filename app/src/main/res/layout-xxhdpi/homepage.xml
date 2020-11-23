@@ -37,9 +37,12 @@
         android:id="@+id/homepagebtLocalizacao"
         android:layout_width="126dp"
         android:layout_height="126dp"
+        android:layout_marginBottom="52dp"
         android:background="@drawable/localizacaoicon"
-        tools:layout_editor_absoluteX="142dp"
-        tools:layout_editor_absoluteY="358dp" />
+        app:layout_constraintBottom_toTopOf="@+id/imageView62"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView19"
@@ -49,43 +52,50 @@
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="14dp"
-        tools:layout_editor_absoluteX="142dp"
-        tools:layout_editor_absoluteY="484dp" />
+        app:layout_constraintBottom_toTopOf="@+id/imageView62"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homepagebtLocalizacao"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/homepagebtChat"
         android:layout_width="126dp"
         android:layout_height="126dp"
         android:layout_marginStart="52dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="68dp"
         android:background="@drawable/medicobutao"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView61" />
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="127dp"
-        android:layout_height="20dp"
+        android:layout_width="126dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="52dp"
         android:text="Médicos"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="14dp"
-        tools:layout_editor_absoluteX="53dp"
-        tools:layout_editor_absoluteY="311dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homepagebtChat" />
 
     <Button
         android:id="@+id/homepagebtProximasConsultas"
         android:layout_width="126dp"
         android:layout_height="126dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="52dp"
         android:background="@drawable/calendariobutao"
-        tools:layout_editor_absoluteX="241dp"
-        tools:layout_editor_absoluteY="185dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView61" />
 
     <TextView
         android:id="@+id/textView20"
         android:layout_width="126dp"
         android:layout_height="21dp"
-        android:layout_marginEnd="44dp"
+        android:layout_marginEnd="52dp"
         android:fontFamily="@font/robotoregular"
         android:text="Calendário"
         android:textAlignment="center"
@@ -108,20 +118,13 @@
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         android:text="Home"
         android:textColor="@color/white"
         android:textSize="84sp"
-        tools:layout_editor_absoluteX="92dp"
-        tools:layout_editor_absoluteY="615dp" />
-
-    <ImageView
-        android:id="@+id/imageView33"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="76dp"
-        android:layout_marginTop="484dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/grupo_de_rolagem_3" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView62" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,87 +4,86 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/linearLayout13"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
 
     <ImageView
         android:id="@+id/imageView41"
-        android:layout_width="322dp"
-        android:layout_height="223dp"
-        android:layout_marginEnd="160dp"
-        android:layout_marginBottom="524dp"
+        android:layout_width="409dp"
+        android:layout_height="33dp"
+        android:layout_marginBottom="84dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/grupo_de_rolagem_19" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView59"
+        app:layout_constraintVertical_bias="0.797"
+        app:srcCompat="@drawable/linha" />
+
+    <ImageView
+        android:id="@+id/imageView45"
+        android:layout_width="417dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="76dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/linha" />
 
     <ImageView
         android:id="@+id/imageView42"
-        android:layout_width="308dp"
-        android:layout_height="329dp"
-        android:layout_marginTop="176dp"
+        android:layout_width="305dp"
+        android:layout_height="259dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView41"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/nopath___c_pia" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView45"
+        app:layout_constraintVertical_bias="0.156"
+        app:srcCompat="@drawable/calendario" />
 
     <Button
         android:id="@+id/button7"
-        android:layout_width="314dp"
-        android:layout_height="64dp"
-        android:layout_marginBottom="160dp"
-        android:background="@drawable/ret_ngulo_28"
-        android:text="Minhas Consultas"
-        android:textColor="@color/white"
+        android:layout_width="210dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/retangulo14"
+        android:text="Sala"
         android:textAlignment="center"
+        android:textColor="@color/black"
         android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/imageView41"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.525"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView42"
+        app:layout_constraintVertical_bias="0.901" />
 
     <TextView
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="Calendario"
-        android:textColor="@color/white"
+        android:layout_marginTop="5dp"
+        android:text="Consultas"
 
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView43"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="128dp"
-        android:layout_marginTop="560dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/grupo_de_rolagem_3" />
-
-    <ImageView
-        android:id="@+id/imageView44"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="568dp"
-        android:layout_marginEnd="60dp"
+        android:textColor="@color/grey"
+        android:textSize="56sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/grupo_de_rolagem_57" />
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView41"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/calendariobtHome"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="320dp"
-        android:layout_marginTop="654dp"
-        android:layout_marginEnd="27dp"
-        android:layout_marginBottom="16dp"
+        android:layout_width="58dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="16dp"
         android:background="@android:drawable/ic_dialog_dialer"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/imageView45"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.888" />
 </androidx.constraintlayout.widget.ConstraintLayout>
