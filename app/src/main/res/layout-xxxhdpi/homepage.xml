@@ -82,7 +82,7 @@
         android:id="@+id/homepagebtPerfil"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="@drawable/ret_ngulo_25"
+        android:background="@color/grey"
         android:text="Perfil"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"

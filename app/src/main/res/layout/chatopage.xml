@@ -97,13 +97,4 @@
         app:layout_constraintStart_toEndOf="@+id/imageView35"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView37"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="608dp"
-        android:layout_marginEnd="48dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/grupo_de_rolagem_57" />
 </androidx.constraintlayout.widget.ConstraintLayout>

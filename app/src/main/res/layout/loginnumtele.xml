@@ -4,7 +4,51 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/linearLayout2"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+    <ImageView
+        android:id="@+id/imageView22"
+        android:layout_width="115dp"
+        android:layout_height="101dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="16dp"
+        android:adjustViewBounds="false"
+        android:cropToPadding="false"
+        android:scaleX="1.45"
+        android:scaleY="1.4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView18"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/medico" />
+
+    <ImageView
+        android:id="@+id/imageView18"
+        android:layout_width="409dp"
+        android:layout_height="33dp"
+        android:layout_marginBottom="116dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView59"
+        app:layout_constraintVertical_bias="0.797"
+        app:srcCompat="@drawable/linha" />
+
+    <ImageView
+        android:id="@+id/imageView19"
+        android:layout_width="417dp"
+        android:layout_height="21dp"
+        android:layout_marginTop="112dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/linha" />
 
     <Button
         android:id="@+id/loginnumtelebtVoltar"
@@ -28,82 +72,51 @@
         android:layout_marginTop="456dp"
         android:layout_marginEnd="214dp"
         android:layout_marginBottom="213dp"
-        android:background="@drawable/ret_ngulo_30"
+        android:background="@drawable/retangulo20"
         android:text="Verificar"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView18"
-        android:layout_width="315dp"
-        android:layout_height="381dp"
-        android:layout_marginStart="104dp"
-        android:layout_marginBottom="492dp"
-        android:rotation="-268"
-        android:rotationX="4"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/grupo_de_rolagem_1" />
-
-    <ImageView
-        android:id="@+id/imageView30"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="156dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/frame" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/loginnumteleNumTele"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="278dp"
+        android:layout_height="84dp"
         android:layout_marginTop="248dp"
         android:layout_marginBottom="398dp"
-        android:background="@drawable/ret_ngulo_4"
+        android:background="@drawable/retangulo21"
         android:ems="10"
         android:hint="Numero de Telefone"
         android:inputType="number"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.598"
+        app:layout_constraintHorizontal_bias="0.48"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <EditText
         android:id="@+id/loginnumteleCodigoVerificacao"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="278dp"
+        android:layout_height="84dp"
         android:layout_marginTop="360dp"
         android:layout_marginBottom="286dp"
-        android:background="@drawable/ret_ngulo_4"
+        android:background="@drawable/retangulo21"
         android:ems="10"
         android:hint="Codigo de Verificação"
         android:inputType="textPersonName"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.598"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView19"
-        android:layout_width="558dp"
-        android:layout_height="329dp"
-        android:layout_marginTop="420dp"
-        android:rotationY="-180"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/grupo_de_rolagem_10" />
+        app:layout_constraintVertical_bias="0.545" />
 
     <Button
         android:id="@+id/loginnumteleLogin"
@@ -113,11 +126,13 @@
         android:layout_marginTop="456dp"
         android:layout_marginEnd="68dp"
         android:layout_marginBottom="214dp"
-        android:background="@drawable/ret_ngulo_28"
+        android:background="@drawable/retangulo20"
         android:text="Login"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

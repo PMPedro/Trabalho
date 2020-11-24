@@ -106,15 +106,17 @@
 
     <Button
         android:id="@+id/homepagebtPerfil"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="676dp"
-        android:layout_marginEnd="320dp"
-        android:background="@drawable/ret_ngulo_25"
+        android:layout_width="90dp"
+        android:layout_height="40dp"
+        android:background="@drawable/retangulo3"
         android:text="Perfil"
         android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/textView9"

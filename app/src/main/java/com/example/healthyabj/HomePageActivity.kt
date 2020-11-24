@@ -49,9 +49,9 @@ class HomePageActivity : AppCompatActivity() {
             startActivity(Intent(this,LocalizacaoActivitie::class.java))
         }
 
-        homepagebtOpcoes.setOnClickListener{
+        /*homepagebtOpcoes.setOnClickListener{
             startActivity(Intent(this,opcoes::class.java))
-        }
+        }*/
 
 
 
