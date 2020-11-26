@@ -5,7 +5,7 @@
     android:id="@+id/linearLayout17"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background">
+    android:background="@drawable/wallpaper_gradient_blue_white_linear_1920x1080_c2_ffffff_00bfff_a_285_f_14_1">
 
     <ImageView
         android:id="@+id/imageView31"

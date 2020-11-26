@@ -5,12 +5,12 @@
     android:id="@+id/linearLayout3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background">
+    android:background="@drawable/wallpaper_gradient_blue_white_linear_1920x1080_c2_ffffff_00bfff_a_285_f_14_1">
 
     <ImageView
         android:id="@+id/imageView55"
-        android:layout_width="190dp"
-        android:layout_height="185dp"
+        android:layout_width="115dp"
+        android:layout_height="112dp"
         android:adjustViewBounds="false"
         android:cropToPadding="false"
         android:scaleX="1.45"

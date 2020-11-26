@@ -6,22 +6,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    android:background="@drawable/background">
+    android:background="@drawable/wallpaper_gradient_blue_white_linear_1920x1080_c2_ffffff_00bfff_a_285_f_14_1">
 
 
     "
-
-    <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="409dp"
-        android:layout_height="33dp"
-        android:layout_marginBottom="84dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView59"
-        app:layout_constraintVertical_bias="0.797"
-        app:srcCompat="@drawable/linha" />
 
     <ImageView
         android:id="@+id/imageView46"
@@ -36,27 +24,19 @@
 
     <Button
         android:id="@+id/signinbtVoltar"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="644dp"
-        android:layout_marginEnd="325dp"
-        android:layout_marginBottom="17dp"
-        android:background="@android:drawable/ic_dialog_email"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="63dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/vector_1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/SignInCreateAccount"
-        android:layout_width="142dp"
-        android:layout_height="53dp"
+        android:layout_width="102dp"
+        android:layout_height="55dp"
         android:layout_marginTop="24dp"
-        android:background="@drawable/retangulo20"
-        android:text="Create Account"
+        android:background="@drawable/group_3"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="17sp"
@@ -95,7 +75,7 @@
         android:layout_width="260dp"
         android:layout_height="65dp"
         android:layout_marginTop="8dp"
-        android:background="@drawable/retangulo21"
+        android:background="@drawable/rectangle_37"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
@@ -112,7 +92,7 @@
         android:layout_width="259dp"
         android:layout_height="64dp"
         android:layout_marginTop="8dp"
-        android:background="@drawable/retangulo22"
+        android:background="@drawable/rectangle_37"
         android:ems="10"
         android:hint="Email"
         android:inputType="textEmailAddress"
@@ -129,7 +109,7 @@
         android:layout_width="259dp"
         android:layout_height="65dp"
         android:layout_marginTop="8dp"
-        android:background="@drawable/retangulo23"
+        android:background="@drawable/rectangle_31"
         android:ems="10"
         android:hint="Data de Nascimento"
         android:inputType="date"
@@ -146,7 +126,7 @@
         android:layout_width="259dp"
         android:layout_height="66dp"
         android:layout_marginTop="8dp"
-        android:background="@drawable/retangulo22"
+        android:background="@drawable/rectangle_37"
         android:ems="10"
         android:hint="Name"
         android:inputType="textPersonName"
@@ -166,7 +146,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5"
         app:srcCompat="@drawable/medico" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
