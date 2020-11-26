@@ -8,19 +8,6 @@
     android:background="@drawable/background">
 
     <ImageView
-        android:id="@+id/imageView62"
-        android:layout_width="409dp"
-        android:layout_height="33dp"
-        android:layout_marginBottom="108dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView59"
-        app:layout_constraintVertical_bias="0.797"
-        app:srcCompat="@drawable/linha" />
-
-    <ImageView
         android:id="@+id/imageView61"
         android:layout_width="417dp"
         android:layout_height="21dp"
@@ -37,12 +24,12 @@
         android:id="@+id/homepagebtLocalizacao"
         android:layout_width="126dp"
         android:layout_height="126dp"
-        android:layout_marginBottom="52dp"
+        android:layout_marginTop="296dp"
         android:background="@drawable/localizacaoicon"
-        app:layout_constraintBottom_toTopOf="@+id/imageView62"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView61" />
 
     <TextView
         android:id="@+id/textView19"
@@ -52,12 +39,10 @@
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="14dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView62"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/homepagebtLocalizacao"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/homepagebtLocalizacao" />
 
     <Button
         android:id="@+id/homepagebtChat"
@@ -110,7 +95,7 @@
         android:layout_height="40dp"
         android:background="@drawable/retangulo3"
         android:text="Perfil"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -122,13 +107,13 @@
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
         android:text="Home"
-        android:textColor="@color/grey"
-        android:textSize="84sp"
+        android:textColor="@color/black"
+        android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView62" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.052" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
