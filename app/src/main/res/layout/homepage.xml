@@ -5,7 +5,20 @@
     android:id="@+id/linearLayout4"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/wallpaper_gradient_blue_white_linear_1920x1080_c2_ffffff_00bfff_a_285_f_14_1">
+    android:background="@drawable/background">
+
+    <ImageView
+        android:id="@+id/imageView54"
+        android:layout_width="325dp"
+        android:layout_height="28dp"
+        android:layout_marginBottom="64dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.438"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView59"
+        app:layout_constraintVertical_bias="0.797"
+        app:srcCompat="@drawable/linha" />
 
     <ImageView
         android:id="@+id/imageView63"
@@ -22,27 +35,26 @@
 
     <TextView
         android:id="@+id/textView9"
-        android:layout_width="62dp"
-        android:layout_height="21dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Home"
         android:textColor="@color/white"
         android:textSize="44dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.511"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView54" />
 
     <Button
         android:id="@+id/homepagebtLocalizacao"
-        android:layout_width="50dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="240dp"
+        android:layout_width="116dp"
+        android:layout_height="116dp"
+        android:layout_marginBottom="32dp"
         android:background="@drawable/localizacaoicon"
+        app:layout_constraintBottom_toTopOf="@+id/imageView54"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView63" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView25"
@@ -53,10 +65,12 @@
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="17dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView54"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/homepagebtLocalizacao" />
+        app:layout_constraintTop_toBottomOf="@+id/homepagebtLocalizacao"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/homepagebtProximasConsultas"

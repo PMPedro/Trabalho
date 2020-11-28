@@ -53,13 +53,15 @@
         android:layout_marginTop="7dp"
         android:layout_marginEnd="324dp"
         android:layout_marginBottom="676dp"
-        android:background="@drawable/retangulo3"
+        android:background="@drawable/retangulo15"
         android:text="Perfil"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2" />
 
     <Button
         android:id="@+id/homeSignOut2"
@@ -69,9 +71,9 @@
         android:layout_marginTop="4dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="679dp"
-        android:background="@drawable/retangulo2"
+        android:background="@drawable/retangulo15"
         android:text="Sign Out"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -79,12 +81,12 @@
 
     <Button
         android:id="@+id/homepagemedicoOpcoes"
-        android:layout_width="74dp"
-        android:layout_height="64dp"
+        android:layout_width="103dp"
+        android:layout_height="63dp"
         android:layout_marginTop="428dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="239dp"
-        android:background="@color/white"
+        android:background="@drawable/retangulo15"
         android:text="Opcoes"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -173,12 +175,11 @@
 
     <Button
         android:id="@+id/homepagemedicoHorario"
-        android:layout_width="74dp"
-        android:layout_height="64dp"
+        android:layout_width="100dp"
+        android:layout_height="55dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="174dp"
-        android:background="@color/white"
-        android:text="Horario"
+        android:background="@drawable/horariobutao"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/homepagemedicoOpcoes" />

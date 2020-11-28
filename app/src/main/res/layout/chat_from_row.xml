@@ -14,8 +14,9 @@
         android:layout_marginStart="4dp"
         android:layout_marginTop="4dp"
         android:background="@drawable/retangulo3"
+        android:paddingLeft="10dp"
         android:text="esta é a menssagem vai ser apresentada no chat log das messensagens enviadas"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         app:layout_constraintStart_toEndOf="@+id/chat_image"
         app:layout_constraintTop_toTopOf="parent" />
 

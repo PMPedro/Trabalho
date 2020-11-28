@@ -18,25 +18,15 @@
         app:layout_constraintVertical_bias="0.152"
         app:srcCompat="@drawable/linha" />
 
-    <ImageView
-        android:id="@+id/imageView12"
-        android:layout_width="408dp"
-        android:layout_height="123dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.844"
-        app:srcCompat="@drawable/linha" />
-
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="76dp"
-        android:layout_marginTop="660dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="52dp"
         android:text="Sobre nós"
-        android:textColor="@color/white"
-        android:textSize="50dp"
+        android:textColor="@color/black"
+        android:textSize="36sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -44,27 +34,26 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="284dp"
         android:text="App Developers"
         android:textColor="@color/black"
         android:textSize="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.452"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView11"
+        app:layout_constraintVertical_bias="0.283" />
 
     <Button
         android:id="@+id/aboutusbtHome"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:layout_marginStart="320dp"
-        android:layout_marginTop="654dp"
         android:layout_marginEnd="27dp"
         android:layout_marginBottom="16dp"
         android:background="@android:drawable/ic_dialog_dialer"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.987"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

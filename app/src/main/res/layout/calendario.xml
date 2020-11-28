@@ -8,73 +8,40 @@
     android:background="@drawable/background">
 
     <ImageView
-        android:id="@+id/imageView41"
-        android:layout_width="409dp"
-        android:layout_height="33dp"
-        android:layout_marginBottom="84dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView59"
-        app:layout_constraintVertical_bias="0.797"
-        app:srcCompat="@drawable/linha" />
-
-    <ImageView
         android:id="@+id/imageView45"
         android:layout_width="417dp"
         android:layout_height="21dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="84dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/linha" />
 
     <ImageView
         android:id="@+id/imageView42"
-        android:layout_width="305dp"
-        android:layout_height="259dp"
+        android:layout_width="280dp"
+        android:layout_height="383dp"
         android:layout_marginTop="60dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView41"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView45"
-        app:layout_constraintVertical_bias="0.156"
         app:srcCompat="@drawable/calendario" />
-
-    <Button
-        android:id="@+id/button7"
-        android:layout_width="210dp"
-        android:layout_height="68dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/retangulo14"
-        android:text="Sala"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView41"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView42"
-        app:layout_constraintVertical_bias="0.901" />
 
     <TextView
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:text="Consultas"
+        android:layout_marginBottom="664dp"
 
-        android:textColor="@color/grey"
-        android:textSize="56sp"
+        android:text="Horários"
+        android:textColor="@color/black"
+        android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView41"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/calendariobtHome"
@@ -85,5 +52,5 @@
         app:layout_constraintBottom_toTopOf="@+id/imageView45"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.888" />
+        app:layout_constraintVertical_bias="0.314" />
 </androidx.constraintlayout.widget.ConstraintLayout>
