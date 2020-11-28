@@ -57,6 +57,7 @@ class ChatActivity : AppCompatActivity() {
                     TODO("Not yet implemented")
                 }
 
+
                 override fun onDataChange(dataSnapshot: DataSnapshot) {
                     // Get Post object and use the values to update the UI
                     val uid = FirebaseAuth.getInstance().uid
@@ -68,6 +69,7 @@ class ChatActivity : AppCompatActivity() {
                     chatpageMessage.text.clear()
 
                 }
+
 
 
             }
