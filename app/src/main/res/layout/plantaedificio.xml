@@ -8,19 +8,6 @@
     android:background="@drawable/background">
 
     <ImageView
-        android:id="@+id/imageView16"
-        android:layout_width="409dp"
-        android:layout_height="33dp"
-        android:layout_marginBottom="116dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView59"
-        app:layout_constraintVertical_bias="0.797"
-        app:srcCompat="@drawable/linha" />
-
-    <ImageView
         android:id="@+id/imageView17"
         android:layout_width="417dp"
         android:layout_height="21dp"
@@ -50,13 +37,15 @@
         android:id="@+id/textView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="96dp"
-        android:layout_marginTop="41dp"
+        android:layout_marginBottom="12dp"
         android:text="Planta"
-        android:textColor="@color/grey"
-        android:textSize="40dp"
+        android:textColor="@color/black"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView17"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView16" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.846" />
 
     <ImageView
         android:id="@+id/imageView26"
@@ -68,16 +57,20 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/planta" />
 
-    <TextView
+    <Button
         android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="136dp"
-        android:layout_marginBottom="196dp"
+        android:layout_width="194dp"
+        android:layout_height="82dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/retangulo15"
         android:text="Consulta sala X"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView26"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
