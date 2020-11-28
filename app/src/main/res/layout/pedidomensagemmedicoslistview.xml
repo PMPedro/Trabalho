@@ -15,7 +15,7 @@
         app:layout_constraintHorizontal_bias="0.36"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ret_ngulo_44" />
+        app:srcCompat="@drawable/retangulo16" />
 
     <ImageView
         android:id="@+id/imageView50"
@@ -57,8 +57,7 @@
         android:layout_marginTop="12dp"
         android:layout_marginEnd="132dp"
         android:text="TextView"
-        android:textColor="@color/white
-"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView17" />
 </androidx.constraintlayout.widget.ConstraintLayout>

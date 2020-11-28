@@ -32,7 +32,7 @@ class SignUpActivity : AppCompatActivity() {
         val nome = SignInName.text.toString()
         val password = SignInPassword.text.toString()
         val dataNascimento = signinBirthdate.text.toString()
-        val cc = signinCC.text.toString()
+        //val cc = signinCC.text.toString()
 
         auth= FirebaseAuth.getInstance()
 

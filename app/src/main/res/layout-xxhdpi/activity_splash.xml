@@ -4,19 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/linearLayout18"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
 
     <ImageView
         android:id="@+id/imageView56"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="134dp"
+        android:layout_height="129dp"
         android:adjustViewBounds="false"
         android:cropToPadding="false"
         android:scaleX="1.45"
         android:scaleY="1.4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.552"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/grupo_2" />
+        app:srcCompat="@drawable/medico" />
 </androidx.constraintlayout.widget.ConstraintLayout>
