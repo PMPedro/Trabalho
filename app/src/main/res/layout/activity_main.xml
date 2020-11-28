@@ -88,7 +88,7 @@
         android:id="@+id/activitymainEmail"
         android:layout_width="278dp"
         android:layout_height="64dp"
-        android:layout_marginTop="168dp"
+        android:layout_marginTop="44dp"
         android:background="@drawable/retangulo27"
         android:ems="10"
         android:hint="Email"
@@ -96,9 +96,9 @@
         android:textAlignment="center"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.518"
+        app:layout_constraintHorizontal_bias="0.488"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView57" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView58" />
 
     <EditText
         android:id="@+id/activitymainPassword"
