@@ -39,12 +39,11 @@ class MainActivity : AppCompatActivity() {
 
 
 
-
-        activitymainbtLoginTele.setOnClickListener{
 //Ao clicar no botao de Num tele vai para outra tela
+       /* activitymainbtLoginTele.setOnClickListener{
             startActivity(Intent(this,Loginnumtele::class.java))
 
-        }
+      }*/
 
 
 
