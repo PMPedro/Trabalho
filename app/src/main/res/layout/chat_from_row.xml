@@ -13,9 +13,12 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:layout_marginTop="4dp"
-        android:background="@drawable/retangulo13"
-        android:text=" enviadas"
-        android:textColor="@color/white"
+        android:background="@drawable/retangulo3"
+        android:paddingLeft="7dp"
+        android:paddingTop="7dp"
+        android:paddingRight="7dp"
+        android:text="esta é a menssagem vai ser apresentada no chat log das messensagens enviadas"
+        android:textColor="@color/black"
         app:layout_constraintStart_toEndOf="@+id/chat_image"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -26,6 +29,6 @@
         android:visibility="visible"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@drawable/imgbin_beard_drawing_line_art_png_tu2kpb33" />
+        tools:srcCompat="@drawable/medicouserdefault" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

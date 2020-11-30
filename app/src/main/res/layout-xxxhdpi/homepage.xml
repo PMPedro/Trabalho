@@ -11,11 +11,11 @@
         android:id="@+id/homepagebtLocalizacao"
         android:layout_width="139dp"
         android:layout_height="139dp"
-        android:layout_marginTop="288dp"
+        android:layout_marginBottom="44dp"
         android:background="@drawable/localizacaoicon"
+        app:layout_constraintBottom_toTopOf="@+id/imageView60"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView59" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView14"
@@ -26,9 +26,11 @@
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="17dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView60"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/homepagebtLocalizacao" />
+        app:layout_constraintTop_toBottomOf="@+id/homepagebtLocalizacao"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/homepagebtChat"
@@ -90,16 +92,17 @@
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
         android:fontFamily="@font/robotoregular"
         android:text="Home"
-        android:textColor="@color/black"
-        android:textSize="36sp"
+        android:textColor="@color/grey"
+        android:textSize="84sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.07" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView60"
+        app:layout_constraintVertical_bias="0.995" />
 
     <ImageView
         android:id="@+id/imageView59"
@@ -111,6 +114,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/linha" />
+
+    <ImageView
+        android:id="@+id/imageView60"
+        android:layout_width="409dp"
+        android:layout_height="33dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView59"
+        app:layout_constraintVertical_bias="0.797"
         app:srcCompat="@drawable/linha" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
