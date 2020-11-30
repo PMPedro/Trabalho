@@ -50,15 +50,14 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="236dp"
         android:text="Onde Estamos"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/localizacaohospitalbt"
+        android:textColor="@color/black"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView21"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.64" />
 
     <Button
         android:id="@+id/localizacaohospitalbt"

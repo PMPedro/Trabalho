@@ -11,9 +11,8 @@
         android:id="@+id/imageView45"
         android:layout_width="417dp"
         android:layout_height="21dp"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="108dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/linha" />
@@ -33,15 +32,16 @@
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="664dp"
 
         android:text="Horários"
         android:textColor="@color/black"
         android:textSize="36sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/imageView45"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.433" />
 
     <Button
         android:id="@+id/calendariobtHome"
