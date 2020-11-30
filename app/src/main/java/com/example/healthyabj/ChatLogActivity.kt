@@ -53,18 +53,18 @@ class ChatLogActivity : AppCompatActivity() {
 
 
     private  fun listenForMessages() {
-
-        db.collection("Messages")
+        db.collection("Messages").orderBy("timestamp", Query.Direction.ASCENDING)
             .get()
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
 
                     val result: StringBuffer = StringBuffer()
-                        var text= String()
+                        var text = String()
                     for (document in task.result) {
                        text= result.append(document.data.getValue("text")).toString()
 
-                        adapter.add(ChatFromItem(text))
+                            adapter.add(ChatFromItem(text))
+
 
 
                     }
@@ -136,6 +136,9 @@ class ChatLogActivity : AppCompatActivity() {
             return R.layout.chat_to_row
         }
 
+
+    }
+    private fun TextMessage(message : List<String>) {
 
     }
 }

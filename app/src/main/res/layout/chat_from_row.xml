@@ -13,8 +13,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:layout_marginTop="4dp"
-        android:background="@drawable/ret_ngulo_28"
-        android:text="esta é a menssagem vai ser apresentada no chat log das messensagens enviadas"
+        android:background="@drawable/retangulo13"
+        android:text=" enviadas"
         android:textColor="@color/white"
         app:layout_constraintStart_toEndOf="@+id/chat_image"
         app:layout_constraintTop_toTopOf="parent" />
