@@ -2,6 +2,7 @@ package com.example.healthyabj
 
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.healthyabj.ChatLogActivity.Companion.TAG
 import com.google.firebase.auth.FirebaseAuth
@@ -24,7 +25,14 @@ class minhasconsultaslistview : AppCompatActivity() {
             .get()
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
+
+                    val result: StringBuffer = StringBuffer()
+
                     for (document in task.result) {
+                       result.append(document.data.getValue("Message"))
+
+
+
 
                     }
                 } else {
