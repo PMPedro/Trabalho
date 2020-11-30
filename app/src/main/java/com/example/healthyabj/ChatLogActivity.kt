@@ -3,17 +3,10 @@ package com.example.healthyabj
 import android.os.Bundle
 import android.util.Log
 import android.widget.TextView
-import android.widget.Toast
-import androidx.annotation.NonNull
 import androidx.appcompat.app.AppCompatActivity
-import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query
-import com.google.firebase.firestore.QuerySnapshot
-import com.google.firebase.firestore.ktx.firestore
-import com.google.firebase.firestore.ktx.toObject
-import com.google.firebase.ktx.Firebase
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.Item
 import com.xwray.groupie.ViewHolder
@@ -51,20 +44,23 @@ class ChatLogActivity : AppCompatActivity() {
     }
 
 
-
+/*
     private  fun listenForMessages() {
         db.collection("Messages").orderBy("timestamp", Query.Direction.ASCENDING)
             .get()
+
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
 
                     val result: StringBuffer = StringBuffer()
                         var text = String()
                     for (document in task.result) {
-                       text= result.append(document.data.getValue("text")).toString()
 
-                            adapter.add(ChatFromItem(text))
-                            text =""
+                       // text= result.append(document.data.getValue("text")).toString()
+                        text =document.data["text"].toString()
+                            adapter.add(ChatFromItem( text))
+
+
 
 
                     }
@@ -73,6 +69,45 @@ class ChatLogActivity : AppCompatActivity() {
                 }
             }
     }
+
+*/
+
+
+
+    private fun listenForMessages() {
+        // [START listen_multiple]
+        db.collection("Messages").orderBy("timestamp", Query.Direction.ASCENDING)
+
+            .addSnapshotListener { value, e ->
+                if (e != null) {
+                    Log.w(TAG, "Listen failed.", e)
+                    return@addSnapshotListener
+                }
+
+
+                val result: StringBuffer = StringBuffer()
+                var text = String()
+
+
+                for (doc in value!!) {
+                    // text= result.append(document.data.getValue("text")).toString()
+                    text = doc.get("name").toString()
+
+
+                   // text =document.data["text"].toString()
+
+                    adapter.add(ChatFromItem( text))
+
+
+                }
+                }
+                //Log.d(TAG, "Current cites in CA: $cities")
+            }
+        // [END listen_multiple]
+
+
+
+
 
 
 
