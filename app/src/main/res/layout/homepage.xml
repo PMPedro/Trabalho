@@ -8,26 +8,12 @@
     android:background="@drawable/background">
 
     <ImageView
-        android:id="@+id/imageView54"
-        android:layout_width="325dp"
-        android:layout_height="28dp"
-        android:layout_marginBottom="64dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.438"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView59"
-        app:layout_constraintVertical_bias="0.797"
-        app:srcCompat="@drawable/linha" />
-
-    <ImageView
         android:id="@+id/imageView63"
         android:layout_width="336dp"
         android:layout_height="24dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="80dp"
         app:layout_constraintBottom_toTopOf="@+id/imageView15"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.443"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
@@ -37,57 +23,23 @@
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
         android:text="Home"
-        android:textColor="@color/white"
-        android:textSize="44dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView54" />
-
-    <Button
-        android:id="@+id/homepagebtLocalizacao"
-        android:layout_width="116dp"
-        android:layout_height="116dp"
-        android:layout_marginBottom="32dp"
-        android:background="@drawable/localizacaoicon"
-        app:layout_constraintBottom_toTopOf="@+id/imageView54"
+        android:textColor="@color/black"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView63"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textView25"
-        android:layout_width="117dp"
-        android:layout_height="25dp"
-        android:fontFamily="@font/robotoregular"
-        android:text="Localização"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="17dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView54"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/homepagebtLocalizacao"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/homepagebtProximasConsultas"
-        android:layout_width="116dp"
-        android:layout_height="116dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/calendariobutao"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView63" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/homepagebtChat"
         android:layout_width="116dp"
         android:layout_height="116dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="48dp"
         android:background="@drawable/medicobutao"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView63" />
@@ -97,6 +49,7 @@
         android:layout_width="116dp"
         android:layout_height="19dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
         android:fontFamily="@font/robotoregular"
         android:text="Médicos"
         android:textAlignment="center"
@@ -109,7 +62,8 @@
         android:id="@+id/textView24"
         android:layout_width="117dp"
         android:layout_height="20dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="12dp"
         android:fontFamily="@font/robotoregular"
         android:text="Calendário"
         android:textAlignment="center"
@@ -119,12 +73,48 @@
         app:layout_constraintTop_toBottomOf="@+id/homepagebtProximasConsultas" />
 
     <Button
+        android:id="@+id/homepagebtProximasConsultas"
+        android:layout_width="116dp"
+        android:layout_height="116dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/calendariobutao"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView63" />
+
+    <Button
+        android:id="@+id/homepagebtLocalizacao"
+        android:layout_width="116dp"
+        android:layout_height="116dp"
+        android:layout_marginTop="216dp"
+        android:background="@drawable/localizacaoicon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView63" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="117dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/robotoregular"
+        android:text="Localização"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="17dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homepagebtLocalizacao" />
+
+    <Button
         android:id="@+id/homepagebtPerfil"
         android:layout_width="74dp"
         android:layout_height="39dp"
-        android:background="@color/black"
+        android:background="@drawable/retangulo20"
         android:text="Perfil"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

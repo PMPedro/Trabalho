@@ -8,19 +8,6 @@
     android:background="@drawable/background">
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="409dp"
-        android:layout_height="33dp"
-        android:layout_marginBottom="116dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView59"
-        app:layout_constraintVertical_bias="0.797"
-        app:srcCompat="@drawable/linha" />
-
-    <ImageView
         android:id="@+id/imageView13"
         android:layout_width="417dp"
         android:layout_height="21dp"
@@ -37,14 +24,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Medico Home"
-        android:textColor="@color/white"
-        android:textSize="50dp"
+        android:textColor="@color/black"
+        android:textSize="36sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.404"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.975" />
+        app:layout_constraintVertical_bias="0.092" />
 
     <Button
         android:id="@+id/homePerfil2"
@@ -80,55 +67,20 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/homepagemedicoOpcoes"
-        android:layout_width="103dp"
-        android:layout_height="63dp"
-        android:layout_marginTop="428dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="239dp"
-        android:background="@drawable/retangulo15"
-        android:text="Opcoes"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView26"
-        android:layout_width="128dp"
-        android:layout_height="25dp"
-        android:layout_marginTop="3dp"
-        android:layout_marginEnd="40dp"
-        android:fontFamily="@font/robotoregular"
-        android:text="Calendário"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="17dp"
-        app:layout_constraintBottom_toTopOf="@+id/homepagemedicoLocalizacao"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/homepagemedicoProximasConsultas"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/textView27"
-        android:layout_width="131dp"
-        android:layout_height="28dp"
-        android:fontFamily="@font/robotoregular"
-        android:text="Localização"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="17dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        android:id="@+id/homepagemedicoChat"
+        android:layout_width="133dp"
+        android:layout_height="133dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/medicobutao"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/homepagemedicoLocalizacao"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView13" />
 
     <TextView
         android:id="@+id/textView21"
         android:layout_width="132dp"
         android:layout_height="21dp"
-        android:layout_marginStart="40dp"
+        android:layout_marginStart="36dp"
         android:layout_marginTop="4dp"
         android:text="Médicos"
         android:textAlignment="center"
@@ -143,35 +95,42 @@
         android:id="@+id/homepagemedicoLocalizacao"
         android:layout_width="133dp"
         android:layout_height="133dp"
-        android:layout_marginTop="421dp"
-        android:layout_marginBottom="194dp"
         android:background="@drawable/localizacaoicon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.941" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView13"
+        app:layout_constraintVertical_bias="0.554" />
 
-    <Button
-        android:id="@+id/homepagemedicoChat"
+    <TextView
+        android:id="@+id/textView27"
         android:layout_width="133dp"
-        android:layout_height="133dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="84dp"
-        android:background="@drawable/medicobutao"
+        android:layout_height="28dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/robotoregular"
+        android:text="Localização"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="17dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView13" />
+        app:layout_constraintTop_toBottomOf="@+id/homepagemedicoLocalizacao" />
 
     <Button
-        android:id="@+id/homepagemedicoProximasConsultas"
-        android:layout_width="131dp"
-        android:layout_height="133dp"
-        android:layout_marginTop="84dp"
-        android:layout_marginEnd="40dp"
-        android:background="@drawable/calendariobutao"
+        android:id="@+id/homepagemedicoOpcoes"
+        android:layout_width="103dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="428dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="239dp"
+        android:background="@drawable/retangulo15"
+        android:text="Opcoes"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView13" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/homepagemedicoLocalizacao"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/homepagemedicoHorario"
@@ -182,6 +141,35 @@
         android:background="@drawable/horariobutao"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/homepagemedicoOpcoes" />
+        app:layout_constraintHorizontal_bias="0.913"
+        app:layout_constraintStart_toEndOf="@+id/textView27"
+        app:layout_constraintTop_toBottomOf="@+id/homepagemedicoOpcoes"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/homepagemedicoProximasConsultas"
+        android:layout_width="131dp"
+        android:layout_height="133dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="36dp"
+        android:background="@drawable/calendariobutao"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView13" />
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="131dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="36dp"
+        android:fontFamily="@font/robotoregular"
+        android:text="Calendário"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="17dp"
+        app:layout_constraintBottom_toTopOf="@+id/homepagemedicoLocalizacao"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homepagemedicoProximasConsultas"
+        app:layout_constraintVertical_bias="0.014" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

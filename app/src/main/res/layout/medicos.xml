@@ -11,12 +11,12 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="644dp"
-        android:text="Medicos"
-        android:textColor="@color/grey"
+        android:layout_marginTop="44dp"
+        android:text="Médicos"
+        android:textColor="@color/black"
         android:textSize="60dp"
-        app:layout_constraintEnd_toStartOf="@+id/medicosbtHome"
-        app:layout_constraintHorizontal_bias="0.631"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
