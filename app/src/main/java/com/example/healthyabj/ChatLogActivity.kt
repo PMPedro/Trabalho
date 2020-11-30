@@ -64,7 +64,7 @@ class ChatLogActivity : AppCompatActivity() {
                        text= result.append(document.data.getValue("text")).toString()
 
                             adapter.add(ChatFromItem(text))
-
+                            text =""
 
 
                     }
