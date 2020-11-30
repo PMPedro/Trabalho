@@ -40,6 +40,12 @@ class MainActivity : AppCompatActivity() {
 
 
 
+        activitymainbtLoginTele.setOnClickListener{
+//Ao clicar no botao de Num tele vai para outra tela
+            startActivity(Intent(this,Loginnumtele::class.java))
+
+        }
+
 
 
         activitymainbtLogin.setOnClickListener{
@@ -72,7 +78,7 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-        activitymainbtSignUp.setOnClickListener {
+        activitymainForgotPassword.setOnClickListener {
             val builder = AlertDialog.Builder(this)
             builder.setTitle("Insira o email")
             val view = layoutInflater.inflate(R.layout.dialog_forgot_password,null)

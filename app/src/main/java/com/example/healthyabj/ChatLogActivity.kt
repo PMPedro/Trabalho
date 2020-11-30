@@ -1,12 +1,19 @@
 package com.example.healthyabj
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.TextView
 import android.widget.Toast
+import androidx.annotation.NonNull
+import androidx.appcompat.app.AppCompatActivity
+import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.Query
+import com.google.firebase.firestore.QuerySnapshot
+import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.firestore.ktx.toObject
+import com.google.firebase.ktx.Firebase
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.Item
 import com.xwray.groupie.ViewHolder
@@ -15,8 +22,8 @@ import kotlinx.android.synthetic.main.chat_from_row.view.*
 import kotlinx.android.synthetic.main.chat_to_row.view.*
 
 
-
 class ChatLogActivity : AppCompatActivity() {
+    val db = FirebaseFirestore.getInstance()
     companion object{
         val TAG ="ChatLog"
     }
@@ -25,43 +32,52 @@ class ChatLogActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_chat_log)
 
+
         recyclerview_chat_log.adapter=adapter
 
         val username = intent.getStringExtra("Name")
         supportActionBar?.title = username
-       //setupDunmmyData()
-     //  listenForMessages()
+      // setupDunmmyData()
+        val message = findViewById<TextView>(R.id.textView_from_row)
+        listenForMessages()
         send_button_chat_log.setOnClickListener{
             Log.d(TAG, "Attemp to send message")
             performSendMessage()
         edittText_chat_log.text.clear()
 
         }
+
+
     }
 
+
+
     private  fun listenForMessages() {
-        val ref = FirebaseFirestore.getInstance().collection("Messages")
 
-            ref.addSnapshotListener { querySnapshot, firebaseFirestoreException ->
-                firebaseFirestoreException?.let {
-                    Toast.makeText(this, it.message, Toast.LENGTH_LONG).show()
-                    return@addSnapshotListener
-                }
-                querySnapshot?.let {
-                    for (document in it) {
-                        val person = document.toObject<ChatMessage>()
+        db.collection("Messages")
+            .get()
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
 
-                        adapter.add(ChatToItem(person.text))
+                    val result: StringBuffer = StringBuffer()
+                        var text= String()
+                    for (document in task.result) {
+                       text= result.append(document.data.getValue("text")).toString()
 
-                        adapter.add(ChatFromItem(person.text))
+                        adapter.add(ChatFromItem(text))
+
+
                     }
-                    //tvPersons.text = sb.toString()
-
+                } else {
+                    Log.w(TAG, "Error getting documents.", task.exception)
                 }
             }
     }
 
-    data class  ChatMessage(val text:String, val fromId:String, val toId: String,val timestamp: Long )
+
+
+
+
     private fun performSendMessage() {
         val text = edittText_chat_log.text.toString()
         val fromId = FirebaseAuth.getInstance().uid
@@ -72,7 +88,7 @@ class ChatLogActivity : AppCompatActivity() {
 
         val refence = FirebaseFirestore.getInstance()
 
-        val chatMessage = ChatMessage(text, fromId, toId, System.currentTimeMillis() / 1000)
+        val chatMessage = Chat.ChatMessage(text, fromId, toId, System.currentTimeMillis() / 1000)
 
 
         refence.collection("Messages")
@@ -80,14 +96,14 @@ class ChatLogActivity : AppCompatActivity() {
             .addOnSuccessListener {
                 Log.d(TAG, "Saved our chat message...${refence}")
             }
-        if (chatMessage != null) {
+        /*if (chatMessage != null) {
             Log.d(TAG, chatMessage.text)
             if (chatMessage.fromId == FirebaseAuth.getInstance().uid) {
                 adapter.add(ChatToItem(chatMessage.text))
             } else {
                 adapter.add(ChatFromItem(chatMessage.text))
             }
-        }
+        }*/
     }
     private fun setupDunmmyData(){
         val adapter = GroupAdapter<ViewHolder>()
