@@ -1,5 +1,6 @@
 package com.example.healthyabj
 
+import com.google.android.gms.common.internal.AccountType
 
 
 class User {
@@ -12,8 +13,8 @@ class User {
         val email: String,
        val name: String="",
         val password: String,
-        val profileImageUrl:String
-
+        val profileImageUrl:String,
+        val usertype: Int
 
 
     )
