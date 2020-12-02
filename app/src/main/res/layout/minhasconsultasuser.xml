@@ -36,13 +36,13 @@
         android:id="@+id/minhasconsultastvtv"
         android:layout_width="282dp"
         android:layout_height="50dp"
-        android:layout_marginTop="644dp"
+        android:layout_marginTop="40dp"
         android:text="Minhas Consultas"
         android:textColor="@color/grey"
         android:textSize="35dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/minhasconsultasuserbtHome"
-        app:layout_constraintHorizontal_bias="0.702"
+        app:layout_constraintHorizontal_bias="0.23"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
