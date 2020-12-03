@@ -74,42 +74,28 @@ class ChatLogActivity : AppCompatActivity() {
 
 
 
+
     private fun listenForMessages() {
         // [START listen_multiple]
-        db.collection("Messages").orderBy("timestamp", Query.Direction.ASCENDING)
-
+        db.collection("Messages")
+            .orderBy("timestamp", Query.Direction.ASCENDING)
             .addSnapshotListener { value, e ->
                 if (e != null) {
                     Log.w(TAG, "Listen failed.", e)
                     return@addSnapshotListener
                 }
-
-
                 val result: StringBuffer = StringBuffer()
                 var text = String()
 
-
                 for (doc in value!!) {
-                    // text= result.append(document.data.getValue("text")).toString()
-                    text = doc.get("name").toString()
 
-
-                   // text =document.data["text"].toString()
+                    text = doc.get("text").toString()
 
                     adapter.add(ChatFromItem( text))
-
-
                 }
                 }
-                //Log.d(TAG, "Current cites in CA: $cities")
+
             }
-        // [END listen_multiple]
-
-
-
-
-
-
 
 
 
