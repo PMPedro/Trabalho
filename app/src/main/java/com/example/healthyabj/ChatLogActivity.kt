@@ -86,14 +86,20 @@ class ChatLogActivity : AppCompatActivity() {
                 }
                 val result: StringBuffer = StringBuffer()
                 var text = String()
+                var from = String()
+                val userUid = intent.getStringExtra("uid")
 
                 for (doc in value!!) {
-
                     text = doc.get("text").toString()
+                    from = doc.get("fromId").toString()
 
-                    adapter.add(ChatFromItem( text))
+                    if(from ==userUid){
+                        adapter.add(ChatFromItem(text))
+                    }else{
+                        adapter.add(ChatToItem(text))
+                    }
                 }
-                }
+             }
 
             }
 
