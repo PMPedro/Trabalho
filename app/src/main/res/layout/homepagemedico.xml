@@ -117,36 +117,6 @@
         app:layout_constraintTop_toBottomOf="@+id/homepagemedicoLocalizacao" />
 
     <Button
-        android:id="@+id/homepagemedicoOpcoes"
-        android:layout_width="103dp"
-        android:layout_height="63dp"
-        android:layout_marginTop="428dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="239dp"
-        android:background="@drawable/retangulo15"
-        android:text="Opcoes"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/homepagemedicoLocalizacao"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Button
-        android:id="@+id/homepagemedicoHorario"
-        android:layout_width="100dp"
-        android:layout_height="55dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="174dp"
-        android:background="@drawable/horariobutao"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.913"
-        app:layout_constraintStart_toEndOf="@+id/textView27"
-        app:layout_constraintTop_toBottomOf="@+id/homepagemedicoOpcoes"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <Button
         android:id="@+id/homepagemedicoProximasConsultas"
         android:layout_width="131dp"
         android:layout_height="133dp"
@@ -163,7 +133,7 @@
         android:layout_marginTop="3dp"
         android:layout_marginEnd="36dp"
         android:fontFamily="@font/robotoregular"
-        android:text="Calendário"
+        android:text="Horários"
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="17dp"

@@ -23,15 +23,10 @@
         android:id="@+id/opcoesbtHome"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:layout_marginStart="325dp"
-        android:layout_marginTop="645dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        android:background="@android:drawable/ic_dialog_dialer"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="28dp"
+        android:background="@drawable/abc_vector_test"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button

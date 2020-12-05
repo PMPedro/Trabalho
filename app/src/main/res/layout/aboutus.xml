@@ -9,13 +9,13 @@
 
     <ImageView
         android:id="@+id/imageView11"
-        android:layout_width="419dp"
-        android:layout_height="114dp"
-        android:layout_marginStart="4dp"
+        android:layout_width="415dp"
+        android:layout_height="19dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.152"
+        app:layout_constraintVertical_bias="0.201"
         app:srcCompat="@drawable/linha" />
 
     <TextView
@@ -48,12 +48,10 @@
         android:id="@+id/aboutusbtHome"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:layout_marginEnd="27dp"
-        android:layout_marginBottom="644dp"
-        android:background="@android:drawable/ic_dialog_dialer"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/abc_vector_test"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.99"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,9 +8,21 @@
     android:background="@drawable/background">
 
     <Button
+        android:id="@+id/homepagebtLogout4"
+        android:layout_width="82dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/retangulo25"
+        android:text="Logout"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homepagebtPerfil" />
+
+    <Button
         android:id="@+id/homepagebtLocalizacao"
-        android:layout_width="139dp"
-        android:layout_height="139dp"
+        android:layout_width="127dp"
+        android:layout_height="127dp"
         android:layout_marginTop="248dp"
         android:background="@drawable/localizacaoicon"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,8 +31,8 @@
 
     <TextView
         android:id="@+id/textView14"
-        android:layout_width="139dp"
-        android:layout_height="22dp"
+        android:layout_width="127dp"
+        android:layout_height="19dp"
         android:fontFamily="@font/robotoregular"
         android:text="Localização"
         android:textAlignment="center"
@@ -32,9 +44,9 @@
 
     <Button
         android:id="@+id/homepagebtChat"
-        android:layout_width="145dp"
-        android:layout_height="145dp"
-        android:layout_marginStart="44dp"
+        android:layout_width="139dp"
+        android:layout_height="138dp"
+        android:layout_marginStart="48dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/medicobutao"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,19 +54,19 @@
 
     <Button
         android:id="@+id/homepagebtProximasConsultas"
-        android:layout_width="145dp"
-        android:layout_height="145dp"
+        android:layout_width="135dp"
+        android:layout_height="139dp"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="44dp"
+        android:layout_marginEnd="52dp"
         android:background="@drawable/calendariobutao"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView59" />
 
     <TextView
         android:id="@+id/textView13"
-        android:layout_width="145dp"
+        android:layout_width="135dp"
         android:layout_height="21dp"
-        android:layout_marginEnd="44dp"
+        android:layout_marginEnd="52dp"
         android:fontFamily="@font/robotoregular"
         android:text="Calendário"
         android:textAlignment="center"
@@ -65,9 +77,9 @@
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="145dp"
-        android:layout_height="21dp"
-        android:layout_marginStart="44dp"
+        android:layout_width="139dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="48dp"
         android:fontFamily="@font/robotoregular"
         android:text="Médicos"
         android:textAlignment="center"
@@ -78,14 +90,14 @@
 
     <Button
         android:id="@+id/homepagebtPerfil"
-        android:layout_width="69dp"
-        android:layout_height="41dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="4dp"
+        android:layout_width="81dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="572dp"
         android:background="@drawable/retangulo20"
         android:text="Perfil"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
