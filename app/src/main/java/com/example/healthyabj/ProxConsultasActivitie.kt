@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.PhoneAuthProvider
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.Query
 import kotlinx.android.synthetic.main.minhasconsultasuser.*
 
 class ProxConsultasActivitie : AppCompatActivity() {
@@ -33,7 +34,7 @@ class ProxConsultasActivitie : AppCompatActivity() {
         val db = FirebaseFirestore.getInstance()
 
 
-        db.collection("ConsultasExis")
+        db.collection("ConsultasExis").orderBy("DiaConsulta", Query.Direction.ASCENDING)
             .get()
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
@@ -47,7 +48,7 @@ class ProxConsultasActivitie : AppCompatActivity() {
                         var NP : String
 
                             DC = result.append(document.data.getValue("DiaConsulta")).toString()
-                            HC = result.append(document.data.getValue("HoraConsulta")).toString()
+                            HC = result.append(document.data.getValue("NomeMedico")).toString()
                             NM = result.append(document.data.getValue("NomeMedico")).toString()
                             NP = result.append(document.data.getValue("NomePaciente")).toString()
 
