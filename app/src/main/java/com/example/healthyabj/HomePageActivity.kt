@@ -2,13 +2,16 @@ package com.example.healthyabj
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.util.Patterns
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.example.healthyabj.ChatLogActivity.Companion.TAG
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.PhoneAuthProvider
+import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.homepage.*
 
 class HomePageActivity : AppCompatActivity() {
@@ -20,6 +23,38 @@ class HomePageActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.homepage)
         auth = FirebaseAuth.getInstance()
+        val db = FirebaseFirestore.getInstance()
+
+
+        BTtesteidkwhatelse.setOnClickListener {
+
+
+            val city = hashMapOf(
+                "name" to "Los Angeles",
+                "state" to "CA",
+                "country" to "AMERIKA"
+            )
+
+
+            db.collection("IDKWHATEVER").document("LA")
+                .set(city)
+                .addOnSuccessListener { Log.d(TAG, "DocumentSnapshot successfully written!") }
+                .addOnFailureListener { e -> Log.w(TAG, "Error writing document", e) }
+
+
+
+
+                }
+
+
+
+
+
+
+
+
+
+
 
 
         homepagebtPerfil.setOnClickListener {
