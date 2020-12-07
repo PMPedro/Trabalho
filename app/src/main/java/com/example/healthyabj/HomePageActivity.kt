@@ -46,7 +46,8 @@ class HomePageActivity : AppCompatActivity() {
         }
 
         homepagebtLocalizacao.setOnClickListener {
-            startActivity(Intent(this,LocalizacaoActivitie::class.java))
+            startActivity(Intent(this,MapsActivity::class.java))
+            //startActivity(Intent(this,LocalizacaoActivitie::class.java))
         }
 
         /*homepagebtOpcoes.setOnClickListener{
