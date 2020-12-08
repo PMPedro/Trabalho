@@ -26,25 +26,7 @@ class HomePageActivity : AppCompatActivity() {
         val db = FirebaseFirestore.getInstance()
 
 
-        BTtesteidkwhatelse.setOnClickListener {
 
-
-            val city = hashMapOf(
-                "name" to "Los Angeles",
-                "state" to "CA",
-                "country" to "AMERIKA"
-            )
-
-
-            db.collection("IDKWHATEVER").document("LA")
-                .set(city)
-                .addOnSuccessListener { Log.d(TAG, "DocumentSnapshot successfully written!") }
-                .addOnFailureListener { e -> Log.w(TAG, "Error writing document", e) }
-
-
-
-
-                }
 
 
 

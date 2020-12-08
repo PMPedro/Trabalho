@@ -17,6 +17,8 @@ import com.google.firebase.storage.FirebaseStorage
 import kotlinx.android.synthetic.main.signin.*
 import java.util.*
 
+import com.google.firebase.firestore.Query
+
 class SignUpActivity : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
@@ -51,26 +53,12 @@ class SignUpActivity : AppCompatActivity() {
 
 
 
+
+
+
+
         //Verifica se alguns dos campos estao vazios, se estiver manda mensagem de erro
         SignInCreateAccount.setOnClickListener {
-
-            if(SignInEmail.text.isEmpty()){
-                Toast.makeText(baseContext, "Email em Falta", Toast.LENGTH_SHORT).show()
-
-            }
-
-            else  if(SignInName.text.isEmpty()){
-                Toast.makeText(baseContext, "Nome em falta", Toast.LENGTH_SHORT).show()
-
-            }
-
-            else if(SignInPassword.text.isEmpty()){
-                Toast.makeText(baseContext, "Password em falta", Toast.LENGTH_SHORT).show()
-
-            }
-
-            else
-
 
                 auth.createUserWithEmailAndPassword(SignInEmail.text.toString(), SignInPassword.text.toString())
                 .addOnCompleteListener(this) {task ->
@@ -81,7 +69,13 @@ class SignUpActivity : AppCompatActivity() {
                         uplaodImageToFirebaseStorage()
 
                         val user = auth.currentUser
-                        startActivity(Intent(this,MainActivity::class.java))
+
+
+
+
+
+
+
 
 
                      //   SaveData()
@@ -99,6 +93,14 @@ class SignUpActivity : AppCompatActivity() {
 
 
     }
+
+
+
+
+
+
+
+
     var selectedPhotoUri: Uri?= null
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?){
         super.onActivityResult(requestCode, resultCode,data)
@@ -133,7 +135,7 @@ class SignUpActivity : AppCompatActivity() {
         val uid = FirebaseAuth.getInstance().uid
         val ref = FirebaseFirestore.getInstance()
         //val users = User.User(SignInEmail.text.toString(),SignInPassword.text.toString(),SignInName.text.toString())
-        val users = User.User (uid.toString(), SignInEmail.text.toString(),SignInName.text.toString() ,SignInPassword.text.toString(),profileImageUrl,0)
+        val users = User.User (uid.toString(), SignInEmail.text.toString(),SignInName.text.toString() ,SignInPassword.text.toString(),profileImageUrl,1)
 
 
 

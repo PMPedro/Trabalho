@@ -10,6 +10,7 @@ import android.widget.EditText
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -23,10 +24,47 @@ class MainActivity : AppCompatActivity() {
 
 
 
+
+        fun recebeuseraftersignin () {
+            val db = FirebaseFirestore.getInstance()
+            val uid = FirebaseAuth.getInstance().uid
+
+
+            val docRef = db.collection("User").document(uid.toString())
+            docRef.get()
+                .addOnSuccessListener { document ->
+                    var tipo = ""
+                    if (document != null) {
+
+                        tipo = document.get("usertype").toString()
+
+                        if(tipo.equals(0)){
+                            startActivity(Intent(this,HomePageActivity::class.java))
+
+
+                        }
+                        else if(tipo.equals(1)) {
+                            startActivity(Intent(this,PerfilUser::class.java))
+                        }
+
+
+                    } else {
+                        startActivity(Intent(this,PerfilUser::class.java))
+                    }
+                }
+                .addOnFailureListener { exception ->
+
+                }
+
+
+
+
+        }
+
+
         if (auth.currentUser != null) {
             // User is signed in (getCurrentUser() will be null if not signed in)
-            val intent = Intent(this, HomePageActivity::class.java)
-            startActivity(intent)
+            recebeuseraftersignin()
             finish()
         }
 

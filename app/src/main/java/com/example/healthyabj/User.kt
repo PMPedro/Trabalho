@@ -17,6 +17,7 @@ class User {
         val usertype: Int
 
 
+
     )
 
     fun setLateInitVariable(value: String , valuetwo : String){
