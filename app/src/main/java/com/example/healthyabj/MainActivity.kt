@@ -38,18 +38,18 @@ class MainActivity : AppCompatActivity() {
 
                         tipo = document.get("usertype").toString()
 
-                        if(tipo.equals("0")){
+                        //if(tipo.toString() === "0"){
                             startActivity(Intent(this,HomePageActivity::class.java))
 
 
-                        }
-                        else if(tipo.equals("1")) {
-                            startActivity(Intent(this,PerfilUser::class.java))
-                        }
-
+//                        else if(tipo.toString() === "1") {
+//                        }
+//                            startActivity(Intent(this,PerfilUser::class.java))
+//                        }
+//
 
                     } else {
-                        startActivity(Intent(this,PerfilUser::class.java))
+//                        startActivity(Intent(this,PerfilUser::class.java))
                     }
                 }
                 .addOnFailureListener { exception ->
