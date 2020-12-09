@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
-
+//mb nb
         fun recebeuseraftersignin () {
             val db = FirebaseFirestore.getInstance()
             val uid = FirebaseAuth.getInstance().uid
@@ -38,12 +38,12 @@ class MainActivity : AppCompatActivity() {
 
                         tipo = document.get("usertype").toString()
 
-                        if(tipo.equals(0)){
+                        if(tipo.equals("0")){
                             startActivity(Intent(this,HomePageActivity::class.java))
 
 
                         }
-                        else if(tipo.equals(1)) {
+                        else if(tipo.equals("1")) {
                             startActivity(Intent(this,PerfilUser::class.java))
                         }
 
