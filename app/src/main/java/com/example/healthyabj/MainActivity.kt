@@ -44,8 +44,8 @@ class MainActivity : AppCompatActivity() {
 
                         //if(tipo == "0"){
 
-                        Toast.makeText(this, tipo, Toast.LENGTH_SHORT).show()
-                            startActivity(Intent(this,HomePageActivity::class.java))
+                        Toast.makeText(this, uid, Toast.LENGTH_SHORT).show()
+            //                startActivity(Intent(this,HomePageActivity::class.java))
                         //}
 
                          //if(tipo == "1") {
@@ -72,7 +72,7 @@ class MainActivity : AppCompatActivity() {
 
         if (auth.currentUser != null) {
             // User is signed in (getCurrentUser() will be null if not signed in)
-            //recebeuseraftersignin()
+            recebeuseraftersignin()
             startActivity(Intent(this,HomePageActivity::class.java))
             finish()
         }

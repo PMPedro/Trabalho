@@ -139,8 +139,8 @@ class SignUpActivity : AppCompatActivity() {
 
 
 
-        ref.collection("User")
-            .add(users)
+        ref.collection("User").document("asd")
+            .set(users)
             .addOnSuccessListener {  }
             .addOnFailureListener{}
 
