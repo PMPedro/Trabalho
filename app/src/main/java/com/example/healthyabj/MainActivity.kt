@@ -36,19 +36,27 @@ class MainActivity : AppCompatActivity() {
                     var tipo = ""
                     if (document != null) {
 
-                        tipo = document.get("usertype").toString()
+                        //tipo = document.get("usertype").toString()
 
-                        //if(tipo.toString() === "0"){
+
+                        val result: StringBuffer = StringBuffer()
+                        tipo =  result.append(document.data?.getValue("usertype")).toString()
+
+                        //if(tipo == "0"){
+
+                        Toast.makeText(this, tipo, Toast.LENGTH_SHORT).show()
                             startActivity(Intent(this,HomePageActivity::class.java))
+                        //}
 
+                         //if(tipo == "1") {
 
-//                        else if(tipo.toString() === "1") {
-//                        }
-//                            startActivity(Intent(this,PerfilUser::class.java))
-//                        }
+                    //        startActivity(Intent(this,PerfilUser::class.java))
+                    }
+
 //
 
-                    } else {
+    //                }
+    else {
 //                        startActivity(Intent(this,PerfilUser::class.java))
                     }
                 }
@@ -64,7 +72,8 @@ class MainActivity : AppCompatActivity() {
 
         if (auth.currentUser != null) {
             // User is signed in (getCurrentUser() will be null if not signed in)
-            recebeuseraftersignin()
+            //recebeuseraftersignin()
+            startActivity(Intent(this,HomePageActivity::class.java))
             finish()
         }
 
