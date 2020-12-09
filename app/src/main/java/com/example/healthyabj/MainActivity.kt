@@ -11,7 +11,9 @@ import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.FirebaseFirestore
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.perfiluser.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -27,53 +29,43 @@ class MainActivity : AppCompatActivity() {
 //mb nb
         fun recebeuseraftersignin () {
             val db = FirebaseFirestore.getInstance()
-            val uid = FirebaseAuth.getInstance().uid
+            val uid = auth.currentUser!!.email
 
 
-            val docRef = db.collection("User").document(uid.toString())
-            docRef.get()
-                .addOnSuccessListener { document ->
-                    var tipo = ""
-                    if (document != null) {
 
-                        //tipo = document.get("usertype").toString()
+    db.collection("User")
+        .addSnapshotListener { value, e ->
+            val result: StringBuffer = StringBuffer()
 
+            for (doc in value!!) {
+                if (doc.get("uid") == FirebaseAuth.getInstance().currentUser?.uid.toString()){
 
-                        val result: StringBuffer = StringBuffer()
-                        tipo =  result.append(document.data?.getValue("usertype")).toString()
+                    var cenas = doc.get("usertype").toString()
+                    Toast.makeText(this, cenas.toString(), Toast.LENGTH_SHORT).show()
+                    //Toast.makeText(this, perfiluserNome, Toast.LENGTH_SHORT).show()
 
-                        //if(tipo == "0"){
+                    if(cenas == "0"){
 
-                        Toast.makeText(this, uid, Toast.LENGTH_SHORT).show()
-            //                startActivity(Intent(this,HomePageActivity::class.java))
-                        //}
+                       //Toast.makeText(this, tipo, Toast.LENGTH_SHORT).show()
+                        //   startActivity(Intent(this,HomePageActivity::class.java))
+                       }
 
-                         //if(tipo == "1") {
+                         if(cenas == "1") {
 
-                    //        startActivity(Intent(this,PerfilUser::class.java))
-                    }
-
-//
-
-    //                }
-    else {
-//                        startActivity(Intent(this,PerfilUser::class.java))
+                            startActivity(Intent(this,PerfilUser::class.java))
                     }
                 }
-                .addOnFailureListener { exception ->
-
-                }
-
-
-
-
+            }
         }
+        }
+
+
 
 
         if (auth.currentUser != null) {
             // User is signed in (getCurrentUser() will be null if not signed in)
             recebeuseraftersignin()
-            startActivity(Intent(this,HomePageActivity::class.java))
+           // startActivity(Intent(this,HomePageActivity::class.java))
             finish()
         }
 

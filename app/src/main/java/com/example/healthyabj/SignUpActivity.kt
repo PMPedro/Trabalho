@@ -70,10 +70,10 @@ class SignUpActivity : AppCompatActivity() {
 
                         val user = auth.currentUser
 
+                       // startActivity(Intent(this,MainActivity::class.java))
 
 
-
-
+                        startActivity(Intent(this,MainActivity::class.java))
 
 
 
@@ -137,9 +137,9 @@ class SignUpActivity : AppCompatActivity() {
         //val users = User.User(SignInEmail.text.toString(),SignInPassword.text.toString(),SignInName.text.toString())
         val users = User.User (uid.toString(), SignInEmail.text.toString(),SignInName.text.toString() ,SignInPassword.text.toString(),profileImageUrl,1)
 
+val cena = SignInEmail.text.toString()
 
-
-        ref.collection("User").document("asd")
+        ref.collection("User").document(cena)
             .set(users)
             .addOnSuccessListener {  }
             .addOnFailureListener{}
