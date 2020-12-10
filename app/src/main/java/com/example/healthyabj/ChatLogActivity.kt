@@ -21,6 +21,7 @@ class ChatLogActivity : AppCompatActivity() {
         val TAG ="ChatLog"
     }
     val adapter = GroupAdapter<ViewHolder>()
+    var toUser: User? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_chat_log)
@@ -77,7 +78,9 @@ class ChatLogActivity : AppCompatActivity() {
 
     private fun listenForMessages() {
         // [START listen_multiple]
-        db.collection("Messages")
+        val fromId= FirebaseAuth.getInstance().uid
+        val toId  = intent.getStringExtra("uid")
+        db.collection("User-Messages/$fromId/$toId")
             .orderBy("timestamp", Query.Direction.ASCENDING)
             .addSnapshotListener { value, e ->
                 if (e != null) {
@@ -87,7 +90,7 @@ class ChatLogActivity : AppCompatActivity() {
                 val result: StringBuffer = StringBuffer()
                 var text = String()
                 var from = String()
-              
+
 
                 for (doc in value!!) {
                     text = doc.get("text").toString()
@@ -114,23 +117,22 @@ class ChatLogActivity : AppCompatActivity() {
         if (fromId == null) return
 
         val refence = FirebaseFirestore.getInstance()
+        val torefence = FirebaseFirestore.getInstance()
 
         val chatMessage = Chat.ChatMessage(text, fromId, toId, System.currentTimeMillis() / 1000)
 
 
-        refence.collection("Messages")
+        refence.collection("User-Messages/$fromId/$toId")
             .add(chatMessage)
             .addOnSuccessListener {
                 Log.d(TAG, "Saved our chat message...${refence}")
             }
-        /*if (chatMessage != null) {
-            Log.d(TAG, chatMessage.text)
-            if (chatMessage.fromId == FirebaseAuth.getInstance().uid) {
-                adapter.add(ChatToItem(chatMessage.text))
-            } else {
-                adapter.add(ChatFromItem(chatMessage.text))
+        torefence.collection("User-Messages/$toId/$fromId")
+            .add(chatMessage)
+            .addOnSuccessListener {
+                Log.d(TAG, "Saved our chat message...${torefence}")
             }
-        }*/
+
     }
     private fun setupDunmmyData(){
         val adapter = GroupAdapter<ViewHolder>()
