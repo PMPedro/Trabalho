@@ -57,10 +57,6 @@ class ProxConsultasActivitie : AppCompatActivity() {
         }
 
 
-
-
-
-
         val db = FirebaseFirestore.getInstance()
 
 
