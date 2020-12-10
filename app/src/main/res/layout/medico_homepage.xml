@@ -30,13 +30,14 @@
         app:srcCompat="@drawable/home" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/medicos_homebtchat"
         android:layout_width="137dp"
-        android:layout_height="138dp"
+        android:layout_height="137dp"
         android:layout_marginStart="52dp"
         android:layout_marginTop="84dp"
-        android:background="@drawable/dgtusgbf_1"
-        android:text="Button"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/medicobutao"
+        app:layout_constraintEnd_toStartOf="@+id/button4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView9" />
 
@@ -45,10 +46,11 @@
         android:layout_width="116dp"
         android:layout_height="126dp"
         android:layout_marginStart="52dp"
+        android:layout_marginEnd="30dp"
         android:layout_marginBottom="208dp"
         android:background="@drawable/draw_calendar_day_five_pngrepo_com_5"
-        android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/medicos_home_localizacao"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -58,18 +60,68 @@
         android:layout_marginTop="84dp"
         android:layout_marginEnd="68dp"
         android:background="@drawable/draw_calendar_day_five_pngrepo_com_5"
-        android:text="Button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView9" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/medicos_home_localizacao"
         android:layout_width="98dp"
         android:layout_height="97dp"
         android:layout_marginEnd="80dp"
         android:layout_marginBottom="208dp"
         android:background="@drawable/localizacaoicon"
-        android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/medicos_homeac_perfil"
+        android:layout_width="89dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/group_9"
+        app:layout_constraintBottom_toTopOf="@+id/medicos_homeac_logout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+
+        android:id="@+id/medicos_homeac_logout"
+        android:layout_width="88dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/group_8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="56dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/button4"
+        app:layout_constraintStart_toStartOf="@+id/button4"
+        app:layout_constraintTop_toBottomOf="@+id/button4"
+        app:srcCompat="@drawable/consultas" />
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="67dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/medicos_home_localizacao"
+        app:layout_constraintStart_toStartOf="@+id/medicos_home_localizacao"
+        app:layout_constraintTop_toBottomOf="@+id/medicos_home_localizacao"
+        app:srcCompat="@drawable/localiza__o" />
+
+    <ImageView
+        android:id="@+id/imageView23"
+        android:layout_width="46dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/medicos_homebtchat"
+        app:layout_constraintStart_toStartOf="@+id/medicos_homebtchat"
+        app:layout_constraintTop_toBottomOf="@+id/medicos_homebtchat"
+        app:srcCompat="@drawable/m_dicos" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

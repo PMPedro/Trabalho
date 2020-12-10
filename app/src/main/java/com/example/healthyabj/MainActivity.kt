@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity() {
                     if(cenas == "0"){
 
                        //Toast.makeText(this, tipo, Toast.LENGTH_SHORT).show()
-                        //   startActivity(Intent(this,HomePageActivity::class.java))
+                           startActivity(Intent(this,HomePageActivity::class.java))
                        }
 
                          if(cenas == "1") {
