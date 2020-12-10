@@ -105,6 +105,11 @@
         <activity
             android:name=".aboutus"
             android:label="@string/app_name" />
+        <activity
+            android:name=".MEDICOS.Medicos_Home"
+            android:label="@string/app_name"
+            />
+
     </application>
 
 </manifest>

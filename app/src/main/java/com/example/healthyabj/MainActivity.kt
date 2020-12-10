@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.util.Patterns
 import android.widget.EditText
 import android.widget.Toast
+import com.example.healthyabj.MEDICOS.Medicos_Home
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.FirebaseFirestore
@@ -52,7 +53,7 @@ class MainActivity : AppCompatActivity() {
 
                          if(cenas == "1") {
 
-                            startActivity(Intent(this,PerfilUser::class.java))
+                            startActivity(Intent(this,Medicos_Home::class.java))
                     }
                 }
             }
