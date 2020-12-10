@@ -1,12 +1,16 @@
 package com.example.healthyabj
 
 import android.app.Activity
+import android.app.AlertDialog
+import android.content.DialogInterface
 import android.content.Intent
 import android.graphics.drawable.BitmapDrawable
 import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Log
+import android.widget.CalendarView
+import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
@@ -52,7 +56,20 @@ class SignUpActivity : AppCompatActivity() {
         }
 
 
+        signinBirthdate.setOnClickListener{
+            val builder = AlertDialog.Builder(this)
+            val view = layoutInflater.inflate(R.layout.dialog_calendario_signup,null)
+            val nascimento = view.findViewById<CalendarView>(R.id.calendarioselecionar)
+            builder.setView(view)
+            builder.setPositiveButton("Ok", DialogInterface.OnClickListener { _, _->
 
+            })
+            builder.setNegativeButton("Cancelar", DialogInterface.OnClickListener { _, _->
+
+            })
+
+            builder.show()
+        }
 
 
 

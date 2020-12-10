@@ -32,7 +32,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
+    <TextView
         android:id="@+id/signinBirthdate"
         android:layout_width="259dp"
         android:layout_height="65dp"
@@ -42,6 +42,7 @@
         android:hint="Data de Nascimento"
         android:inputType="date"
         android:paddingLeft="15dp"
+        android:paddingTop="20dp"
         android:textAlignment="viewStart"
         android:textSize="17sp"
         app:layout_constraintEnd_toEndOf="parent"
