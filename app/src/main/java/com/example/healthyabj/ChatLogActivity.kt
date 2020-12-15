@@ -10,12 +10,14 @@ import com.google.firebase.firestore.Query
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.Item
 import com.xwray.groupie.ViewHolder
+import kotlinx.android.synthetic.*
 import kotlinx.android.synthetic.main.activity_chat_log.*
 import kotlinx.android.synthetic.main.chat_from_row.view.*
 import kotlinx.android.synthetic.main.chat_to_row.view.*
 
 
 class ChatLogActivity : AppCompatActivity() {
+   // val message : MutableMap<String,Any> = mutableMapOf()
     val db = FirebaseFirestore.getInstance()
     companion object{
         val TAG ="ChatLog"
@@ -69,8 +71,12 @@ class ChatLogActivity : AppCompatActivity() {
 
                     if(from ==FirebaseAuth.getInstance().uid){
                         adapter.add(ChatFromItem(text))
+
+
                     }else{
                         adapter.add(ChatToItem(text))
+
+
                     }
                 }
              }
@@ -80,6 +86,7 @@ class ChatLogActivity : AppCompatActivity() {
 
 
     private fun performSendMessage() {
+        adapter.clear()
         val text = edittText_chat_log.text.toString()
         val fromId = FirebaseAuth.getInstance().uid
         val userUid = intent.getStringExtra("uid")
@@ -96,11 +103,15 @@ class ChatLogActivity : AppCompatActivity() {
         refence.collection("User-Messages/$fromId/$toId")
             .add(chatMessage)
             .addOnSuccessListener {
+
                 Log.d(TAG, "Saved our chat message...${refence}")
+
             }
         torefence.collection("User-Messages/$toId/$fromId")
             .add(chatMessage)
+
             .addOnSuccessListener {
+
                 Log.d(TAG, "Saved our chat message...${torefence}")
             }
 
@@ -138,7 +149,5 @@ class ChatLogActivity : AppCompatActivity() {
 
 
     }
-    private fun TextMessage(message : List<String>) {
 
-    }
 }
