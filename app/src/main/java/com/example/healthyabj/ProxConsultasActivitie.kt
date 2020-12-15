@@ -60,7 +60,7 @@ class ProxConsultasActivitie : AppCompatActivity() {
         val db = FirebaseFirestore.getInstance()
 
 
-        db.collection("ConsultasExis").orderBy("DiaConsulta", Query.Direction.ASCENDING)
+        db.collection("Consultas").orderBy("DiaConsulta", Query.Direction.ASCENDING)
             .get()
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
@@ -74,12 +74,13 @@ class ProxConsultasActivitie : AppCompatActivity() {
                         var NP : String
 
                             DC = result.append(document.data.getValue("DiaConsulta")).toString()
-                            HC = result.append(document.data.getValue("NomeMedico")).toString()
-                            NM = result.append(document.data.getValue("NomeMedico")).toString()
-                            NP = result.append(document.data.getValue("NomePaciente")).toString()
+                            NP = result.append(document.data.getValue("EmaiPaciente")).toString()
+                            NM = result.append(document.data.getValue("EmailMedico")).toString()
+                            HC = result.append(document.data.getValue("HoraConsulta")).toString()
 
 
-                            var todoList = mutableListOf(   Consultas(DC,HC,NM,NP)  )
+
+                        var todoList = mutableListOf(   Consultas(DC, NP, NM, HC)  )
 
 
 

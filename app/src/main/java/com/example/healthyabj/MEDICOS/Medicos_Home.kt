@@ -31,6 +31,9 @@ class Medicos_Home  : AppCompatActivity() {
         startActivity(Intent(this, ChatListViewActivity::class.java))
 
         }
+        medicos_homebtConsultas.setOnClickListener{
+            startActivity(Intent(this, ProxConsultasActivitie::class.java))
+        }
 
 
 

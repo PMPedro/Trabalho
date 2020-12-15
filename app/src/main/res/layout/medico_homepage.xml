@@ -37,7 +37,7 @@
         android:layout_marginTop="84dp"
         android:layout_marginEnd="30dp"
         android:background="@drawable/medicobutao"
-        app:layout_constraintEnd_toStartOf="@+id/button4"
+        app:layout_constraintEnd_toStartOf="@+id/medicos_homebtConsultas"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView9" />
 
@@ -54,7 +54,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/medicos_homebtConsultas"
         android:layout_width="127dp"
         android:layout_height="139dp"
         android:layout_marginTop="84dp"
@@ -99,9 +99,9 @@
         android:layout_width="56dp"
         android:layout_height="15dp"
         android:layout_marginTop="5dp"
-        app:layout_constraintEnd_toEndOf="@+id/button4"
-        app:layout_constraintStart_toStartOf="@+id/button4"
-        app:layout_constraintTop_toBottomOf="@+id/button4"
+        app:layout_constraintEnd_toEndOf="@+id/medicos_homebtConsultas"
+        app:layout_constraintStart_toStartOf="@+id/medicos_homebtConsultas"
+        app:layout_constraintTop_toBottomOf="@+id/medicos_homebtConsultas"
         app:srcCompat="@drawable/consultas" />
 
     <ImageView

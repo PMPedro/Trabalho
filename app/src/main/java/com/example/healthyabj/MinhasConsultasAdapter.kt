@@ -31,9 +31,9 @@ class MinhasConsultasAdapter (
         holder.itemView.apply {
             //tvtitle.text = todos[posotion}.title
             mconsultaslvData.text = lvbro[position].DiaConsulta.toString()
+            mconsultaslvPaciente.text = lvbro[position].EmaiPaciente.toString()
+            mconsultaslvMedico.text = lvbro[position].EmailMedico.toString()
             mconsultaslvHora.text = lvbro[position].HoraConsulta.toString()
-            mconsultaslvMedico.text = lvbro[position].NomeMedico.toString()
-            mconsultaslvPaciente.text = lvbro[position].NomePaciente.toString()
 
 
 

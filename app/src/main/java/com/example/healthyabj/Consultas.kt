@@ -4,8 +4,8 @@ data class Consultas (
 
     val DiaConsulta : String,
     val HoraConsulta : String,
-    val NomeMedico : String,
-    val NomePaciente : String,
+    val EmailMedico : String,
+    val EmaiPaciente : String,
 
     )
 

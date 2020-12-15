@@ -21,7 +21,6 @@ class ChatLogActivity : AppCompatActivity() {
         val TAG ="ChatLog"
     }
     val adapter = GroupAdapter<ViewHolder>()
-    var toUser: User? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_chat_log)
@@ -45,44 +44,15 @@ class ChatLogActivity : AppCompatActivity() {
     }
 
 
-/*
-    private  fun listenForMessages() {
-        db.collection("Messages").orderBy("timestamp", Query.Direction.ASCENDING)
-            .get()
-
-            .addOnCompleteListener { task ->
-                if (task.isSuccessful) {
-
-                    val result: StringBuffer = StringBuffer()
-                        var text = String()
-                    for (document in task.result) {
-
-                       // text= result.append(document.data.getValue("text")).toString()
-                        text =document.data["text"].toString()
-                            adapter.add(ChatFromItem( text))
-
-
-
-
-                    }
-                } else {
-                    Log.w(TAG, "Error getting documents.", task.exception)
-                }
-            }
-    }
-
-*/
-
-
-
-
     private fun listenForMessages() {
         // [START listen_multiple]
+
         val fromId= FirebaseAuth.getInstance().uid
         val toId  = intent.getStringExtra("uid")
         db.collection("User-Messages/$fromId/$toId")
             .orderBy("timestamp", Query.Direction.ASCENDING)
             .addSnapshotListener { value, e ->
+
                 if (e != null) {
                     Log.w(TAG, "Listen failed.", e)
                     return@addSnapshotListener
@@ -94,6 +64,7 @@ class ChatLogActivity : AppCompatActivity() {
 
                 for (doc in value!!) {
                     text = doc.get("text").toString()
+
                     from = doc.get("fromId").toString()
 
                     if(from ==FirebaseAuth.getInstance().uid){
