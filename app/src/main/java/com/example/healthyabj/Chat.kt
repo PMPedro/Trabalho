@@ -10,6 +10,9 @@ class Chat{
         val fromId:String,
         val toId: String,
         val timestamp: Long,
-    var message : MutableMap<String,Any> = mutableMapOf()
+
+
+
         )
+
 }
