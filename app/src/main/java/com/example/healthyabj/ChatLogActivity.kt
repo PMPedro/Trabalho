@@ -2,11 +2,13 @@ package com.example.healthyabj
 
 import android.os.Bundle
 import android.util.Log
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query
+import com.squareup.picasso.Picasso
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.Item
 import com.xwray.groupie.ViewHolder
@@ -72,9 +74,9 @@ class ChatLogActivity : AppCompatActivity() {
                     if(from ==FirebaseAuth.getInstance().uid){
                         adapter.add(ChatFromItem(text))
 
-
                     }else{
                         adapter.add(ChatToItem(text))
+
 
 
                     }
