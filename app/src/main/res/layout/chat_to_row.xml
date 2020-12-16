@@ -5,6 +5,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginBottom="12dp"
+    android:paddingStart="7dp"
     android:paddingEnd="50dp">
 
     <TextView
@@ -13,9 +14,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:background="@drawable/message2"
+        android:padding="5dp"
         android:paddingLeft="7dp"
         android:paddingTop="7dp"
-        android:paddingEnd="15dp"
+        android:paddingEnd="7dp"
         android:paddingRight="7dp"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
