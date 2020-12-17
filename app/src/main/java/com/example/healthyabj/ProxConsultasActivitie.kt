@@ -15,8 +15,6 @@ import com.google.firebase.auth.PhoneAuthProvider
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query
 import kotlinx.android.synthetic.main.minhasconsultasuser.*
-import java.time.LocalDate
-import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 import java.util.*
 
@@ -30,25 +28,6 @@ class ProxConsultasActivitie : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.minhasconsultasuser)
         auth = FirebaseAuth.getInstance()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
         minhasconsultasuserbtHome.setOnClickListener {
@@ -87,51 +66,59 @@ class ProxConsultasActivitie : AppCompatActivity() {
 
 
         val db = FirebaseFirestore.getInstance()
-//
-//
-//        db.collection("Consultas").orderBy("DiaConsulta", Query.Direction.ASCENDING)
-//            .get()
-//            .addOnCompleteListener { task ->
-//                if (task.isSuccessful) {
-//
-//                    val result: StringBuffer = StringBuffer()
-//
-//                    for (document in task.result) {
-//                        var DC : String
-//                        var HC : String
-//                        var NM : String
-//                        var NP : String
-//
-//                            DC = result.append(document.data.getValue("DiaConsulta")).toString()
-//                            NP = result.append(document.data.getValue("EmaiPaciente")).toString()
-//                            NM = result.append(document.data.getValue("EmailMedico")).toString()
-//                            HC = result.append(document.data.getValue("HoraConsulta")).toString()
-//
-//
-//
-//                        var todoList = mutableListOf(Consultas(DC, NP, NM, HC))
-//
-//
-//
-//
-//                        val adapter = MinhasConsultasAdapter(todoList)
-//                        rvTODO.adapter = adapter
-//                        rvTODO.layoutManager = LinearLayoutManager(this)
-//
-//
-//
-//
-//                    }
-//                } else {
-//                    Log.w(ChatLogActivity.TAG, "Error getting documents.", task.exception)
-//                }
-//            }
+
+fun recebedia2(date : String) {
+        db.collection("Consultas").orderBy("DiaConsulta", Query.Direction.ASCENDING)
+            .get()
+            .addOnCompleteListener { task ->
+                if (task.isSuccessful) {
+
+                    val result: StringBuffer = StringBuffer()
+
+                    for (document in task.result) {
+                        var DC : String
+                        var HC : String
+                        var NM : String
+                        var NP : String
+
+                            DC = result.append(document.data.getValue("DiaConsulta")).toString()
+                            NP = result.append(document.data.getValue("EmaiPaciente")).toString()
+                            NM = result.append(document.data.getValue("EmailMedico")).toString()
+                            HC = result.append(document.data.getValue("HoraConsulta")).toString()
+
+
+//                        DC = document.get("DiaConsulta").toString()
+//                        NP = document.get("EmaiPaciente").toString()
+//                        NM = document.get("EmailMedico").toString()
+//                        HC = document.get("HoraConsulta").toString()
+
+
+                        if(date.equals(DC) == true ) {
+                            var todoList = mutableListOf(Consultas(DC, NP, NM, HC))
+
+
+
+
+                        val adapter = MinhasConsultasAdapter(todoList)
+                        rvTODO.adapter = adapter
+                        rvTODO.layoutManager = LinearLayoutManager(this)
+
+
+                        }
+
+                    }
+                } else {
+                    Log.w(ChatLogActivity.TAG, "Error getting documents.", task.exception)
+                }
+            }
+}
 
 
 
 
 
-fun ReceDia() {
+fun ReceDia( date : String ) {
+
         val fromId= FirebaseAuth.getInstance().uid
 
         db.collection("Consultas")
@@ -157,10 +144,19 @@ fun ReceDia() {
                     NP = doc.get("EmaiPaciente").toString()
                     NM = doc.get("EmailMedico").toString()
                     HC = doc.get("HoraConsulta").toString()
-
-if(DC.toString().equals( tvconsultasdatepickertext.text)){
-
                     var todoList = mutableListOf(Consultas(DC, NP, NM, HC))
+                    val result: StringBuffer = StringBuffer()
+//                    DC = result.append(doc.data.getValue("DiaConsulta")).toString()
+//                    NP = result.append(doc.data.getValue("EmaiPaciente")).toString()
+//                    NM = result.append(doc.data.getValue("EmailMedico")).toString()
+//                    HC = result.append(doc.data.getValue("HoraConsulta")).toString()
+
+
+
+
+                                    if(date.equals(DC) == true   ){
+
+
 
 
 
@@ -173,15 +169,14 @@ if(DC.toString().equals( tvconsultasdatepickertext.text)){
 
 
 }
-                    else{
+                  /*  else{
     Toast.makeText(this, "Nao existem consultas nesse Dia", Toast.LENGTH_SHORT).show()
 
 
 
-    Toast.makeText(this, "Nao existem consultas nesse Dia", Toast.LENGTH_SHORT).show()
-    Toast.makeText(this, "Nao existem consultas nesse Dia", Toast.LENGTH_SHORT).show()
 
-                }
+
+                }*/
             }
 
     }
@@ -198,8 +193,44 @@ if(DC.toString().equals( tvconsultasdatepickertext.text)){
 
         btconsultasdatepicker.setOnClickListener {
             val dpd = DatePickerDialog(this,DatePickerDialog.OnDateSetListener { view, mYear,mMonth,mDay ->
-                tvconsultasdatepickertext.setText(""+mYear+"/"+(mMonth+1)+"/"+mDay)
+                if ((mDay < 10) && (mMonth < 10 ) )
+                {
 
+                    tvconsultasdatepickertext.setText(""+mYear+"-"+"0"+(mMonth+1)+"-"+"0"+mDay)
+                    var date = (""+mYear+"-"+"0"+(mMonth+1)+"-"+"0"+mDay)
+                    ReceDia(date)
+                }
+
+
+                else if (mMonth < 10 )
+                {
+                    tvconsultasdatepickertext.setText(""+mYear+"-"+"0"+(mMonth+1)+"-"+mDay)
+                    var date = (""+mYear+"-"+"0"+(mMonth+1)+"-"+mDay)
+                    ReceDia(date)
+                }
+
+
+                else if (mDay < 10 )
+                {
+                    tvconsultasdatepickertext.setText(""+mYear+"-"+(mMonth+1)+"-"+"0"+mDay)
+                    var date = (""+mYear+"-"+(mMonth+1)+"-"+"0"+mDay)
+                    ReceDia(date)
+                }
+
+
+
+                else
+                {
+                    tvconsultasdatepickertext.setText(""+mYear+"-"+(mMonth+1)+"-"+mDay)
+                    var date = (""+mYear+"-"+(mMonth+1)+"-"+mDay)
+                    ReceDia(date)
+                }
+
+
+
+
+
+              //  recebedia2 (date)
 
             },year,month,day)
             dpd.show()
@@ -210,8 +241,8 @@ if(DC.toString().equals( tvconsultasdatepickertext.text)){
 
 
 
-        ReceDia()
-
+       //
+        //
     }}
 
 
