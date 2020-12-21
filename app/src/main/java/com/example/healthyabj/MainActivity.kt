@@ -48,12 +48,17 @@ class MainActivity : AppCompatActivity() {
                     if(cenas == "0"){
 
                        //Toast.makeText(this, tipo, Toast.LENGTH_SHORT).show()
-                           startActivity(Intent(this,HomePageActivity::class.java))
+                        val intent = Intent(this,HomePageActivity::class.java)
+                        intent.putExtra("TipoUser",cenas)
+                        startActivity(intent)
+                           //startActivity(Intent(this,HomePageActivity::class.java))
                        }
 
                          if(cenas == "1") {
-
-                            startActivity(Intent(this,Medicos_Home::class.java))
+                             val intent = Intent(this,Medicos_Home::class.java)
+                             intent.putExtra("TipoUser",cenas)
+                             startActivity(intent)
+                          //  startActivity(Intent(this,Medicos_Home::class.java))
                     }
                 }
             }

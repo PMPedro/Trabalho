@@ -2,6 +2,7 @@ package com.example.healthyabj.MEDICOS
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.healthyabj.*
 import com.google.firebase.auth.FirebaseAuth
@@ -32,7 +33,11 @@ class Medicos_Home  : AppCompatActivity() {
 
         }
         medicos_homebtConsultas.setOnClickListener{
-            startActivity(Intent(this, ProxConsultasActivitie::class.java))
+            val profileName=intent.getStringExtra("TipoUser")
+            val intent = Intent(this, ProxConsultasActivitie::class.java)
+            intent.putExtra("TipoUser",profileName)
+            startActivity(intent)
+
         }
 
 

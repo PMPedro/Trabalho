@@ -67,51 +67,6 @@ class ProxConsultasActivitie : AppCompatActivity() {
 
         val db = FirebaseFirestore.getInstance()
 
-fun recebedia2(date : String) {
-        db.collection("Consultas").orderBy("DiaConsulta", Query.Direction.ASCENDING)
-            .get()
-            .addOnCompleteListener { task ->
-                if (task.isSuccessful) {
-
-                    val result: StringBuffer = StringBuffer()
-
-                    for (document in task.result) {
-                        var DC : String
-                        var HC : String
-                        var NM : String
-                        var NP : String
-
-                            DC = result.append(document.data.getValue("DiaConsulta")).toString()
-                            NP = result.append(document.data.getValue("EmaiPaciente")).toString()
-                            NM = result.append(document.data.getValue("EmailMedico")).toString()
-                            HC = result.append(document.data.getValue("HoraConsulta")).toString()
-
-
-//                        DC = document.get("DiaConsulta").toString()
-//                        NP = document.get("EmaiPaciente").toString()
-//                        NM = document.get("EmailMedico").toString()
-//                        HC = document.get("HoraConsulta").toString()
-
-
-                        if(date.equals(DC) == true ) {
-                            var todoList = mutableListOf(Consultas(DC, NP, NM, HC))
-
-
-
-
-                        val adapter = MinhasConsultasAdapter(todoList)
-                        rvTODO.adapter = adapter
-                        rvTODO.layoutManager = LinearLayoutManager(this)
-
-
-                        }
-
-                    }
-                } else {
-                    Log.w(ChatLogActivity.TAG, "Error getting documents.", task.exception)
-                }
-            }
-}
 
 
 
@@ -140,35 +95,65 @@ fun ReceDia( date : String ) {
                     var NP : String
 
 
+
+
+
                     DC = doc.get("DiaConsulta").toString()
                     NP = doc.get("EmaiPaciente").toString()
                     NM = doc.get("EmailMedico").toString()
                     HC = doc.get("HoraConsulta").toString()
+
+
+
+
                     var todoList = mutableListOf(Consultas(DC, NP, NM, HC))
                     val result: StringBuffer = StringBuffer()
-//                    DC = result.append(doc.data.getValue("DiaConsulta")).toString()
-//                    NP = result.append(doc.data.getValue("EmaiPaciente")).toString()
-//                    NM = result.append(doc.data.getValue("EmailMedico")).toString()
-//                    HC = result.append(doc.data.getValue("HoraConsulta")).toString()
 
 
-
-
-                                    if(date.equals(DC) == true   ){
+                    val profileName=intent.getStringExtra("TipoUser")
+                    val um = 1
+                    val zero = 0
+                    if (profileName== um.toString() ){
 
 
 
 
 
-
-                    val adapter = MinhasConsultasAdapter(todoList)
-                    rvTODO.adapter = adapter
-                    rvTODO.layoutManager = LinearLayoutManager(this)
+                        if(date.equals(DC) == true   ){
 
 
+                            val user = FirebaseAuth.getInstance().currentUser
+                            if (user != null) {
+                                val useremail = user.email
+                            } else {
+
+                            }
+                            val useremail = user?.email
+
+                            if(useremail == NM){
 
 
-}
+   val adapter = MinhasConsultasAdapter(todoList)
+                            rvTODO.adapter = adapter
+                            rvTODO.layoutManager = LinearLayoutManager(this)
+
+
+                            }
+                            else{
+                                Toast.makeText(this, "Nao existem Consultas neste dia! ", Toast.LENGTH_SHORT).show()
+
+                            }
+
+                        }
+
+
+                   }
+
+
+
+
+
+
                   /*  else{
     Toast.makeText(this, "Nao existem consultas nesse Dia", Toast.LENGTH_SHORT).show()
 

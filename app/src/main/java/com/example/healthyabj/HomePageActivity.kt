@@ -59,7 +59,11 @@ class HomePageActivity : AppCompatActivity() {
 
 
         homepagebtProximasConsultas.setOnClickListener {
-            startActivity(Intent(this,ProxConsultasActivitie::class.java))
+            val profileName=intent.getStringExtra("TipoUser")
+            val intent = Intent(this,ProxConsultasActivitie::class.java)
+            intent.putExtra("TipoUser",profileName)
+            startActivity(intent)
+
         }
 
         homepagebtLocalizacao.setOnClickListener {
