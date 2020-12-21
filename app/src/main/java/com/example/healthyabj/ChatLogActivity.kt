@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -34,15 +35,22 @@ class ChatLogActivity : AppCompatActivity() {
 
         val username = intent.getStringExtra("Name")
         supportActionBar?.title = username
-      // setupDunmmyData()
-        val message = findViewById<TextView>(R.id.textView_from_row)
+
+
         listenForMessages()
         send_button_chat_log.setOnClickListener{
-            Log.d(TAG, "Attemp to send message")
-            performSendMessage()
-        edittText_chat_log.text.clear()
+            var emty = edittText_chat_log.text.toString()
+            if (emty == "") {
+                Toast.makeText(this@ChatLogActivity, "Escreva uma menssagem", Toast.LENGTH_LONG).show()
+            }else{
+                Log.d(TAG, "Attemp to send message")
+                performSendMessage()
+
+            }
+            edittText_chat_log.text.clear()
 
         }
+
 
 
     }
@@ -101,7 +109,6 @@ class ChatLogActivity : AppCompatActivity() {
 
         val chatMessage = Chat.ChatMessage(text, fromId, toId, System.currentTimeMillis() / 1000)
 
-
         refence.collection("User-Messages/$fromId/$toId")
             .add(chatMessage)
             .addOnSuccessListener {
@@ -118,16 +125,7 @@ class ChatLogActivity : AppCompatActivity() {
             }
 
     }
-    private fun setupDunmmyData(){
-        val adapter = GroupAdapter<ViewHolder>()
 
-        adapter.add(ChatFromItem("From message"))
-        adapter.add(ChatToItem("To Message  to message"))
-
-
-      recyclerview_chat_log.adapter=adapter
-
-    }
 
 
     class  ChatFromItem(val text: String) : Item<ViewHolder>(){
