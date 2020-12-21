@@ -141,6 +141,8 @@ fun ReceDia( date : String ) {
                             }
                             else{
                                 Toast.makeText(this, "Nao existem Consultas neste dia! ", Toast.LENGTH_SHORT).show()
+                                Toast.makeText(this, "Nao existem Consultas neste dia! ", Toast.LENGTH_SHORT).show()
+           //asdasd
 
                             }
 
