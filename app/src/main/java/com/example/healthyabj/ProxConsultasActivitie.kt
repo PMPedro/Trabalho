@@ -130,7 +130,11 @@ fun ReceDia( date : String ) {
                             }
                             val useremail = user?.email
 
-                            if(useremail == NM){
+
+
+
+
+                            if(useremail.toString().toLowerCase() == NM.toLowerCase()){
 
 
    val adapter = MinhasConsultasAdapter(todoList)
@@ -141,7 +145,7 @@ fun ReceDia( date : String ) {
                             }
                             else{
                                 Toast.makeText(this, "Nao existem Consultas neste dia! ", Toast.LENGTH_SHORT).show()
-                                Toast.makeText(this, "Nao existem Consultas neste dia! ", Toast.LENGTH_SHORT).show()
+                                //Toast.makeText(this, "Nao existem Consultas neste dia! ", Toast.LENGTH_SHORT).show()
            //asdasd
 
                             }
@@ -150,6 +154,56 @@ fun ReceDia( date : String ) {
 
 
                    }
+
+
+
+
+
+
+
+
+                    if(profileName== zero.toString())
+                    {
+
+
+
+
+
+                        if(date.equals(DC) == true   ){
+
+
+                            val user = FirebaseAuth.getInstance().currentUser
+                            if (user != null) {
+                                val useremail = user.email
+                            } else {
+
+                            }
+                            val useremail = user?.email
+
+
+
+
+
+                            if(useremail.toString().toLowerCase() == NP.toLowerCase()){
+
+
+                                val adapter = MinhasConsultasAdapter(todoList)
+                                rvTODO.adapter = adapter
+                                rvTODO.layoutManager = LinearLayoutManager(this)
+
+
+                            }
+                            else{
+                                Toast.makeText(this, "Nao existem Consultas neste dia! ", Toast.LENGTH_SHORT).show()
+
+//sdf
+                            }
+
+                        }
+
+
+
+                    }
 
 
 
