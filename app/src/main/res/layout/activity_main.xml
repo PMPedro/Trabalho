@@ -5,16 +5,16 @@
     android:id="@+id/loginLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/frame_6"
     tools:context=".MainActivity">
 
 
     <EditText
         android:id="@+id/activitymainEmail"
-        android:layout_width="276dp"
-        android:layout_height="71dp"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/retangulo27"
+        android:layout_width="282dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="250dp"
+        android:background="@drawable/rectangle_100"
         android:ems="10"
         android:hint="Email"
         android:inputType="textPersonName"
@@ -23,14 +23,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView58" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/activitymainPassword"
-        android:layout_width="276dp"
-        android:layout_height="71dp"
-        android:layout_marginTop="12dp"
-        android:background="@drawable/retangulo28"
+        android:layout_width="282dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rectangle_100"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
@@ -48,7 +48,7 @@
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textAppearance="@style/ForgotPassword"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.513"
@@ -57,14 +57,15 @@
     <TextView
 
         android:id="@+id/activitymainbtSignUp"
-        android:layout_width="97dp"
-        android:layout_height="23dp"
+        android:layout_width="240dp"
+        android:layout_height="32dp"
         android:layout_marginTop="24dp"
         android:clickable="true"
-        android:text="Criar Conta"
+
+        android:text="Não tem conta?"
         android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/activitymainbtLogin" />
@@ -72,39 +73,23 @@
     <Button
 
         android:id="@+id/activitymainbtLogin"
-        android:layout_width="87dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="60dp"
-        android:background="@drawable/loginbutao"
+        android:layout_width="282dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/group_12"
         android:clickable="false"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/activitymainPassword"
+        app:layout_constraintStart_toStartOf="@+id/activitymainPassword"
         app:layout_constraintTop_toBottomOf="@+id/activitymainPassword" />
 
     <ImageView
-        android:id="@+id/imageView58"
-        android:layout_width="103dp"
-        android:layout_height="93dp"
-        android:layout_marginTop="32dp"
-        android:adjustViewBounds="false"
-        android:cropToPadding="false"
-        android:scaleX="1.45"
-        android:scaleY="1.4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView57"
-        app:srcCompat="@drawable/medico" />
-
-    <ImageView
-        android:id="@+id/imageView57"
-        android:layout_width="417dp"
-        android:layout_height="21dp"
-        android:layout_marginTop="92dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/imageView25"
+        android:layout_width="209dp"
+        android:layout_height="186dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/linha" />
+        app:srcCompat="@drawable/cenaemcima" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

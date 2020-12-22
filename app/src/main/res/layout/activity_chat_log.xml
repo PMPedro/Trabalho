@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
+    android:background="@drawable/frame_6"
     tools:context=".ChatLogActivity">
 
     <EditText
         android:id="@+id/edittText_chat_log"
-        android:layout_width="298dp"
-        android:layout_height="45dp"
+        android:layout_width="299dp"
+        android:layout_height="60dp"
+        android:background="@drawable/rectangle_109"
         android:ems="10"
         android:hint="Escreva uma messagem"
         android:inputType="textPersonName"
@@ -22,7 +23,7 @@
         android:id="@+id/send_button_chat_log"
         android:layout_width="57dp"
         android:layout_height="50dp"
-        android:background="@android:drawable/ic_menu_send"
+        android:background="@drawable/polygon_2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -31,7 +32,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="16dp"
-        android:background="@drawable/background"
+        android:background="@drawable/frame_6"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toTopOf="@+id/edittText_chat_log"
         app:layout_constraintEnd_toEndOf="parent"

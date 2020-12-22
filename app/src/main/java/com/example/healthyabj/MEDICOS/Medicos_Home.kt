@@ -45,14 +45,14 @@ class Medicos_Home  : AppCompatActivity() {
 
 
 
-        medicos_homeac_perfil.setOnClickListener {
-
-            startActivity(Intent(this, PerfilUser::class.java))
-
-
-
-
-        }
+//        medicos_homeac_perfil.setOnClickListener {
+//
+//            startActivity(Intent(this, PerfilUser::class.java))
+//
+//
+//
+//
+//        }
 
 }
 }

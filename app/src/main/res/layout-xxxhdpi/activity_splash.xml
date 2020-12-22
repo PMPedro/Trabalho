@@ -5,25 +5,4 @@
     android:id="@+id/linearLayout17"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/wallpaper_gradient_blue_white_linear_1920x1080_c2_ffffff_00bfff_a_285_f_14_1">
-
-    <ImageView
-        android:id="@+id/imageView31"
-        android:layout_width="133dp"
-        android:layout_height="132dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginBottom="3dp"
-        android:adjustViewBounds="false"
-        android:cropToPadding="false"
-        android:scaleX="1.45"
-        android:scaleY="1.4"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.501"
-        app:srcCompat="@drawable/medico"
-        tools:layout_conversion_absoluteHeight="869dp"
-        tools:layout_conversion_absoluteWidth="411dp" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+    android:background="@drawable/frame_2"/>

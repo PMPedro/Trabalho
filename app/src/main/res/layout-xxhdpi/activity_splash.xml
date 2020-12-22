@@ -5,15 +5,4 @@
     android:id="@+id/linearLayout18"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/wallpaper_gradient_blue_white_linear_1920x1080_c2_ffffff_00bfff_a_285_f_14_1" >
-
-    <ImageView
-        android:id="@+id/imageView20"
-        android:layout_width="258dp"
-        android:layout_height="124dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo_5" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+    android:background="@drawable/frame_2" />

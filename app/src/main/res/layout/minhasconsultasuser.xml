@@ -5,35 +5,7 @@
     android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background">
-
-    <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="417dp"
-        android:layout_height="21dp"
-        android:layout_marginTop="112dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView15"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/linha" />
-
-    <TextView
-        android:id="@+id/minhasconsultastvtv"
-        android:layout_width="282dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="40dp"
-        android:text="Minhas Consultas"
-        android:textColor="@color/black"
-        android:textSize="35dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView8"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/minhasconsultasuserbtHome"
-        app:layout_constraintHorizontal_bias="0.256"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+    android:background="@drawable/frame_6">
 
     <Button
         android:id="@+id/minhasconsultasuserbtHome"
@@ -55,30 +27,36 @@
 
     <Button
         android:id="@+id/btconsultasdatepicker"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="30dp"
-        android:background="@drawable/ellipse_2"
+        android:layout_width="180dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/rectangle_110"
         android:text="Dia"
+        android:textColor="@color/white"
+        android:textSize="20sp"
         app:layout_constraintBottom_toTopOf="@+id/rvTODO"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/tvconsultasdatepickertext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="30dp"
         android:text="Escolha um Dia"
         android:textColor="@color/white"
         android:textSize="30dp"
         app:layout_constraintBottom_toTopOf="@+id/rvTODO"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView8"
-        app:layout_constraintVertical_bias="0.377" />
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="161dp"
+        android:layout_height="156dp"
+        android:layout_marginStart="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/group_13" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
