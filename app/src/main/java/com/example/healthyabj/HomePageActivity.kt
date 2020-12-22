@@ -12,6 +12,7 @@ import com.example.healthyabj.ChatLogActivity.Companion.TAG
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.PhoneAuthProvider
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.ktx.Firebase
 import kotlinx.android.synthetic.main.homepage.*
 
 class HomePageActivity : AppCompatActivity() {
@@ -27,22 +28,47 @@ class HomePageActivity : AppCompatActivity() {
 
 
 
+        val user = FirebaseAuth.getInstance().currentUser
+        val useremail = user?.email
 
 
+        fun ReceiveDataPlace () {
+        val docRef = db.collection("User").document(useremail.toString())
+        docRef.get()
+            .addOnSuccessListener { document ->
+                if (document != null) {
+
+                  var email = document.get("email").toString()
+                  //var data = document.get("EmaiPaciente").toString()
+                  var nome = document.get("name").toString()
 
 
+                    tvhomepageNome.setText(nome)
+                    tvhomepageNome.setText(email)
+
+                } else {
 
 
-
-
-
-
-
-
-        homepagebtPerfil.setOnClickListener {
-            startActivity(Intent(this,PerfilUser::class.java))
+                }
+            }
+            .addOnFailureListener { exception ->
+                Log.d(TAG, "get failed with ", exception)
+            }
 
         }
+
+        ReceiveDataPlace()
+
+
+
+
+
+
+
+
+
+
+
 
 
 //        homepagebtSignOut.setOnClickListener {
