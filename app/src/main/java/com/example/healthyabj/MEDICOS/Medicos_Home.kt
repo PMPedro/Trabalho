@@ -35,7 +35,8 @@ class Medicos_Home  : AppCompatActivity() {
 
         val user = FirebaseAuth.getInstance().currentUser
         val useremail = user?.email
-           fun ReceiveDataPlace () {
+
+        fun ReceiveDataPlace () {
         val docRef = db.collection("User").document(useremail.toString())
         docRef.get()
             .addOnSuccessListener { document ->
@@ -54,6 +55,9 @@ class Medicos_Home  : AppCompatActivity() {
 
                 }
             }
+
+
+
             .addOnFailureListener { exception ->
 
             }
@@ -80,7 +84,6 @@ class Medicos_Home  : AppCompatActivity() {
             val intent = Intent(this, ProxConsultasActivitie::class.java)
             intent.putExtra("TipoUser",profileName)
             startActivity(intent)
-
         }
 
 

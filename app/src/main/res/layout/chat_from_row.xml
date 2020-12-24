@@ -13,14 +13,19 @@
         android:id="@+id/textView_from_row"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:background="@drawable/message"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="1dp"
+        android:background="@color/colorPrimary"
         android:padding="5dp"
         android:paddingLeft="7dp"
+
         android:paddingTop="7dp"
         android:paddingEnd="7dp"
         android:paddingRight="7dp"
-        android:textColor="@color/black"
+        android:textSize="12sp"
+
+
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

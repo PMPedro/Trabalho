@@ -9,23 +9,24 @@
 
     <EditText
         android:id="@+id/edittText_chat_log"
-        android:layout_width="299dp"
-        android:layout_height="60dp"
+        android:layout_width="300sp"
+        android:layout_height="60sp"
+        android:layout_marginStart="5dp"
         android:background="@drawable/rectangle_109"
         android:ems="10"
         android:hint="Escreva uma messagem"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/send_button_chat_log"
         app:layout_constraintStart_toEndOf="@+id/sendFilesButton" />
 
     <Button
         android:id="@+id/send_button_chat_log"
-        android:layout_width="57dp"
-        android:layout_height="50dp"
+        android:layout_width="55sp"
+        android:layout_height="60sp"
+        android:layout_marginStart="5dp"
         android:background="@drawable/polygon_2"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/edittText_chat_log" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview_chat_log"
@@ -39,12 +40,14 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/sendFilesButton"
-        android:layout_width="45dp"
-        android:layout_height="51dp"
+        android:layout_width="30sp"
+
+        android:layout_height="60sp"
+        android:layout_marginStart="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 

@@ -5,7 +5,7 @@
     android:id="@+id/linearLayout4"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/frame_6">
+    android:background="@drawable/screen3x">
 
     <Button
         android:id="@+id/homepagebtChat"
@@ -34,30 +34,19 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/homepagebtProximasConsultas" />
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/selectphoto_imageview"
-        android:layout_width="128dp"
-        android:layout_height="126dp"
-        app:civ_border_width="4dp"
-        app:layout_constraintBottom_toTopOf="@+id/SignInEmail"
-        app:layout_constraintEnd_toEndOf="@+id/SignInFoto"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/SignInFoto"
-        app:layout_constraintTop_toBottomOf="@+id/imageView46"
-        app:layout_constraintVertical_bias="0.0" />
-
 
     <Button
         android:id="@+id/SignInFoto"
         android:layout_width="126dp"
         android:layout_height="126dp"
+        android:layout_marginTop="170dp"
         android:background="@drawable/round"
         android:text="Selecionar Foto"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/imageView20"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.484"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/homepagebtLogout"
@@ -67,31 +56,22 @@
         android:layout_marginEnd="4dp"
         android:background="@drawable/retangulo25"
         android:text="Logout"
-        android:textSize="15sp"
-
-
         android:textColor="@color/white"
+
+
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView16"
-        android:layout_width="131dp"
-        android:layout_height="119dp"
-        android:layout_marginTop="4dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/group_13" />
 
     <ImageView
         android:id="@+id/imageView20"
         android:layout_width="372dp"
         android:layout_height="284dp"
-        android:layout_marginTop="240dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.589"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SignInFoto"
         app:srcCompat="@drawable/rectangle_105" />
 
     <TextView
@@ -115,10 +95,10 @@
         android:layout_marginStart="107dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="107dp"
-        android:textColor="@color/white"
         android:shadowColor="@color/white"
-        android:textSize="20sp"
         android:text="TextView"
+        android:textColor="@color/white"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/imageView20"
         app:layout_constraintStart_toStartOf="@+id/imageView20"
         app:layout_constraintTop_toBottomOf="@+id/tvhomepageNome" />
@@ -128,11 +108,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="107dp"
-        android:textSize="20sp"
-        android:textColor="@color/white"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="107dp"
         android:text="TextView"
+        android:textColor="@color/white"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/imageView20"
         app:layout_constraintStart_toStartOf="@+id/imageView20"
         app:layout_constraintTop_toBottomOf="@+id/tvhomepageDatanas" />

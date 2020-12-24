@@ -188,6 +188,7 @@ fun ReceDia( date : String ) {
 
 
                                 val adapter = MinhasConsultasAdapter(todoList)
+                       //         adapter.add(MinhasConsultasAdapter(todoList))
                                 rvTODO.adapter = adapter
                                 rvTODO.layoutManager = LinearLayoutManager(this)
 
