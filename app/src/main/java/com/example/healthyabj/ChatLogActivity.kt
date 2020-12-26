@@ -203,7 +203,7 @@ class ChatLogActivity : AppCompatActivity() {
 
             .addOnSuccessListener {
 
-                Log.d(TAG, "Saved our chat message...${torefence}")
+                Log.d(ImageSendActivity.TAG, "Saved our chat message...${torefence}")
             }
 
     }
