@@ -17,7 +17,7 @@
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/send_button_chat_log"
-        app:layout_constraintStart_toEndOf="@+id/sendFilesButton" />
+        app:layout_constraintStart_toEndOf="@+id/sendFotoButton"/>
 
     <Button
         android:id="@+id/send_button_chat_log"
@@ -42,7 +42,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/sendFilesButton"
+        android:id="@+id/sendFotoButton"
         android:layout_width="45dp"
         android:layout_height="51dp"
         app:layout_constraintBottom_toBottomOf="parent"

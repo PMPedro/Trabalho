@@ -109,6 +109,10 @@
             android:name=".MEDICOS.Medicos_Home"
             android:label="@string/app_name"
             />
+        <activity
+            android:name=".ImageSendActivity"
+            android:label="@string/app_name"
+            />
 
     </application>
 

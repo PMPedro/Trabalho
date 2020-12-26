@@ -1,22 +1,31 @@
 package com.example.healthyabj
 
+import android.annotation.SuppressLint
+import android.app.Activity
+import android.content.Intent
+import android.icu.text.Transliterator
+import android.icu.text.Transliterator.Position
+import android.net.Uri
 import android.os.Bundle
+import android.provider.MediaStore
+import android.util.DisplayMetrics
 import android.util.Log
-import android.widget.ImageView
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearSmoothScroller
+import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query
-import com.squareup.picasso.Picasso
+import com.google.firebase.storage.FirebaseStorage
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.Item
 import com.xwray.groupie.ViewHolder
-import kotlinx.android.synthetic.*
 import kotlinx.android.synthetic.main.activity_chat_log.*
+import kotlinx.android.synthetic.main.activity_image_send.*
 import kotlinx.android.synthetic.main.chat_from_row.view.*
 import kotlinx.android.synthetic.main.chat_to_row.view.*
+import java.util.*
 
 
 class ChatLogActivity : AppCompatActivity() {
@@ -25,14 +34,13 @@ class ChatLogActivity : AppCompatActivity() {
     companion object{
         val TAG ="ChatLog"
     }
+    lateinit var file:String
     val adapter = GroupAdapter<ViewHolder>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_chat_log)
 
-
-        recyclerview_chat_log.adapter=adapter
-
+            recyclerview_chat_log.adapter=adapter
         val username = intent.getStringExtra("Name")
         supportActionBar?.title = username
 
@@ -51,13 +59,53 @@ class ChatLogActivity : AppCompatActivity() {
 
         }
 
+        sendFotoButton.setOnClickListener{
+            startActivity(Intent(this,ChatLogActivity::class.java))
+            Log.d(ChatLogActivity.TAG,"Try to show photo selector")
+            val intent = Intent(Intent.ACTION_PICK)
+            intent.type="image/*"
+            startActivityForResult(intent,0)
+
+        }
+
+    }
+
+    var selectedPhotoUri: Uri?= null
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?){
+        super.onActivityResult(requestCode, resultCode,data)
+        if (requestCode == 0 && resultCode == Activity.RESULT_OK && data !=null){
+            Log.d(ImageSendActivity.TAG," photo selected")
+            selectedPhotoUri=data?.data
+            uplaodImageToFirebaseStorage()
+
+
+        }
+
+
+    }
+    private fun uplaodImageToFirebaseStorage() {
+
+        if (selectedPhotoUri == null)return
+        val filename = UUID.randomUUID().toString()
+        val reffoto = FirebaseStorage.getInstance().getReference("/images/$filename")
+        reffoto.putFile(selectedPhotoUri!!)
+            .addOnSuccessListener {
+                Log.d(ImageSendActivity.TAG,"Successfully uploaded image: ${it.metadata?.path}")
+                reffoto.downloadUrl.addOnSuccessListener {
+                    Log.d(ImageSendActivity.TAG,"File Location $it")
+                    file = it.toString()
+                    performSendFoto()
+
+
+                }
+            }
 
 
     }
 
-
     private fun listenForMessages() {
         // [START listen_multiple]
+        adapter.clear()
 
         val fromId= FirebaseAuth.getInstance().uid
         val toId  = intent.getStringExtra("uid")
@@ -82,6 +130,7 @@ class ChatLogActivity : AppCompatActivity() {
                     if(from ==FirebaseAuth.getInstance().uid){
                         adapter.add(ChatFromItem(text))
 
+
                     }else{
                         adapter.add(ChatToItem(text))
 
@@ -97,6 +146,7 @@ class ChatLogActivity : AppCompatActivity() {
 
     private fun performSendMessage() {
         adapter.clear()
+
         val text = edittText_chat_log.text.toString()
         val fromId = FirebaseAuth.getInstance().uid
         val userUid = intent.getStringExtra("uid")
@@ -127,8 +177,39 @@ class ChatLogActivity : AppCompatActivity() {
     }
 
 
+    private fun performSendFoto() {
+
+
+        val text = file
+        val fromId = FirebaseAuth.getInstance().uid
+        val userUid = intent.getStringExtra("touid")
+        val toId = userUid!!
+        if (fromId == null) return
+
+        val refence = FirebaseFirestore.getInstance()
+        val torefence = FirebaseFirestore.getInstance()
+
+        val chatMessage = Chat.ChatMessage(text, fromId, toId, System.currentTimeMillis() / 1000)
+        adapter.clear()
+        refence.collection("User-Messages/$fromId/$toId")
+            .add(chatMessage)
+            .addOnSuccessListener {
+
+                Log.d(TAG, "Saved our chat message...${refence}")
+
+            }
+        torefence.collection("User-Messages/$toId/$fromId")
+            .add(chatMessage)
+
+            .addOnSuccessListener {
+
+                Log.d(TAG, "Saved our chat message...${torefence}")
+            }
+
+    }
 
     class  ChatFromItem(val text: String) : Item<ViewHolder>(){
+
         override fun bind(viewHolder: ViewHolder, position: Int) {
             viewHolder.itemView.textView_from_row.text=text
 

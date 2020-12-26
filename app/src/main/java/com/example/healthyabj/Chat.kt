@@ -1,4 +1,4 @@
-package com.example.healthyabj
+   package com.example.healthyabj
 
 class Chat{
     lateinit var text:String
@@ -10,8 +10,6 @@ class Chat{
         val fromId:String,
         val toId: String,
         val timestamp: Long,
-
-
 
         )
 
