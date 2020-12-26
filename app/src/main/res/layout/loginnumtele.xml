@@ -11,7 +11,6 @@
         android:id="@+id/imageView22"
         android:layout_width="115dp"
         android:layout_height="101dp"
-        android:layout_marginTop="5dp"
         android:layout_marginBottom="16dp"
         android:adjustViewBounds="false"
         android:cropToPadding="false"
@@ -21,22 +20,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView18"
-        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/medico" />
-
-    <ImageView
-        android:id="@+id/imageView18"
-        android:layout_width="409dp"
-        android:layout_height="33dp"
-        android:layout_marginBottom="116dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView59"
-        app:layout_constraintVertical_bias="0.797"
-        app:srcCompat="@drawable/linha" />
 
     <ImageView
         android:id="@+id/imageView19"

@@ -11,29 +11,35 @@
 
     <EditText
         android:id="@+id/activitymainEmail"
-        android:layout_width="282dp"
-        android:layout_height="77dp"
-        android:layout_marginTop="250dp"
+        android:layout_width="269dp"
+        android:layout_height="71dp"
+
+        android:layout_marginTop="244dp"
         android:background="@drawable/rectangle_100"
         android:ems="10"
         android:hint="Email"
         android:inputType="textPersonName"
         android:textAlignment="center"
         android:textColor="@color/black"
+
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/activitymainPassword"
-        android:layout_width="282dp"
-        android:layout_height="77dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+
+
+
+        android:layout_width="269dp"
+        android:layout_height="71dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/rectangle_100"
         android:ems="10"
-        android:hint="Password"
-        android:inputType="textPassword"
+
+
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
@@ -71,10 +77,11 @@
         app:layout_constraintTop_toBottomOf="@+id/activitymainbtLogin" />
 
     <Button
-
+        android:layout_width="269dp"
+        android:layout_height="71dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
         android:id="@+id/activitymainbtLogin"
-        android:layout_width="282dp"
-        android:layout_height="77dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/group_12"
         android:clickable="false"
@@ -83,7 +90,6 @@
         app:layout_constraintEnd_toEndOf="@+id/activitymainPassword"
         app:layout_constraintStart_toStartOf="@+id/activitymainPassword"
         app:layout_constraintTop_toBottomOf="@+id/activitymainPassword" />
-
     <ImageView
         android:id="@+id/imageView25"
         android:layout_width="209dp"

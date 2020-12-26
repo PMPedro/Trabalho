@@ -5,39 +5,33 @@
     android:id="@+id/linearLayout16"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/frame_6">
+    android:background="@drawable/screen3x">
 
     <Button
         android:id="@+id/homeSignOut2"
         android:layout_width="112dp"
         android:layout_height="48dp"
-        android:layout_marginStart="315dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="679dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
         android:background="@drawable/retangulo15"
         android:text="Sign Out"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.75"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/homepagemedicoChat"
-        android:layout_width="100sp"
-        android:layout_height="100sp"
-        android:layout_marginEnd="20dp"
+        android:layout_width="70sp"
+        android:layout_height="70sp"
+        android:layout_marginEnd="70dp"
         android:background="@drawable/oupaccrrlrlrlrlrlrl"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/homepagemedicoLocalizacao"
-        android:layout_width="100sp"
-        android:layout_height="100sp"
+        android:layout_width="70sp"
+        android:layout_height="70sp"
         android:layout_marginEnd="20dp"
         android:background="@drawable/maps"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -45,12 +39,14 @@
 
     <Button
         android:id="@+id/homepagemedicoProximasConsultas"
-        android:layout_width="100sp"
-        android:layout_height="100sp"
+        android:layout_width="70sp"
+        android:layout_height="70sp"
+        android:layout_marginStart="70dp"
         android:layout_marginEnd="20dp"
         android:background="@drawable/feckofff"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/homepagemedicoLocalizacao" />
+        app:layout_constraintEnd_toStartOf="@+id/homepagemedicoLocalizacao"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/imageView13"
@@ -58,10 +54,10 @@
         android:layout_height="360dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.551"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.325"
+        app:layout_constraintVertical_bias="0.466"
         app:srcCompat="@drawable/rectangle_105" />
 
     <TextView
@@ -100,13 +96,5 @@
         app:layout_constraintEnd_toEndOf="@+id/imageView13"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView17" />
-
-    <ImageView
-        android:id="@+id/imageView12"
-        android:layout_width="150sp"
-        android:layout_height="150sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/group_13" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

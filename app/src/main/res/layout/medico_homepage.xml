@@ -5,7 +5,7 @@
     android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/frame_6">
+    android:background="@drawable/frame_5">
 
     <Button
         android:id="@+id/medicos_homebtchat"
@@ -39,12 +39,11 @@
         android:id="@+id/medicos_homeac_logout"
         android:layout_width="88dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="680dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
         android:background="@drawable/group_8"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView9"
@@ -60,7 +59,7 @@
         app:srcCompat="@drawable/rectangle_105" />
 
     <TextView
-        android:id="@+id/textView21"
+        android:id="@+id/tvmedicoshomepageNome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
@@ -72,38 +71,14 @@
         app:layout_constraintTop_toTopOf="@+id/imageView9" />
 
     <TextView
-        android:id="@+id/textView23"
-        android:layout_width="wrap_content"
-
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="TextView"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView21" />
-
-    <TextView
-        android:id="@+id/textView26"
+        android:id="@+id/tvmedicoshomepageEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
         android:text="TextView"
         android:textColor="@color/white"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView23" />
-
-    <ImageView
-        android:id="@+id/imageView14"
-        android:layout_width="150sp"
-        android:layout_height="150sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/group_13" />
+        tools:layout_editor_absoluteY="394dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
