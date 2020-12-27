@@ -39,7 +39,7 @@ class NewMessageActivity : AppCompatActivity() {
 
     // Access a Cloud Firestore instance from your Activity
     val db = Firebase.firestore
-
+    lateinit var textToUid:String
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -74,7 +74,7 @@ class NewMessageActivity : AppCompatActivity() {
 
                 usName.text = model.name
              Picasso.with(this@NewMessageActivity).load(model.profileImageUrl).into(usImage)
-
+                            textToUid=model.uid
 
                 holder.itemView.setOnClickListener {
 
@@ -82,7 +82,7 @@ class NewMessageActivity : AppCompatActivity() {
 
                     intent.putExtra("Name", model.name)
                     intent.putExtra("uid", model.uid)
-
+                    intent.putExtra("touid", model.uid)
                     startActivity(intent)
                 }
 

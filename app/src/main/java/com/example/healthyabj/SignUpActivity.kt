@@ -148,10 +148,9 @@ class SignUpActivity : AppCompatActivity() {
 
 
     private fun saveUserToFirabaseDatabase(profileImageUrl:String){
-        val database = Firebase
+
         val uid = FirebaseAuth.getInstance().uid
         val ref = FirebaseFirestore.getInstance()
-        //val users = User.User(SignInEmail.text.toString(),SignInPassword.text.toString(),SignInName.text.toString())
         val users = User.User (uid.toString(), SignInEmail.text.toString(),SignInName.text.toString() ,SignInPassword.text.toString(),profileImageUrl,0)
 
 val cena = SignInEmail.text.toString()
@@ -163,19 +162,6 @@ val cena = SignInEmail.text.toString()
 
 
 
-
-
-
-
-//        ref.setValue(users)
-//            .addOnSuccessListener {
-//                Log.d("SignupActivity","Finaly we saved the user to firebase ")
-//            }
-
-        // ref.child("users").setValue(users)
-        // ref.child("/Users/$uid").setValue(users)
-        //ref.child("/Users/$uid").setValue(user)
-        //database.child("users").child(userId).setValue(user)
     }
 
 

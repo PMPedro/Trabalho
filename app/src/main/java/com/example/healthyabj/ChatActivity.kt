@@ -34,15 +34,7 @@ class ChatActivity : AppCompatActivity() {
             val uid = FirebaseAuth.getInstance().uid
             val ref = FirebaseDatabase.getInstance().getReference("/Message/")
 
-         //   val message = Message.Message(chatpageMessage.text.toString(),uid.toString())
 
-
-           // ref.setValue(message)
-
-            // ref.child("users").setValue(users)
-            // ref.child("/Users/$uid").setValue(users)
-            //ref.child("/Users/$uid").setValue(user)
-            //database.child("users").child(userId).setValue(user)
         }
 
 
