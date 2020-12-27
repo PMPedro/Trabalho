@@ -139,6 +139,7 @@ fun ReceDia( date : String ) {
 
    val adapter = MinhasConsultasAdapter(todoList)
                             rvTODO.adapter = adapter
+
                             rvTODO.layoutManager = LinearLayoutManager(this)
 
 
@@ -149,6 +150,11 @@ fun ReceDia( date : String ) {
            //asdasd
 
                             }
+
+                        }
+                        else {
+                            val adapter = MinhasConsultasAdapter(todoList)
+                          //  adapter.clean()
 
                         }
 

@@ -80,7 +80,8 @@ class HomePageActivity : AppCompatActivity() {
 
         homepagebtChat.setOnClickListener {
             //vai para o chat
-            startActivity(Intent(this,ChatListViewActivity::class.java))
+            val intent = Intent(this,NewMessageActivity::class.java)
+            startActivity(intent)
         }
 
 

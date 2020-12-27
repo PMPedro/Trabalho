@@ -11,10 +11,12 @@
         android:id="@+id/medicos_homebtchat"
         android:layout_width="100sp"
         android:layout_height="100sp"
+        android:layout_marginStart="21dp"
         android:layout_marginEnd="30dp"
         android:background="@drawable/oupaccrrlrlrlrlrlrl"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/medicos_homebtConsultas" />
+        app:layout_constraintEnd_toStartOf="@+id/medicos_homebtConsultas"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/medicos_homebtConsultas"
@@ -27,8 +29,8 @@
 
     <Button
         android:id="@+id/medicos_home_localizacao"
-        android:layout_width="100sp"
-        android:layout_height="100sp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_marginEnd="30dp"
         android:background="@drawable/maps"
         app:layout_constraintBottom_toBottomOf="parent"

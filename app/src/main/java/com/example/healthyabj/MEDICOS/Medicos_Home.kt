@@ -76,7 +76,8 @@ class Medicos_Home  : AppCompatActivity() {
 
         medicos_homebtchat.setOnClickListener {
 
-        startActivity(Intent(this, ChatListViewActivity::class.java))
+            val intent = Intent(this,NewMessageActivity::class.java)
+            startActivity(intent)
 
         }
         medicos_homebtConsultas.setOnClickListener{
