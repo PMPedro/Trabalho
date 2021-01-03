@@ -1,25 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/constraintlayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    android:background="@drawable/wallpaper_gradient_blue_white_linear_1920x1080_c2_ffffff_00bfff_a_285_f_14_1">
+    android:background="@drawable/frame_5">
 
-
-    <ImageView
-        android:id="@+id/imageView46"
-        android:layout_width="417dp"
-        android:layout_height="21dp"
-        android:layout_marginTop="108dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.833"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/linha" />
 
     <Button
         android:id="@+id/signinbtVoltar"
@@ -35,8 +23,8 @@
         android:id="@+id/signinBirthdate"
         android:layout_width="259dp"
         android:layout_height="65dp"
-        android:layout_marginTop="24dp"
-        android:background="@drawable/rectangle_31"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/rectangle_109"
         android:ems="10"
         android:hint="Data de Nascimento"
         android:inputType="date"
@@ -53,8 +41,8 @@
         android:id="@+id/SignInPassword"
         android:layout_width="260dp"
         android:layout_height="65dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/rectangle_31"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/rectangle_109"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
@@ -71,7 +59,7 @@
         android:layout_width="259dp"
         android:layout_height="64dp"
         android:layout_marginTop="16dp"
-        android:background="@drawable/rectangle_31"
+        android:background="@drawable/rectangle_109"
         android:ems="10"
         android:hint="Email"
         android:inputType="textEmailAddress"
@@ -86,8 +74,8 @@
         android:id="@+id/SignInName"
         android:layout_width="259dp"
         android:layout_height="66dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/rectangle_31"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/rectangle_109"
         android:ems="10"
         android:hint="Name"
         android:inputType="textPersonName"
@@ -120,33 +108,41 @@
         app:layout_constraintBottom_toTopOf="@+id/SignInEmail"
         app:layout_constraintEnd_toEndOf="@+id/SignInFoto"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/SignInFoto"
-        app:layout_constraintTop_toBottomOf="@+id/imageView46"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintStart_toStartOf="@+id/SignInFoto" />
 
     <Button
         android:id="@+id/SignInFoto"
         android:layout_width="126dp"
         android:layout_height="126dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="60dp"
         android:background="@drawable/round"
         android:text="Selecionar Foto"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView46" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageView39"
-        android:layout_width="137dp"
-        android:layout_height="84dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView46"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/medico" />
+    <TextView
+        android:id="@+id/ErrorEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text=""
+        android:textColor="#FF0000"
+        app:layout_constraintEnd_toEndOf="@+id/SignInEmail"
+        app:layout_constraintStart_toStartOf="@+id/SignInEmail"
+        app:layout_constraintTop_toBottomOf="@+id/SignInEmail" />
+
+    <TextView
+        android:id="@+id/ErrorPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text=""
+        android:textColor="#FF0000"
+        app:layout_constraintEnd_toEndOf="@+id/SignInPassword"
+        app:layout_constraintStart_toStartOf="@+id/SignInPassword"
+        app:layout_constraintTop_toBottomOf="@+id/SignInPassword" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

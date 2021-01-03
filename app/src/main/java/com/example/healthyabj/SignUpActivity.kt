@@ -22,6 +22,7 @@ import kotlinx.android.synthetic.main.signin.*
 import java.util.*
 
 import com.google.firebase.firestore.Query
+import java.util.regex.Pattern
 
 class SignUpActivity : AppCompatActivity() {
 
@@ -73,37 +74,114 @@ class SignUpActivity : AppCompatActivity() {
 
 
 
+        val regex = "^(?=.*?\\p{Lu})(?=.*?\\p{Ll})(?=.*?\\d)" +
+                "(?=.*?[`~!@#$%^&*()\\-_=+\\\\|\\[{\\]};:'\",<.>/?]).*$"
+
+        fun ValidatePasds(Pass: String): Boolean {
+            if(Pass.length < 6){
+
+                ErrorPassword.text = "Password Muito Pequena! "
+                return false
+            }
+
+            else if(Pass.isEmpty() == true){
+
+                return false
+
+            }
+
+
+            else if (Pattern.compile(regex).matcher(Pass).matches() == false) {
+
+                ErrorPassword.text = "Palavra Passe muito fraca!"
+                return false
+            }
+
+
+
+
+
+
+            else{
+                ErrorPassword.text = ""
+                return true
+            }
+
+
+        }
+
+        val regex2 = "@."
+        fun ValidateEmail(Email: String) :Boolean {
+
+
+
+            if (android.util.Patterns.EMAIL_ADDRESS.matcher(Email).matches() == false) {
+                ErrorEmail.text = "Email Invalido, por favor, Insira outro!"
+                return false
+            }
+            else if(Email == "" ){
+                ErrorEmail.text = "Email Invalido, por favor, Insira outro!"
+                return false
+            }
+            else{
+                ErrorEmail.text = ""
+                    return true
+            }
+
+        }
+
 
         //Verifica se alguns dos campos estao vazios, se estiver manda mensagem de erro
         SignInCreateAccount.setOnClickListener {
 
+            ValidateEmail(SignInEmail.text.toString())
+            ValidatePasds(SignInPassword.text.toString())
+
+            if((ValidateEmail(SignInEmail.text.toString()) == true ) && ( ValidatePasds(SignInPassword.text.toString()) == true ))
+            {
+
+
+
+
                 auth.createUserWithEmailAndPassword(SignInEmail.text.toString(), SignInPassword.text.toString())
-                .addOnCompleteListener(this) {task ->
-                    if (task.isSuccessful) {
-                        //Caso nao exista nenhum erro ao criar conta, vai para a tela de login
-                        // Sign in success, update UI with the signed-in user's information
+                    .addOnCompleteListener(this) {task ->
+                        if (task.isSuccessful) {
+                            //Caso nao exista nenhum erro ao criar conta, vai para a tela de login
+                            // Sign in success, update UI with the signed-in user's information
 
-                        uplaodImageToFirebaseStorage()
+                            uplaodImageToFirebaseStorage()
 
-                        val user = auth.currentUser
+                            val user = auth.currentUser
 
-                       // startActivity(Intent(this,MainActivity::class.java))
-
-
-                        startActivity(Intent(this,MainActivity::class.java))
+                            // startActivity(Intent(this,MainActivity::class.java))
 
 
+                            startActivity(Intent(this,MainActivity::class.java))
 
 
-                     //   SaveData()
 
 
-                    } else {
-                        //Caso exista algum erro ao criar conta, manda mensagem de erro
-                        // If sign in fails, display a message to the user.
-                        Toast.makeText(baseContext, "Error 404, please try again! ", Toast.LENGTH_SHORT).show()
+                            //   SaveData()
+
+
+                        } else {
+                            //Caso exista algum erro ao criar conta, manda mensagem de erro
+                            // If sign in fails, display a message to the user.
+                            Toast.makeText(baseContext, "Error 404, please try again! ", Toast.LENGTH_SHORT).show()
+                        }
                     }
-                }
+
+
+
+
+
+            }
+
+            else {
+
+                Toast.makeText(baseContext, "Credenciais invalidas! ", Toast.LENGTH_SHORT).show()
+            }
+
 
 
         }
