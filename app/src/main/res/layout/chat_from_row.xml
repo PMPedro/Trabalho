@@ -15,18 +15,23 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:layout_marginEnd="1dp"
-        android:background="@color/colorPrimary"
+        android:background="@drawable/custom_shape"
         android:padding="5dp"
 
+
         android:paddingLeft="7dp"
-
         android:paddingTop="7dp"
+
+
         android:paddingEnd="7dp"
+
         android:paddingRight="7dp"
-        android:textSize="12sp"
-
-
+        android:radius="20dp"
+        android:shape="rectangle"
         android:textColor="@color/white"
+
+
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
