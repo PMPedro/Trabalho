@@ -5,29 +5,28 @@
     android:id="@+id/linearLayout4"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/screen3x">
+    android:background="@drawable/frame_6">
 
     <Button
+        android:id="@+id/homepagebtChat"
         android:layout_width="50sp"
+
+
         android:layout_height="50sp"
 
-
-
-
-
-        android:id="@+id/homepagebtChat"
-
-        android:layout_marginStart="50dp"
+        android:layout_marginStart="385dp"
+        android:layout_marginEnd="20dp"
         android:background="@drawable/oupaccrrlrlrlrlrlrl"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/homepagebtLocalizacao"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/homepagebtProximasConsultas"
         android:layout_width="50sp"
         android:layout_height="50sp"
-        android:layout_marginStart="30dp"
-        android:layout_marginEnd="58dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="385dp"
         android:background="@drawable/feckofff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,10 +37,10 @@
         android:id="@+id/homepagebtLocalizacao"
         android:layout_width="50sp"
         android:layout_height="50sp"
-        android:layout_marginStart="32dp"
         android:background="@drawable/maps"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/homepagebtChat" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/SignInFoto"
@@ -72,8 +71,8 @@
 
     <ImageView
         android:id="@+id/imageView20"
-        android:layout_width="200sp"
-        android:layout_height="200sp"
+        android:layout_width="0dp"
+        android:layout_height="245dp"
         android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.432"

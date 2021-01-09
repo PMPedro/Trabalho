@@ -24,6 +24,7 @@ class ProxConsultasActivitie : AppCompatActivity() {
     lateinit var callbacks: PhoneAuthProvider.OnVerificationStateChangedCallbacks
 
     @RequiresApi(Build.VERSION_CODES.O)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.minhasconsultasuser)
@@ -86,14 +87,15 @@ fun ReceDia( date : String ) {
                 }
 
 
-
+                var i = 0
                 for (doc in value!!) {
+                    i++
 
                     var DC : String
                     var HC : String
                     var NM : String
                     var NP : String
-
+                    var array : String
 
 
 
@@ -104,8 +106,8 @@ fun ReceDia( date : String ) {
                     HC = doc.get("HoraConsulta").toString()
 
 
-
-
+                    var todoList2 = mutableListOf(Consultas(doc.get("DiaConsulta").toString(),doc.get("EmaiPaciente").toString(),doc.get("EmailMedico").toString(),doc.get("HoraConsulta").toString()))
+                     array = arrayOf(todoList2).toString()
                     var todoList = mutableListOf(Consultas(DC, NP, NM, HC))
                     val result: StringBuffer = StringBuffer()
 
@@ -137,7 +139,7 @@ fun ReceDia( date : String ) {
                             if(useremail.toString().toLowerCase() == NM.toLowerCase()){
 
 
-   val adapter = MinhasConsultasAdapter(todoList)
+   val adapter = MinhasConsultasAdapter(todoList2)
                             rvTODO.adapter = adapter
 
                             rvTODO.layoutManager = LinearLayoutManager(this)
@@ -155,13 +157,14 @@ fun ReceDia( date : String ) {
 
                         }
                         else {
-                            val adapter = MinhasConsultasAdapter(todoList)
+                           val adapter = MinhasConsultasAdapter(todoList2)
                           //  adapter.clean()
 
                         }
 
 
                    }
+
 
 
 

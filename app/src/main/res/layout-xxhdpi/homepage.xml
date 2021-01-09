@@ -5,36 +5,39 @@
     android:id="@+id/linearLayout4"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/screen3x">
+    android:background="@drawable/frame_6">
 
     <Button
         android:id="@+id/homepagebtChat"
         android:layout_width="70sp"
         android:layout_height="70sp"
-        android:layout_marginStart="91dp"
+        android:layout_marginStart="80dp"
         android:layout_marginEnd="20dp"
         android:background="@drawable/oupaccrrlrlrlrlrlrl"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/homepagebtLocalizacao"
         app:layout_constraintStart_toStartOf="parent" />
 
+
     <Button
         android:id="@+id/homepagebtProximasConsultas"
         android:layout_width="70sp"
         android:layout_height="70sp"
-        android:layout_marginEnd="70dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="80dp"
         android:background="@drawable/feckofff"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/homepagebtLocalizacao" />
 
     <Button
         android:id="@+id/homepagebtLocalizacao"
         android:layout_width="70sp"
         android:layout_height="70sp"
-        android:layout_marginEnd="20dp"
         android:background="@drawable/maps"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/homepagebtProximasConsultas" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
     <Button
@@ -48,21 +51,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/homepagebtLogout"
-        android:layout_width="74dp"
-        android:layout_height="39dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="4dp"
-        android:background="@drawable/retangulo25"
-        android:text="Logout"
-        android:textColor="@color/white"
-
-
-        android:textSize="15sp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
