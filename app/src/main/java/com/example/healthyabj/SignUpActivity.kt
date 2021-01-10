@@ -2,6 +2,7 @@ package com.example.healthyabj
 
 import android.app.Activity
 import android.app.AlertDialog
+import android.app.DatePickerDialog
 import android.content.DialogInterface
 import android.content.Intent
 import android.graphics.drawable.BitmapDrawable
@@ -22,6 +23,7 @@ import kotlinx.android.synthetic.main.signin.*
 import java.util.*
 
 import com.google.firebase.firestore.Query
+import kotlinx.android.synthetic.main.minhasconsultasuser.*
 import java.util.regex.Pattern
 
 class SignUpActivity : AppCompatActivity() {
@@ -35,42 +37,78 @@ class SignUpActivity : AppCompatActivity() {
         var num = 2
 
 
-        val email =  SignInEmail.text.toString()
+        val email = SignInEmail.text.toString()
         val nome = SignInName.text.toString()
         val password = SignInPassword.text.toString()
         val dataNascimento = signinBirthdate.text.toString()
         //val cc = signinCC.text.toString()
 
-        auth= FirebaseAuth.getInstance()
+        auth = FirebaseAuth.getInstance()
 
-        SignInFoto.setOnClickListener{
-            Log.d("SignupActivity","Try to show photo selector")
+        SignInFoto.setOnClickListener {
+            Log.d("SignupActivity", "Try to show photo selector")
             val intent = Intent(Intent.ACTION_PICK)
-            intent.type="image/*"
-            startActivityForResult(intent,0)
+            intent.type = "image/*"
+            startActivityForResult(intent, 0)
 
 
         }
 
         signinbtVoltar.setOnClickListener {
-            startActivity(Intent(this,MainActivity::class.java))
+            startActivity(Intent(this, MainActivity::class.java))
         }
 
 
-        signinBirthdate.setOnClickListener{
-            val builder = AlertDialog.Builder(this)
-            val view = layoutInflater.inflate(R.layout.dialog_calendario_signup,null)
-            val nascimento = view.findViewById<CalendarView>(R.id.calendarioselecionar)
-            builder.setView(view)
-            builder.setPositiveButton("Ok", DialogInterface.OnClickListener { _, _->
+        signinBirthdate.setOnClickListener {
 
-            })
-            builder.setNegativeButton("Cancelar", DialogInterface.OnClickListener { _, _->
 
-            })
 
-            builder.show()
-        }
+                val c = Calendar.getInstance()
+                val year = c.get(Calendar.YEAR)
+                val month = c.get(Calendar.MONTH)
+                val day = c.get(Calendar.DAY_OF_MONTH)
+
+
+                val dpd = DatePickerDialog(
+                    this,
+                    DatePickerDialog.OnDateSetListener { view, mYear, mMonth, mDay ->
+                        if ((mDay < 10) && (mMonth < 10)) {
+
+                            DataNasSign.setText("" + mYear + "-" + "0" + (mMonth + 1) + "-" + "0" + mDay)
+                            var date = ("" + mYear + "-" + "0" + (mMonth + 1) + "-" + "0" + mDay)
+
+
+
+                        } else if (mMonth < 10) {
+                            DataNasSign.setText("" + mYear + "-" + "0" + (mMonth + 1) + "-" + mDay)
+                            var date = ("" + mYear + "-" + "0" + (mMonth + 1) + "-" + mDay)
+
+
+
+                        } else if (mDay < 10) {
+                            DataNasSign.setText("" + mYear + "-" + (mMonth + 1) + "-" + "0" + mDay)
+                            var date = ("" + mYear + "-" + (mMonth + 1) + "-" + "0" + mDay)
+
+
+
+                        } else {
+                            DataNasSign.setText("" + mYear + "-" + (mMonth + 1) + "-" + mDay)
+                            var date = ("" + mYear + "-" + (mMonth + 1) + "-" + mDay)
+
+
+                        }
+
+
+                        //  recebedia2 (date)
+
+                    }, year, month, day
+                )
+                dpd.show()
+
+
+
+            }
+
 
 
 
@@ -225,13 +263,20 @@ class SignUpActivity : AppCompatActivity() {
     }
 
 
+
+
     private fun saveUserToFirabaseDatabase(profileImageUrl:String){
 
         val uid = FirebaseAuth.getInstance().uid
         val ref = FirebaseFirestore.getInstance()
-        val users = User.User (uid.toString(), SignInEmail.text.toString(),SignInName.text.toString() ,SignInPassword.text.toString(),profileImageUrl,0)
+
+
+
+var a = DataNasSign.text.toString()
+        val users = User.User (uid.toString(), SignInEmail.text.toString(),SignInName.text.toString() ,SignInPassword.text.toString(),profileImageUrl,0,a )
 
 val cena = SignInEmail.text.toString()
+
 
         ref.collection("User").document(cena)
             .set(users)

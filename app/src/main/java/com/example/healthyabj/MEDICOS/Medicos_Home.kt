@@ -10,6 +10,7 @@ import com.example.healthyabj.*
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.PhoneAuthProvider
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.Query
 import kotlinx.android.synthetic.main.medico_homepage.*
 
 class Medicos_Home  : AppCompatActivity() {
@@ -30,40 +31,102 @@ class Medicos_Home  : AppCompatActivity() {
         val user = FirebaseAuth.getInstance().currentUser
         val useremail = user?.email
 
+
+
+
+
+
         fun ReceiveDataPlace () {
+
+
+            val fromId = FirebaseAuth.getInstance().uid
+
+            db.collection("User")
+
+                .addSnapshotListener { value, e ->
+
+                    if (e != null) {
+                        Log.w(ChatLogActivity.TAG, "Listen failed.", e)
+                        return@addSnapshotListener
+                    }
+
+
+
+                    for (doc in value!!) {
+
+                        var email = doc.get("email").toString()
+                        var name = doc.get("name").toString()
+
+                        if (email.toLowerCase() == useremail) {
+
+                            tvmedicoshomepageEmail.setText(useremail)
+                            tvmedicoshomepageNome.setText(name)
+
+
+                        }
+                    }
+                }
+        }
+            ReceiveDataPlace()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
         val docRef = db.collection("User").document(useremail.toString())
         docRef.get()
-            .addOnSuccessListener { document ->
+         .addOnSuccessListener { document ->
                 if (document != null) {
 
-                  var email = document.get("email").toString()
-                  //var data = document.get("EmaiPaciente").toString()
-                  var nome = document.get("name").toString()
+
+                    var email = useremail
+                    //var data = document.get("EmaiPaciente").toString()
+                    var nome = document.get("name").toString()
 
 
-                    tvmedicoshomepageNome.setText(nome)
+                    tvmedicoshomepageNome.setText(document.get("name").toString())
                     tvmedicoshomepageEmail.setText(email)
 
-                } else {
+                  }
+                else
+                    {
 
+                    }
 
-                }
-            }
-
+                    }
 
 
             .addOnFailureListener { exception ->
 
             }
 
-        }
-
-        ReceiveDataPlace()
-
-
-
-
-
+ */
 
 
 
