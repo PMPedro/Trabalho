@@ -3,17 +3,18 @@ package com.example.healthyabj
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.util.Patterns
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.TextView
+import android.view.View
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.healthyabj.ChatLogActivity.Companion.TAG
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.PhoneAuthProvider
 import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.ktx.Firebase
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.homepage.*
+import kotlinx.android.synthetic.main.medico_homepage.*
 
 class HomePageActivity : AppCompatActivity() {
 
@@ -30,45 +31,44 @@ class HomePageActivity : AppCompatActivity() {
 
         val user = FirebaseAuth.getInstance().currentUser
         val useremail = user?.email
-
+       // val usImage: ImageView = findViewById(R.id.imageUser)
 
         fun ReceiveDataPlace () {
-        val docRef = db.collection("User").document(useremail.toString())
-        docRef.get()
-            .addOnSuccessListener { document ->
-                if (document != null) {
-
-                  var email = document.get("email").toString()
-                  //var data = document.get("EmaiPaciente").toString()
-                  var nome = document.get("name").toString()
 
 
-                    tvhomepageNome.setText(nome)
-                    tvhomepageNome.setText(email)
+            val fromId = FirebaseAuth.getInstance().uid
+            val imageperfil: ImageView = findViewById(R.id.imageUser)
+            db.collection("User")
 
-                } else {
+                .addSnapshotListener { value, e ->
+
+                    if (e != null) {
+                        Log.w(ChatLogActivity.TAG, "Listen failed.", e)
+                        return@addSnapshotListener
+                    }
 
 
+
+                    for (doc in value!!) {
+
+                        var email = doc.get("email").toString()
+                        var name = doc.get("name").toString()
+                        var dataNascimento = doc.get("dateNascimento").toString()
+
+                        if (email.toLowerCase() == useremail) {
+
+                            tvhomepageEmail.setText(useremail)
+                            tvhomepageNome.setText(name)
+                          //  tvhomepageDatanas.setText(dataNascimento)
+                            Picasso.with(this@HomePageActivity).load(doc.get("profileImageUrl").toString())
+                                .into(imageperfil)
+
+                        }
+                    }
                 }
-            }
-            .addOnFailureListener { exception ->
-                Log.d(TAG, "get failed with ", exception)
-            }
-
         }
 
         ReceiveDataPlace()
-
-
-
-
-
-
-
-
-
-
-
 
 
 //        homepagebtSignOut.setOnClickListener {

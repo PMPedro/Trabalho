@@ -1,19 +1,14 @@
 package com.example.healthyabj
 
-import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Intent
-import android.icu.text.Transliterator
-import android.icu.text.Transliterator.Position
 import android.net.Uri
 import android.os.Bundle
-import android.provider.MediaStore
-import android.util.DisplayMetrics
 import android.util.Log
+import android.view.View
+import android.widget.ScrollView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearSmoothScroller
-import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query
@@ -22,7 +17,6 @@ import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.Item
 import com.xwray.groupie.ViewHolder
 import kotlinx.android.synthetic.main.activity_chat_log.*
-import kotlinx.android.synthetic.main.activity_image_send.*
 import kotlinx.android.synthetic.main.chat_from_row.view.*
 import kotlinx.android.synthetic.main.chat_to_row.view.*
 import java.util.*
@@ -45,6 +39,7 @@ class ChatLogActivity : AppCompatActivity() {
         supportActionBar?.title = username
 
 
+
         listenForMessages()
         send_button_chat_log.setOnClickListener{
             var emty = edittText_chat_log.text.toString()
@@ -53,7 +48,7 @@ class ChatLogActivity : AppCompatActivity() {
             }else{
                 Log.d(TAG, "Attemp to send message")
                 performSendMessage()
-
+                recyclerview_chat_log.focusSearch(ScrollView.FOCUS_DOWN)
             }
             edittText_chat_log.text.clear()
 
@@ -106,7 +101,7 @@ class ChatLogActivity : AppCompatActivity() {
     private fun listenForMessages() {
         // [START listen_multiple]
         adapter.clear()
-
+        recyclerview_chat_log.focusSearch(ScrollView.FOCUS_DOWN)
         val fromId= FirebaseAuth.getInstance().uid
         val toId  = intent.getStringExtra("uid")
         db.collection("User-Messages/$fromId/$toId")

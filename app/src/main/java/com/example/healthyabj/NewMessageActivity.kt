@@ -1,19 +1,10 @@
 package com.example.healthyabj
 
-import android.accounts.AccountManager.get
 import android.content.Intent
-import android.icu.number.NumberFormatter.with
-import android.icu.number.NumberRangeFormatter.with
-import android.media.Image
-import android.nfc.tech.Ndef.get
-import android.nfc.tech.NdefFormatable.get
 import android.os.Bundle
-import android.system.Os.getuid
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.AdapterView
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -21,16 +12,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter
 import com.firebase.ui.firestore.FirestoreRecyclerOptions
-import com.google.firebase.firestore.CollectionReference
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
-import com.squareup.okhttp.internal.Platform.get
 import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.aboutus.view.*
 import kotlinx.android.synthetic.main.activity_new_message.*
-import kotlinx.android.synthetic.main.user_row_new_message.*
-import kotlinx.android.synthetic.main.user_row_new_message.view.*
-import java.lang.reflect.Array.get
 
 
 class UserViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
@@ -74,7 +59,7 @@ class NewMessageActivity : AppCompatActivity() {
 
                 usName.text = model.name
              Picasso.with(this@NewMessageActivity).load(model.profileImageUrl).into(usImage)
-                            textToUid=model.uid
+                textToUid=model.uid
 
                 holder.itemView.setOnClickListener {
 
