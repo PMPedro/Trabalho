@@ -47,6 +47,11 @@ class Planta : AppCompatActivity() {
 
                                 startActivity(Intent(this, Medicos_Home::class.java))
                             }
+                            if(cenas == "2") {
+
+                                startActivity(Intent(this, Medicos_Home::class.java))
+                            }
+
                         }
                     }
                 }

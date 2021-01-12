@@ -57,6 +57,10 @@ class ProxConsultasActivitie : AppCompatActivity() {
 
                                         startActivity(Intent(this, Medicos_Home::class.java))
                                     }
+                                    if(cenas == "2") {
+
+                                        startActivity(Intent(this, Medicos_Home::class.java))
+                                    }
                                 }
                             }
                 }
@@ -115,6 +119,7 @@ fun ReceDia( date : String ) {
                     val profileName=intent.getStringExtra("TipoUser")
                     val um = 1
                     val zero = 0
+                    val dois = 2
                     if (profileName== um.toString() ){
 
 
@@ -173,7 +178,7 @@ fun ReceDia( date : String ) {
 
 
 
-                    if(profileName== zero.toString())
+                    if((profileName== zero.toString()) || (profileName== dois.toString()) )
                     {
 
 

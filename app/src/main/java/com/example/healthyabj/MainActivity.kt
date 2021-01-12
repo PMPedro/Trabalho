@@ -54,11 +54,19 @@ class MainActivity : AppCompatActivity() {
                            //startActivity(Intent(this,HomePageActivity::class.java))
                        }
 
-                         if(cenas == "1") {
+                         if(cenas == "1"  ) {
                              val intent = Intent(this, Medicos_Home::class.java)
                              intent.putExtra("TipoUser", cenas)
                              startActivity(intent)
                           //  startActivity(Intent(this,Medicos_Home::class.java))
+                    }
+                    if (cenas == "2" )
+
+                    {
+                        val intent = Intent(this, Medicos_Home::class.java)
+                        intent.putExtra("TipoUser", cenas)
+                        startActivity(intent)
+
                     }
                 }
             }

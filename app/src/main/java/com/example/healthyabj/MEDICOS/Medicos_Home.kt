@@ -110,10 +110,8 @@ class Medicos_Home  : AppCompatActivity() {
         }
 
         medicos_homebtchat.setOnClickListener {
-
             val intent = Intent(this,NewMessageActivity::class.java)
             startActivity(intent)
-
         }
         medicos_homebtConsultas.setOnClickListener{
             val profileName=intent.getStringExtra("TipoUser")
