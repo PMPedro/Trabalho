@@ -58,6 +58,7 @@ class SignUpActivity : AppCompatActivity() {
             startActivity(Intent(this, MainActivity::class.java))
         }
 
+//tem q dar
 
         signinBirthdate.setOnClickListener {
 
