@@ -120,7 +120,7 @@ fun ReceDia( date : String ) {
                     val um = 1
                     val zero = 0
                     val dois = 2
-                    if (profileName== um.toString() ){
+                    if ((profileName== um.toString()) || (profileName== dois.toString()) ){
 
 
 
@@ -178,7 +178,7 @@ fun ReceDia( date : String ) {
 
 
 
-                    if((profileName== zero.toString()) || (profileName== dois.toString()) )
+                    if((profileName== zero.toString())  )
                     {
 
 
