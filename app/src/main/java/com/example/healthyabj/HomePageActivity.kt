@@ -27,8 +27,6 @@ class HomePageActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
         val db = FirebaseFirestore.getInstance()
 
-
-
         val user = FirebaseAuth.getInstance().currentUser
         val useremail = user?.email
        // val usImage: ImageView = findViewById(R.id.imageUser)
@@ -46,8 +44,6 @@ class HomePageActivity : AppCompatActivity() {
                         Log.w(ChatLogActivity.TAG, "Listen failed.", e)
                         return@addSnapshotListener
                     }
-
-
 
                     for (doc in value!!) {
 
@@ -69,8 +65,6 @@ class HomePageActivity : AppCompatActivity() {
         }
 
         ReceiveDataPlace()
-
-
 //        homepagebtSignOut.setOnClickListener {
 //
 //            FirebaseAuth.getInstance().signOut();
@@ -101,16 +95,6 @@ class HomePageActivity : AppCompatActivity() {
         /*homepagebtOpcoes.setOnClickListener{
             startActivity(Intent(this,opcoes::class.java))
         }*/
-
-
-
-
-
-
-
-
-
-
 
 
     }
