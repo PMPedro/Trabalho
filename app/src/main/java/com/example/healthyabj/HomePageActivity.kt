@@ -33,6 +33,11 @@ class HomePageActivity : AppCompatActivity() {
         val useremail = user?.email
        // val usImage: ImageView = findViewById(R.id.imageUser)
 
+
+
+
+
+
         fun ReceiveDataPlace () {
 
 

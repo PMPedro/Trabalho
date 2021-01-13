@@ -113,6 +113,10 @@
             android:name=".ImageSendActivity"
             android:label="@string/app_name"
             />
+        <activity
+            android:name=".MEDICOS.ErroTela"
+            android:label="@string/app_name"
+            />
 
     </application>
 

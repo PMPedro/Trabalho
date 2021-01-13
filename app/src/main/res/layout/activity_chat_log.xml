@@ -11,11 +11,13 @@
         android:id="@+id/edittText_chat_log"
         android:layout_width="0dp"
         android:layout_height="60dp"
+        android:layout_marginStart="5dp"
         android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
         android:background="@drawable/rectangle_109"
+
         android:ems="10"
         android:hint="Escreva uma messagem"
-
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/send_button_chat_log"
@@ -23,9 +25,10 @@
 
     <Button
         android:id="@+id/send_button_chat_log"
-        android:layout_width="56dp"
-        android:layout_height="54dp"
-        android:layout_marginEnd="10dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
         android:background="@drawable/polygon_2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
@@ -51,9 +54,9 @@
 
         android:layout_height="43dp"
         android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
         android:background="@android:drawable/ic_menu_gallery"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/edittText_chat_log" />
+        app:layout_constraintBottom_toBottomOf="@+id/edittText_chat_log"
+        app:layout_constraintEnd_toEndOf="@+id/edittText_chat_log"
+        app:layout_constraintTop_toTopOf="@+id/edittText_chat_log" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

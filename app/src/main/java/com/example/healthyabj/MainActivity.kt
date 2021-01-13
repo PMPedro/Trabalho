@@ -8,6 +8,7 @@ import android.util.Patterns
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.healthyabj.MEDICOS.ErroTela
 import com.example.healthyabj.MEDICOS.Medicos_Home
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
@@ -42,15 +43,23 @@ class MainActivity : AppCompatActivity() {
                 if (doc.get("uid") == FirebaseAuth.getInstance().currentUser?.uid.toString()){
 
                     var cenas = doc.get("usertype").toString()
-                    Toast.makeText(this, cenas.toString(), Toast.LENGTH_SHORT).show()
+                    var cenas2 = doc.get("permissao").toString()
+                    Toast.makeText(this, cenas2.toString(), Toast.LENGTH_SHORT).show()
                     //Toast.makeText(this, perfiluserNome, Toast.LENGTH_SHORT).show()
 
                     if(cenas == "0"){
+                        if(cenas2 == "0"){
+                            val intent = Intent(this, ErroTela::class.java)
+                            startActivity(intent)
+                        }
+
+                        else{
 
                        //Toast.makeText(this, tipo, Toast.LENGTH_SHORT).show()
                         val intent = Intent(this, HomePageActivity::class.java)
                         intent.putExtra("TipoUser", cenas)
                         startActivity(intent)
+                        }
                            //startActivity(Intent(this,HomePageActivity::class.java))
                        }
 

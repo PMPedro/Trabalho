@@ -274,7 +274,7 @@ class SignUpActivity : AppCompatActivity() {
 
 
 var a = DataNasSign.text.toString()
-        val users = User.User (uid.toString(), SignInEmail.text.toString(),SignInName.text.toString() ,SignInPassword.text.toString(),profileImageUrl,0,a )
+        val users = User.User (uid.toString(), SignInEmail.text.toString(),SignInName.text.toString() ,SignInPassword.text.toString(),profileImageUrl,0,a,0 )
 
 val cena = SignInEmail.text.toString()
 

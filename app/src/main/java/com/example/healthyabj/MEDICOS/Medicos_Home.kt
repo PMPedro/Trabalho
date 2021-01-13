@@ -57,11 +57,13 @@ class Medicos_Home  : AppCompatActivity() {
 
                         var email = doc.get("email").toString()
                         var name = doc.get("name").toString()
+                        var date = doc.get("dateNascimento").toString()
 
                         if (email.toLowerCase() == useremail) {
 
                             tvmedicoshomepageEmail.setText(useremail)
                             tvmedicoshomepageNome.setText(name)
+                            tvmedicosdate.setText(date)
 
 
                         }

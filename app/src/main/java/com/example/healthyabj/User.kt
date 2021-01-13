@@ -15,7 +15,8 @@ class User {
         val password: String,
         val profileImageUrl:String,
         val usertype: Int,
-        val DateNascimento: String
+        val DateNascimento: String,
+        val Permissao: Int
 
 //nknnjkkjnknjknjknjk
 
