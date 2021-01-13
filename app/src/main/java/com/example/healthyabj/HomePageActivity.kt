@@ -27,8 +27,6 @@ class HomePageActivity : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
         val db = FirebaseFirestore.getInstance()
 
-
-
         val user = FirebaseAuth.getInstance().currentUser
         val useremail = user?.email
        // val usImage: ImageView = findViewById(R.id.imageUser)
@@ -52,8 +50,6 @@ class HomePageActivity : AppCompatActivity() {
                         return@addSnapshotListener
                     }
 
-
-
                     for (doc in value!!) {
 
                         var email = doc.get("email").toString()
@@ -74,8 +70,6 @@ class HomePageActivity : AppCompatActivity() {
         }
 
         ReceiveDataPlace()
-
-
 //        homepagebtSignOut.setOnClickListener {
 //
 //            FirebaseAuth.getInstance().signOut();
@@ -106,16 +100,6 @@ class HomePageActivity : AppCompatActivity() {
         /*homepagebtOpcoes.setOnClickListener{
             startActivity(Intent(this,opcoes::class.java))
         }*/
-
-
-
-
-
-
-
-
-
-
 
 
     }

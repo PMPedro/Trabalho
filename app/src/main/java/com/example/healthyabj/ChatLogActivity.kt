@@ -9,6 +9,7 @@ import android.view.View
 import android.widget.ScrollView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query
@@ -37,6 +38,7 @@ class ChatLogActivity : AppCompatActivity() {
             recyclerview_chat_log.adapter=adapter
         val username = intent.getStringExtra("Name")
         supportActionBar?.title = username
+
 
 
 
@@ -95,7 +97,6 @@ class ChatLogActivity : AppCompatActivity() {
                 }
             }
 
-
     }
 
     private fun listenForMessages() {
@@ -116,7 +117,6 @@ class ChatLogActivity : AppCompatActivity() {
                 var text = String()
                 var from = String()
 
-
                 for (doc in value!!) {
                     text = doc.get("text").toString()
 
@@ -136,8 +136,6 @@ class ChatLogActivity : AppCompatActivity() {
              }
 
             }
-
-
 
     private fun performSendMessage() {
         adapter.clear()
@@ -173,7 +171,6 @@ class ChatLogActivity : AppCompatActivity() {
 
 
     private fun performSendFoto() {
-
 
         val text = file
         val fromId = FirebaseAuth.getInstance().uid
