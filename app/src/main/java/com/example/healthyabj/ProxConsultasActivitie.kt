@@ -15,6 +15,7 @@ import com.google.firebase.auth.PhoneAuthProvider
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query
 import kotlinx.android.synthetic.main.minhasconsultasuser.*
+import java.io.File
 import java.time.format.DateTimeFormatter
 import java.util.*
 
@@ -22,7 +23,7 @@ class ProxConsultasActivitie : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
     lateinit var callbacks: PhoneAuthProvider.OnVerificationStateChangedCallbacks
-
+    var todoList2 : MutableList<Consultas> = arrayListOf()
     @RequiresApi(Build.VERSION_CODES.O)
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -110,8 +111,9 @@ fun ReceDia( date : String ) {
                     HC = doc.get("HoraConsulta").toString()
 
 
-                    var todoList2 = mutableListOf(Consultas(doc.get("DiaConsulta").toString(),doc.get("EmaiPaciente").toString(),doc.get("EmailMedico").toString(),doc.get("HoraConsulta").toString()))
-                     array = arrayOf(todoList2).toString()
+
+
+                     todoList2.add( Consultas(doc.get("DiaConsulta").toString(),doc.get("EmaiPaciente").toString(),doc.get("EmailMedico").toString(),doc.get("HoraConsulta").toString()))
                     var todoList = mutableListOf(Consultas(DC, NP, NM, HC))
                     val result: StringBuffer = StringBuffer()
 
@@ -222,7 +224,7 @@ fun ReceDia( date : String ) {
 
                                 Toast.makeText(this, "Nao existem Consultas neste dia! ", Toast.LENGTH_SHORT).show()
 
-//sdf
+
                             }
 
                         }
@@ -236,14 +238,7 @@ fun ReceDia( date : String ) {
 
 
 
-                  /*  else{
-    Toast.makeText(this, "Nao existem consultas nesse Dia", Toast.LENGTH_SHORT).show()
 
-
-
-
-
-                }*/
             }
 
     }
