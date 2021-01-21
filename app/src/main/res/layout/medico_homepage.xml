@@ -2,116 +2,51 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/linearLayout4"
-    android:layout_width="wrap_content"
+    android:id="@+id/linearLayout16"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg">
 
     <ImageView
-        android:id="@+id/imageView29"
-        android:layout_width="wrap_content"
-        android:layout_height="150dp"
+        android:id="@+id/imageView21"
+        android:layout_width="407dp"
+        android:layout_height="148dp"
+        android:layout_marginTop="216dp"
         android:background="@drawable/rectangle_123"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView21"
-        app:srcCompat="@drawable/rectangle_123" />
-
-    <ImageView
-        android:id="@+id/imageView28"
-        android:layout_width="wrap_content"
-        android:layout_height="20dp"
-        android:background="@drawable/rectangle_129"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView29"
-        app:srcCompat="@drawable/rectangle_125" />
-
-    <ImageView
-        android:id="@+id/imageView20"
-        android:layout_width="wrap_content"
-        android:layout_height="150dp"
-        android:background="@drawable/rectangle_123"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/rectangle_123" />
 
     <ImageView
-        android:id="@+id/imageView21"
-        android:layout_width="wrap_content"
-        android:layout_height="20dp"
-        android:layout_marginTop="-5dp"
-        android:background="@drawable/rectangle_129"
+        android:id="@+id/imageView20"
+        android:layout_width="407dp"
+        android:layout_height="148dp"
+        android:background="@drawable/rectangle_123"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView20"
-        app:srcCompat="@drawable/rectangle_125" />
-
-    <ImageView
-        android:id="@+id/imageView32"
-        android:layout_width="0dp"
-        android:layout_height="196dp"
-        android:layout_marginTop="4dp"
-        android:background="@drawable/rectangle_128"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView28"
-        app:srcCompat="@drawable/rectangle_128" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView18"
+        app:srcCompat="@drawable/rectangle_123" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:background="@drawable/ccbfc1d3d5bc48067d818f916d463f34_10"
-        app:layout_constraintBottom_toTopOf="@+id/imageView29"
-        app:layout_constraintEnd_toEndOf="@+id/imageView21"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView20" />
+        android:id="@+id/medicos_homebtchat"
+        android:layout_width="70sp"
+        android:layout_height="70sp"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/oupaccrrlrlrlrlrlrl"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/medicos_home_localizacao" />
 
-    <TextView
-        android:id="@+id/CALOUPORRAPQP2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:fontFamily="serif"
-        android:text="Dr Sins das Babes"
-        android:textColor="@color/white"
-        android:textSize="30dp"
+    <Button
+        android:id="@+id/medicos_home_localizacao"
+        android:layout_width="70sp"
+        android:layout_height="70sp"
+        android:background="@drawable/maps"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
-
-    <TextView
-        android:id="@+id/tvmedicoshomepageEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:text="email@email.email"
-        android:textColor="@color/white"
-        android:fontFamily="serif"
-        android:textSize="30dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView28" />
-
-    <TextView
-        android:id="@+id/tvmedicosdate"
-        android:layout_width="wrap_content"
-        android:fontFamily="serif"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="TextView"
-        android:textColor="@color/white"
-        android:textSize="30dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvmedicoshomepageEmail" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/medicos_homebtConsultas"
@@ -121,22 +56,68 @@
         android:background="@drawable/feckofff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/medicos_home_localizacao" />
-    <Button
-    android:id="@+id/medicos_home_localizacao"
-    android:layout_width="70sp"
-    android:layout_height="70sp"
-    android:background="@drawable/maps"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-    android:id="@+id/medicos_homebtchat"
-    android:layout_width="70sp"
-    android:layout_height="70sp"
-    android:layout_marginStart="20dp"
-    android:background="@drawable/oupaccrrlrlrlrlrlrl"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintStart_toEndOf="@+id/medicos_home_localizacao" />
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="491dp"
+        android:layout_height="200dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.758"
+        app:srcCompat="@drawable/rectangle_128" />
+
+    <TextView
+        android:id="@+id/tvmedicoshomepageEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        android:fontFamily="serif"
+        android:text="EMAIL@EMAIL.EMAIL"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.476"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvmedicoshomepageNome" />
+
+    <TextView
+        android:id="@+id/tvmedicosDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:fontFamily="serif"
+        android:text="data/data/data"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvmedicoshomepageEmail" />
+
+    <TextView
+        android:id="@+id/tvmedicoshomepageNome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34dp"
+        android:fontFamily="serif"
+        android:text="Dr Sins das Babes"
+        android:textColor="@color/white"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="147dp"
+        android:layout_height="160dp"
+        android:layout_marginBottom="156dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView13"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ccbfc1d3d5bc48067d818f916d463f34_12" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
