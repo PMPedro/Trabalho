@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/frame_6"
+    android:background="@drawable/bg"
     tools:context=".ChatLogActivity">
 
     <EditText
@@ -13,14 +13,18 @@
         android:layout_height="60dp"
         android:layout_marginStart="5dp"
         android:layout_marginEnd="5dp"
-        android:layout_marginBottom="5dp"
-        android:background="@drawable/rectangle_109"
-
+        android:background="@drawable/rectangle_108"
         android:ems="10"
+        android:fontFamily="serif"
+
         android:hint="Escreva uma messagem"
         android:inputType="textPersonName"
+        android:textColorHint="@color/white"
+android:textColor="@color/white"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/send_button_chat_log"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -28,18 +32,15 @@
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:layout_marginEnd="5dp"
-        android:layout_marginBottom="5dp"
-        android:background="@drawable/polygon_2"
+        android:background="@drawable/sendmessageimage2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview_chat_log"
-        app:stackFromEnd="true"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="16dp"
-        android:background="@drawable/frame_6"
+        android:background="@drawable/bg"
         android:fillViewport="true"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toTopOf="@+id/edittText_chat_log"
@@ -47,17 +48,6 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <Button
-        android:id="@+id/sendFotoButton"
-        android:layout_width="43dp"
-
-        android:layout_height="43dp"
-        android:layout_marginEnd="10dp"
-        android:background="@android:drawable/ic_menu_gallery"
-        app:layout_constraintBottom_toBottomOf="@+id/edittText_chat_log"
-        app:layout_constraintEnd_toEndOf="@+id/edittText_chat_log"
-        app:layout_constraintTop_toTopOf="@+id/edittText_chat_log" />
+        app:stackFromEnd="true" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

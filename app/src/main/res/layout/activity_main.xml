@@ -22,6 +22,7 @@
         android:inputType="textPersonName"
         android:textAlignment="center"
         android:textColor="@color/black"
+        android:fontFamily="serif"
 
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,6 +32,7 @@
         android:id="@+id/activitymainPassword"
         android:layout_width="269dp"
         android:layout_height="71dp"
+        android:fontFamily="serif"
 
         android:textColorHint="@color/black"
         android:textSize="30sp"
@@ -50,6 +52,8 @@
     <TextView
         android:id="@+id/activitymainForgotPassword"
         android:layout_width="201dp"
+        android:fontFamily="serif"
+
         android:layout_height="22dp"
         android:text="Não se lembra da Password?"
         android:textAlignment="center"
@@ -68,6 +72,7 @@
         android:layout_height="32dp"
         android:layout_marginTop="24dp"
         android:clickable="true"
+        android:fontFamily="serif"
 
         android:text="Não tem conta?"
         android:textAlignment="center"
@@ -84,6 +89,8 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="40dp"
+        android:fontFamily="serif"
+
         android:background="@drawable/login"
         android:clickable="false"
         android:textColor="#FFFFFF"

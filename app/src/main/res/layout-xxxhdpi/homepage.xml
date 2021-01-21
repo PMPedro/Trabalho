@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/linearLayout4"
-    android:layout_width="420dp"
-    android:layout_height="740dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@drawable/bg">
 
     <de.hdodenhof.circleimageview.CircleImageView
@@ -114,6 +114,7 @@
 
         android:textColor="@color/white"
         android:textSize="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView27"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
