@@ -57,7 +57,7 @@ class HomePageActivity : AppCompatActivity() {
                         if (email.toLowerCase() == useremail) {
 
                             tvhomepageEmail.setText(useremail)
-                            tvhomepageNome.setText(name)
+                            CALOUPORRApqp.setText(name)
                             tvhomepageDatanas.setText(dataNascimento)
                             Picasso.with(this@HomePageActivity).load(doc.get("profileImageUrl").toString())
                                 .into(imageperfil)
