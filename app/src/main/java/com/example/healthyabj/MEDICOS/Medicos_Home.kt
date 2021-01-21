@@ -60,7 +60,7 @@ class Medicos_Home  : AppCompatActivity() {
                         if (email.toLowerCase() == useremail) {
 
                             tvmedicoshomepageEmail.setText(useremail)
-                         //   CALOUPORRA.setText(name)
+                            CALOUPORRAPQP2.setText(name)
                             tvmedicosdate.setText(date)
 
 
