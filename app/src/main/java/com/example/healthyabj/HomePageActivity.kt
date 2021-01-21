@@ -5,10 +5,8 @@ import android.os.Bundle
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
-import android.view.View
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
-import com.example.healthyabj.ChatLogActivity.Companion.TAG
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.PhoneAuthProvider
 import com.google.firebase.firestore.FirebaseFirestore
@@ -59,8 +57,8 @@ class HomePageActivity : AppCompatActivity() {
                         if (email.toLowerCase() == useremail) {
 
                             tvhomepageEmail.setText(useremail)
-                            tvhomepageNome.setText(name)
-                          //  tvhomepageDatanas.setText(dataNascimento)
+                            CALOUPORRA.setText(name)
+                            tvhomepageDatanas.setText(dataNascimento)
                             Picasso.with(this@HomePageActivity).load(doc.get("profileImageUrl").toString())
                                 .into(imageperfil)
 

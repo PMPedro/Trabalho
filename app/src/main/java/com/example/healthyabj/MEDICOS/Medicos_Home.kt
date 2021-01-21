@@ -5,13 +5,11 @@ import android.os.Bundle
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.healthyabj.*
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.PhoneAuthProvider
 import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.firestore.Query
 import kotlinx.android.synthetic.main.medico_homepage.*
 
 class Medicos_Home  : AppCompatActivity() {
@@ -62,7 +60,7 @@ class Medicos_Home  : AppCompatActivity() {
                         if (email.toLowerCase() == useremail) {
 
                             tvmedicoshomepageEmail.setText(useremail)
-                            tvmedicoshomepageNome.setText(name)
+                            CALOUPORRA.setText(name)
                             tvmedicosdate.setText(date)
 
 

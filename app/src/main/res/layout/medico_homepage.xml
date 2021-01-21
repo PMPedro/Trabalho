@@ -59,29 +59,15 @@
         app:layout_constraintTop_toTopOf="@+id/imageView13" />
 
     <TextView
-        android:id="@+id/tvmedicoshomepageNome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="TextView"
-        android:textColor="@color/white"
-        android:textSize="25sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvmedicoshomepageEmail" />
-
-    <TextView
         android:id="@+id/tvmedicosdate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
         android:text="TextView"
         android:textColor="@color/white"
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="@+id/imageView13"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvmedicoshomepageNome" />
+        tools:layout_editor_absoluteY="470dp" />
 
     <ImageView
         android:id="@+id/imageView8"

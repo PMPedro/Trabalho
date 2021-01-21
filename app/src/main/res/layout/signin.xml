@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    android:background="@drawable/frame_6">
+    android:background="@drawable/bg">
 
 
     <Button
@@ -21,17 +21,18 @@
 
     <EditText
         android:id="@+id/SignInPassword"
-        android:layout_width="248dp"
-        android:layout_height="58dp"
+        android:layout_width="269dp"
+        android:layout_height="71dp"
         android:layout_marginTop="40dp"
-        android:background="@drawable/rectangle_109"
+        android:background="@drawable/rectangle_101"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
         android:paddingLeft="15dp"
-        android:textAlignment="viewStart"
+        android:textAlignment="center"
 
-        android:textSize="17sp"
+        android:textColorHint="@color/black"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,48 +40,54 @@
 
     <EditText
         android:id="@+id/SignInEmail"
-        android:layout_width="259dp"
-        android:layout_height="64dp"
+        android:layout_width="269dp"
+        android:layout_height="71dp"
         android:layout_marginTop="16dp"
-        android:background="@drawable/rectangle_109"
+
+        android:background="@drawable/rectangle_101"
         android:ems="10"
         android:hint="Email"
         android:inputType="textEmailAddress"
         android:paddingLeft="15dp"
-        android:textAlignment="viewStart"
-        android:textSize="17sp"
+        android:textAlignment="center"
+        android:textColorHint="@color/black"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/SignInFoto" />
 
     <EditText
         android:id="@+id/SignInName"
-        android:layout_width="259dp"
-        android:layout_height="66dp"
+        android:layout_width="269dp"
+        android:layout_height="71dp"
         android:layout_marginTop="40dp"
-        android:background="@drawable/rectangle_109"
+        android:background="@drawable/rectangle_101"
+
         android:ems="10"
         android:hint="Name"
         android:inputType="textPersonName"
         android:paddingLeft="15dp"
-        android:textAlignment="viewStart"
-        android:textSize="17sp"
+        android:textAlignment="center"
+        android:textColorHint="@color/black"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/SignInEmail" />
 
     <Button
         android:id="@+id/SignInCreateAccount"
-        android:layout_width="87dp"
-        android:layout_height="49dp"
-        android:background="@drawable/group_3"
+        android:layout_width="269dp"
+        android:layout_height="71dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/group_12"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="603dp" />
+        app:layout_constraintTop_toBottomOf="@+id/signinBirthdate" />
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/selectphoto_imageview"
@@ -96,9 +103,9 @@
         android:id="@+id/SignInFoto"
         android:layout_width="126dp"
         android:layout_height="126dp"
-        android:layout_marginTop="60dp"
-        android:background="@drawable/round"
-        android:text="Selecionar Foto"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/ellipse_9"
+        android:text="Foto"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -129,11 +136,12 @@
 
     <Button
         android:id="@+id/signinBirthdate"
-        android:layout_width="50dp"
+        android:layout_width="100dp"
         android:layout_height="60dp"
         android:layout_marginTop="40dp"
-        android:background="@drawable/rectangle_109"
-        android:hint="Data de Nascimento"
+        android:background="@drawable/retangulo6"
+        android:text="Data Nascimento"
+        android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="@+id/SignInPassword"
         app:layout_constraintTop_toBottomOf="@+id/SignInPassword" />
 
