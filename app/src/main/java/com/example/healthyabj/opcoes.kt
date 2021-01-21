@@ -8,7 +8,6 @@ import com.example.healthyabj.MEDICOS.Medicos_Home
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.PhoneAuthProvider
 import com.google.firebase.firestore.FirebaseFirestore
-import kotlinx.android.synthetic.main.aboutus.*
 import kotlinx.android.synthetic.main.opcoes.*
 
 class opcoes : AppCompatActivity() {
@@ -58,9 +57,6 @@ class opcoes : AppCompatActivity() {
                 }
         }
 
-        opcoesbtAboutUs.setOnClickListener {
-            startActivity(Intent(this,aboutus::class.java))
-        }
 
 
 

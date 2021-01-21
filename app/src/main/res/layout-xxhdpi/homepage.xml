@@ -18,6 +18,7 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView23"
         app:srcCompat="@drawable/rectangle_129" />
 
+
     <ImageView
         android:id="@+id/imageView23"
         android:layout_width="407dp"
@@ -30,35 +31,37 @@
         app:srcCompat="@drawable/rectangle_123" />
 
     <Button
-        android:id="@+id/homepagebtChat"
-        android:layout_width="100sp"
-        android:layout_height="100sp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/oupaccrrlrlrlrlrlrl"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView31" />
-
-    <Button
         android:id="@+id/homepagebtProximasConsultas"
         android:layout_width="100sp"
         android:layout_height="100sp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="100dp"
         android:background="@drawable/feckofff"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.687"
         app:layout_constraintStart_toEndOf="@+id/homepagebtChat"
+        app:layout_constraintTop_toBottomOf="@+id/imageView31" />
+
+    <Button
+        android:id="@+id/homepagebtChat"
+        android:layout_width="100sp"
+        android:layout_height="100sp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/oupaccrrlrlrlrlrlrl"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.162"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView31" />
 
     <Button
         android:id="@+id/homepagebtLocalizacao"
         android:layout_width="100sp"
         android:layout_height="100sp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/maps"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/homepagebtProximasConsultas"
+        app:layout_constraintHorizontal_bias="0.485"
         app:layout_constraintStart_toStartOf="@+id/homepagebtChat" />
-
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/imageUser"
@@ -67,8 +70,10 @@
         app:civ_border_width="4dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView25"
         app:layout_constraintEnd_toEndOf="@+id/imageView25"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="@+id/imageView25"
         app:layout_constraintTop_toTopOf="@+id/imageView25"
+        app:layout_constraintVertical_bias="0.495"
         tools:srcCompat="@tools:sample/avatars" />
 
     <ImageView
@@ -101,11 +106,11 @@
         app:srcCompat="@drawable/rectangle_128" />
 
     <TextView
-        android:id="@+id/CALOUPORRA"
+        android:id="@+id/tvhomepageNome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="serif"
-        android:text="Dr Sins das Babes"
+        android:text="NOME"
 
 
         android:textColor="@color/white"
@@ -120,10 +125,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
+        android:fontFamily="serif"
+        android:text="EMAIL"
         android:textColor="@color/white"
         android:textSize="30dp"
-        android:fontFamily="serif"
-        android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView27" />
@@ -132,12 +137,12 @@
         android:id="@+id/tvhomepageDatanas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="serif"
-        android:textColor="@color/white"
-        android:textSize="30dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
-        android:text="TextView"
+        android:fontFamily="serif"
+        android:text="DATA"
+        android:textColor="@color/white"
+        android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView31"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
