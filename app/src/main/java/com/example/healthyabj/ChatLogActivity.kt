@@ -56,14 +56,6 @@ class ChatLogActivity : AppCompatActivity() {
 
         }
 
-        sendFotoButton.setOnClickListener{
-            startActivity(Intent(this,ChatLogActivity::class.java))
-            Log.d(ChatLogActivity.TAG,"Try to show photo selector")
-            val intent = Intent(Intent.ACTION_PICK)
-            intent.type="image/*"
-            startActivityForResult(intent,0)
-
-        }
 
     }
 
