@@ -39,5 +39,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         val sydney = LatLng(41.122312, -8.618959)
         mMap.addMarker(MarkerOptions().position(sydney).title("All Day Clinic"))
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney, 20.0f))
+
     }
 }
