@@ -23,7 +23,7 @@ import kotlinx.android.synthetic.main.activity_new_message.*
 class UserViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 class NewMessageActivity : AppCompatActivity() {
 
-
+//m lmklm
     // Access a Cloud Firestore instance from your Activity
     val db = Firebase.firestore
     lateinit var textToUid:String
